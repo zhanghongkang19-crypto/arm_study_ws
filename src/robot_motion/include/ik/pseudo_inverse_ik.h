@@ -23,16 +23,16 @@ public:
     );
 
     // FK返回: x y z qx qy qz qw
-    Eigen::Matrix<double,7,1>
-    get_fk(const Eigen::VectorXd& joint_angles, const std::string& link_name);
+    Eigen::Matrix<double,7,1>   get_fk(const Eigen::VectorXd& joint_angles, const std::string& link_name);
 
     // IK
-    Eigen::VectorXd
-    get_ik(const Eigen::VectorXd& initial_joint_angles, const Eigen::VectorXd& target_pose, const std::string& link_name);
+    bool get_ik(const Eigen::VectorXd& initial_joint_angles, const Eigen::VectorXd& target_pose, const std::string& link_name, Eigen::VectorXd& result_joint_angles);
 
 
 
 private:
+    Eigen::Matrix<double,7,1>   get_fk(const Eigen::VectorXd& joint_angles, const std::string& link_name);
+
     pinocchio::Model model_;
     std::unique_ptr<pinocchio::Data> data_;
     pinocchio::FrameIndex ee_frame_id_;
