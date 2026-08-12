@@ -4,7 +4,6 @@
 
 #include "rclcpp/rclcpp.hpp"
 #include "sensor_msgs/msg/joint_state.hpp"
-
 #include "robot_msgs/msg/arm_position_cmd.hpp"
 
 
@@ -13,13 +12,9 @@ using namespace std::chrono_literals;
 
 class RobotMonitor : public rclcpp::Node
 {
-
 public:
-
-    RobotMonitor()
-    : Node("robot_monitor")
+    RobotMonitor(): Node("robot_monitor")
     {
-
         for(int i=0;i<8;i++)
         {
             cmd[i]=0.0;
@@ -28,32 +23,16 @@ public:
 
         // 发布机械臂控制指令
         cmd_pub_ = this->create_publisher<robot_msgs::msg::ArmPositionCmd>( "/rebot/joint_group_cmd", 10);
-
-
         // 订阅机械臂状态
         joint_state_sub_ = this->create_subscription<sensor_msgs::msg::JointState>( "/joint_states", 10,std::bind( &RobotMonitor::jointStateCallback, this,std::placeholders::_1));
-
-
         // 定时发送控制命令
-        timer_ =
-            this->create_wall_timer(
-                500ms,
-                std::bind(
-                    &RobotMonitor::timerCallback,
-                    this));
-
-
-        RCLCPP_INFO(
-            this->get_logger(),
-            "Robot monitor node started.");
-
+        timer_ = this->create_wall_timer(500ms,std::bind(&RobotMonitor::timerCallback,this));
+        RCLCPP_INFO(this->get_logger(),"Robot monitor node started.");
     }
 
 
 
 private:
-
-
     // ============================
     // 周期发送控制命令
     // ============================
@@ -73,10 +52,7 @@ private:
         }
 
 
-
         robot_msgs::msg::ArmPositionCmd msg;
-
-
         msg.position.resize(8);
 
 
@@ -87,13 +63,7 @@ private:
 
 
         cmd_pub_->publish(msg);
-
-
-        RCLCPP_INFO(
-            this->get_logger(),
-            "Publish joint command");
-
-
+        RCLCPP_INFO(this->get_logger(),"Publish joint command");
     }
 
 
@@ -101,31 +71,19 @@ private:
     // ============================
     // 接收关节状态
     // ============================
-    void jointStateCallback(
-        const sensor_msgs::msg::JointState::SharedPtr msg)
+    void jointStateCallback(const sensor_msgs::msg::JointState::SharedPtr msg)
     {
-
-
-        RCLCPP_INFO(
-            this->get_logger(),
-            "Received joint state");
-
+        RCLCPP_INFO( this->get_logger(),"Received joint state");
 
         for(size_t i=0;i<msg->name.size();i++)
         {
-
             double pos=0.0;
-
-
             if(i < msg->position.size())
             {
                 pos=msg->position[i];
             }
-
-
             RCLCPP_INFO( this->get_logger(),"%s : %.4f", msg->name[i].c_str(), pos);
         }
-
     }
 
 
