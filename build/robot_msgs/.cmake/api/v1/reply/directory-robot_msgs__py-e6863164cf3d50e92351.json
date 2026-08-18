@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "robot_msgs__py",
+		"source" : "/home/zme/self_project/rebotArm_mujoco/build/robot_msgs/robot_msgs__py"
+	}
+}

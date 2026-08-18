@@ -1,0 +1,158 @@
+[0.036s] Invoking command in '/home/zme/self_project/rebotArm_mujoco/build/robot_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/zme/self_project/rebotArm_mujoco/build/robot_msgs -- -j8 -l8
+[0.177s] [  2%] Built target robot_msgs__rs
+[0.178s] [  5%] Built target robot_msgs__rosidl_generator_type_description
+[0.257s] [  5%] Built target ament_cmake_python_copy_robot_msgs
+[0.261s] [  8%] Built target robot_msgs__cpp
+[0.279s] [ 22%] Built target robot_msgs__rosidl_generator_c
+[0.388s] [ 31%] Built target robot_msgs__rosidl_typesupport_fastrtps_c
+[0.394s] [ 40%] Built target robot_msgs__rosidl_typesupport_introspection_cpp
+[0.444s] [ 48%] Built target robot_msgs__rosidl_typesupport_fastrtps_cpp
+[0.460s] [ 57%] Built target robot_msgs__rosidl_typesupport_introspection_c
+[0.468s] [ 65%] Built target robot_msgs__rosidl_typesupport_cpp
+[0.476s] [ 74%] Built target robot_msgs__rosidl_typesupport_c
+[0.554s] [ 74%] Built target robot_msgs
+[0.626s] [ 77%] Built target robot_msgs__py
+[0.676s] [ 82%] Built target robot_msgs__rosidl_generator_py
+[0.743s] [ 88%] Built target robot_msgs_s__rosidl_typesupport_introspection_c
+[0.743s] [ 94%] Built target robot_msgs_s__rosidl_typesupport_fastrtps_c
+[0.752s] [100%] Built target robot_msgs_s__rosidl_typesupport_c
+[0.968s] running egg_info
+[1.033s] writing robot_msgs.egg-info/PKG-INFO
+[1.035s] writing dependency_links to robot_msgs.egg-info/dependency_links.txt
+[1.035s] writing top-level names to robot_msgs.egg-info/top_level.txt
+[1.186s] reading manifest file 'robot_msgs.egg-info/SOURCES.txt'
+[1.187s] writing manifest file 'robot_msgs.egg-info/SOURCES.txt'
+[1.269s] [100%] Built target ament_cmake_python_build_robot_msgs_egg
+[1.297s] Invoked command in '/home/zme/self_project/rebotArm_mujoco/build/robot_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/zme/self_project/rebotArm_mujoco/build/robot_msgs -- -j8 -l8
+[1.301s] Invoking command in '/home/zme/self_project/rebotArm_mujoco/build/robot_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/zme/self_project/rebotArm_mujoco/build/robot_msgs
+[1.321s] -- Install configuration: ""
+[1.322s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/ament_index/resource_index/rosidl_interfaces/robot_msgs
+[1.322s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/msg/ArmPositionCmd.json
+[1.324s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs
+[1.324s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg
+[1.325s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg/rosidl_generator_c__visibility_control.h
+[1.325s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg/arm_position_cmd.h
+[1.326s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail
+[1.326s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail/arm_position_cmd__functions.c
+[1.326s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail/arm_position_cmd__struct.h
+[1.327s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail/arm_position_cmd__description.c
+[1.327s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail/arm_position_cmd__type_support.h
+[1.327s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail/arm_position_cmd__functions.h
+[1.328s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail/arm_position_cmd__type_support.c
+[1.328s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/environment/library_path.sh
+[1.330s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/environment/library_path.dsv
+[1.330s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/librobot_msgs__rosidl_generator_c.so
+[1.330s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs
+[1.330s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg
+[1.331s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[1.331s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail
+[1.331s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail/arm_position_cmd__rosidl_typesupport_fastrtps_c.h
+[1.331s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/librobot_msgs__rosidl_typesupport_fastrtps_c.so
+[1.332s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs
+[1.332s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg
+[1.332s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[1.332s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail
+[1.333s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail/arm_position_cmd__rosidl_typesupport_introspection_c.h
+[1.333s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail/arm_position_cmd__type_support.c
+[1.333s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/librobot_msgs__rosidl_typesupport_introspection_c.so
+[1.334s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/librobot_msgs__rosidl_typesupport_c.so
+[1.334s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs
+[1.335s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg
+[1.335s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+[1.335s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg/arm_position_cmd.hpp
+[1.335s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail
+[1.336s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail/arm_position_cmd__traits.hpp
+[1.336s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail/arm_position_cmd__struct.hpp
+[1.336s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail/arm_position_cmd__type_support.hpp
+[1.337s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail/arm_position_cmd__builder.hpp
+[1.338s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs
+[1.338s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg
+[1.338s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[1.338s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail
+[1.339s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail/dds_fastrtps
+[1.340s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail/arm_position_cmd__rosidl_typesupport_fastrtps_cpp.hpp
+[1.340s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/librobot_msgs__rosidl_typesupport_fastrtps_cpp.so
+[1.340s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs
+[1.340s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg
+[1.341s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail
+[1.341s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail/arm_position_cmd__type_support.cpp
+[1.341s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail/arm_position_cmd__rosidl_typesupport_introspection_cpp.hpp
+[1.341s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/librobot_msgs__rosidl_typesupport_introspection_cpp.so
+[1.343s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/librobot_msgs__rosidl_typesupport_cpp.so
+[1.343s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/environment/pythonpath.sh
+[1.343s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/environment/pythonpath.dsv
+[1.344s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/python3.12/site-packages/robot_msgs-0.0.0-py3.12.egg-info
+[1.344s] -- Installing: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/python3.12/site-packages/robot_msgs-0.0.0-py3.12.egg-info/PKG-INFO
+[1.344s] -- Installing: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/python3.12/site-packages/robot_msgs-0.0.0-py3.12.egg-info/top_level.txt
+[1.345s] -- Installing: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/python3.12/site-packages/robot_msgs-0.0.0-py3.12.egg-info/dependency_links.txt
+[1.345s] -- Installing: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/python3.12/site-packages/robot_msgs-0.0.0-py3.12.egg-info/SOURCES.txt
+[1.345s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/python3.12/site-packages/robot_msgs
+[1.346s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/python3.12/site-packages/robot_msgs/_robot_msgs_s.ep.rosidl_typesupport_introspection_c.c
+[1.346s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/python3.12/site-packages/robot_msgs/__init__.py
+[1.346s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/python3.12/site-packages/robot_msgs/robot_msgs_s__rosidl_typesupport_c.so
+[1.346s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/python3.12/site-packages/robot_msgs/robot_msgs_s__rosidl_typesupport_fastrtps_c.so
+[1.347s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/python3.12/site-packages/robot_msgs/_robot_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+[1.347s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/python3.12/site-packages/robot_msgs/msg
+[1.347s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/python3.12/site-packages/robot_msgs/msg/__init__.py
+[1.347s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/python3.12/site-packages/robot_msgs/msg/_arm_position_cmd.py
+[1.347s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/python3.12/site-packages/robot_msgs/msg/_arm_position_cmd_s.c
+[1.348s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/python3.12/site-packages/robot_msgs/robot_msgs_s__rosidl_typesupport_introspection_c.so
+[1.348s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/python3.12/site-packages/robot_msgs/_robot_msgs_s.ep.rosidl_typesupport_c.c
+[1.412s] Listing '/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/python3.12/site-packages/robot_msgs'...
+[1.413s] Listing '/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/python3.12/site-packages/robot_msgs/msg'...
+[1.431s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/python3.12/site-packages/robot_msgs/robot_msgs_s__rosidl_typesupport_fastrtps_c.so
+[1.432s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/python3.12/site-packages/robot_msgs/robot_msgs_s__rosidl_typesupport_introspection_c.so
+[1.433s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/python3.12/site-packages/robot_msgs/robot_msgs_s__rosidl_typesupport_c.so
+[1.434s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/librobot_msgs__rosidl_generator_py.so
+[1.434s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/ament_index/resource_index/rust_packages/robot_msgs
+[1.434s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/rust
+[1.435s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/rust/Cargo.toml
+[1.435s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/rust/src
+[1.435s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/rust/src/msg.rs
+[1.435s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/rust/src/msg
+[1.436s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/rust/src/msg/rmw.rs
+[1.436s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/rust/src/lib.rs
+[1.436s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/rust/build.rs
+[1.438s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/msg/ArmPositionCmd.idl
+[1.438s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/msg/ArmPositionCmd.msg
+[1.438s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/ament_index/resource_index/package_run_dependencies/robot_msgs
+[1.439s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/ament_index/resource_index/parent_prefix_path/robot_msgs
+[1.439s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/environment/ament_prefix_path.sh
+[1.439s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/environment/ament_prefix_path.dsv
+[1.439s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/environment/path.sh
+[1.440s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/environment/path.dsv
+[1.440s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/local_setup.bash
+[1.440s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/local_setup.sh
+[1.441s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/local_setup.zsh
+[1.441s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/local_setup.dsv
+[1.441s] -- Installing: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/package.dsv
+[1.441s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/ament_index/resource_index/packages/robot_msgs
+[1.442s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/cmake/export_robot_msgs__rosidl_generator_cExport.cmake
+[1.442s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/cmake/export_robot_msgs__rosidl_generator_cExport-noconfig.cmake
+[1.442s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/cmake/export_robot_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[1.442s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/cmake/export_robot_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[1.442s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/cmake/robot_msgs__rosidl_typesupport_introspection_cExport.cmake
+[1.443s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/cmake/robot_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[1.443s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/cmake/robot_msgs__rosidl_typesupport_cExport.cmake
+[1.443s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/cmake/robot_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[1.443s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/cmake/export_robot_msgs__rosidl_generator_cppExport.cmake
+[1.443s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/cmake/export_robot_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[1.444s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/cmake/export_robot_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[1.444s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/cmake/robot_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[1.444s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/cmake/robot_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[1.444s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/cmake/robot_msgs__rosidl_typesupport_cppExport.cmake
+[1.444s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/cmake/robot_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[1.445s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/cmake/export_robot_msgs__rosidl_generator_pyExport.cmake
+[1.446s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/cmake/export_robot_msgs__rosidl_generator_pyExport-noconfig.cmake
+[1.449s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/cmake/rosidl_cmake-extras.cmake
+[1.450s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[1.451s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[1.451s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[1.451s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[1.452s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[1.453s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[1.454s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/cmake/rosidl_cmake_aggregate_target-extras.cmake
+[1.454s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/cmake/robot_msgsConfig.cmake
+[1.458s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/cmake/robot_msgsConfig-version.cmake
+[1.459s] -- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/package.xml
+[1.460s] Invoked command in '/home/zme/self_project/rebotArm_mujoco/build/robot_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/zme/self_project/rebotArm_mujoco/build/robot_msgs

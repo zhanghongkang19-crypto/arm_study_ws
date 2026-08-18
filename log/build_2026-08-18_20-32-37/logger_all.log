@@ -1,0 +1,339 @@
+[0.263s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.263s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7ddd7267e390>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7ddd7317f500>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7ddd7317f500>>)
+[0.355s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.355s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.355s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.355s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.355s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.355s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.355s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/zme/self_project/rebotArm_mujoco'
+[0.355s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.419s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.419s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.419s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.419s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.419s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.420s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.420s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.420s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.420s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.420s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.421s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.421s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.421s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.421s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.421s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.421s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.421s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.422s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.422s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.422s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.422s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.422s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.422s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.422s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.422s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.422s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.423s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.423s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.423s] Level 1:colcon.colcon_core.package_identification:_identify(src/rebot_description) by extensions ['ignore', 'ignore_ament_install']
+[0.423s] Level 1:colcon.colcon_core.package_identification:_identify(src/rebot_description) by extension 'ignore'
+[0.423s] Level 1:colcon.colcon_core.package_identification:_identify(src/rebot_description) by extension 'ignore_ament_install'
+[0.423s] Level 1:colcon.colcon_core.package_identification:_identify(src/rebot_description) by extensions ['colcon_pkg']
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(src/rebot_description) by extension 'colcon_pkg'
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(src/rebot_description) by extensions ['colcon_meta']
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(src/rebot_description) by extension 'colcon_meta'
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(src/rebot_description) by extensions ['ros']
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(src/rebot_description) by extension 'ros'
+[0.434s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rebot_description' with type 'ros.ament_cmake' and name 'rebot_description'
+[0.434s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_motion) by extensions ['ignore', 'ignore_ament_install']
+[0.434s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_motion) by extension 'ignore'
+[0.434s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_motion) by extension 'ignore_ament_install'
+[0.435s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_motion) by extensions ['colcon_pkg']
+[0.435s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_motion) by extension 'colcon_pkg'
+[0.435s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_motion) by extensions ['colcon_meta']
+[0.435s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_motion) by extension 'colcon_meta'
+[0.435s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_motion) by extensions ['ros']
+[0.435s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_motion) by extension 'ros'
+[0.438s] DEBUG:colcon.colcon_core.package_identification:Package 'src/robot_motion' with type 'ros.ament_cmake' and name 'robot_motion'
+[0.438s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.438s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_msgs) by extension 'ignore'
+[0.438s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_msgs) by extension 'ignore_ament_install'
+[0.438s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_msgs) by extensions ['colcon_pkg']
+[0.438s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_msgs) by extension 'colcon_pkg'
+[0.439s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_msgs) by extensions ['colcon_meta']
+[0.439s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_msgs) by extension 'colcon_meta'
+[0.439s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_msgs) by extensions ['ros']
+[0.439s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_msgs) by extension 'ros'
+[0.440s] DEBUG:colcon.colcon_core.package_identification:Package 'src/robot_msgs' with type 'ros.ament_cmake' and name 'robot_msgs'
+[0.440s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_control) by extensions ['ignore', 'ignore_ament_install']
+[0.440s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_control) by extension 'ignore'
+[0.441s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_control) by extension 'ignore_ament_install'
+[0.441s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_control) by extensions ['colcon_pkg']
+[0.441s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_control) by extension 'colcon_pkg'
+[0.441s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_control) by extensions ['colcon_meta']
+[0.441s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_control) by extension 'colcon_meta'
+[0.441s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_control) by extensions ['ros']
+[0.441s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_control) by extension 'ros'
+[0.444s] DEBUG:colcon.colcon_core.package_identification:Package 'src/test_control' with type 'ros.ament_cmake' and name 'test_control'
+[0.444s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.444s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.444s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.444s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.444s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.492s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.492s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.504s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 385 installed packages in /opt/ros/jazzy
+[0.507s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.666s] Level 5:colcon.colcon_core.verb:set package 'rebot_description' build argument 'cmake_args' from command line to 'None'
+[0.667s] Level 5:colcon.colcon_core.verb:set package 'rebot_description' build argument 'cmake_target' from command line to 'None'
+[0.667s] Level 5:colcon.colcon_core.verb:set package 'rebot_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.667s] Level 5:colcon.colcon_core.verb:set package 'rebot_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.667s] Level 5:colcon.colcon_core.verb:set package 'rebot_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.667s] Level 5:colcon.colcon_core.verb:set package 'rebot_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.667s] Level 5:colcon.colcon_core.verb:set package 'rebot_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.667s] Level 5:colcon.colcon_core.verb:set package 'rebot_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.667s] Level 5:colcon.colcon_core.verb:set package 'rebot_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.667s] DEBUG:colcon.colcon_core.verb:Building package 'rebot_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/zme/self_project/rebotArm_mujoco/build/rebot_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/zme/self_project/rebotArm_mujoco/install/rebot_description', 'merge_install': False, 'path': '/home/zme/self_project/rebotArm_mujoco/src/rebot_description', 'symlink_install': False, 'test_result_base': None}
+[0.667s] Level 5:colcon.colcon_core.verb:set package 'robot_msgs' build argument 'cmake_args' from command line to 'None'
+[0.667s] Level 5:colcon.colcon_core.verb:set package 'robot_msgs' build argument 'cmake_target' from command line to 'None'
+[0.667s] Level 5:colcon.colcon_core.verb:set package 'robot_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.667s] Level 5:colcon.colcon_core.verb:set package 'robot_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.668s] Level 5:colcon.colcon_core.verb:set package 'robot_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.668s] Level 5:colcon.colcon_core.verb:set package 'robot_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.668s] Level 5:colcon.colcon_core.verb:set package 'robot_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.668s] Level 5:colcon.colcon_core.verb:set package 'robot_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.668s] Level 5:colcon.colcon_core.verb:set package 'robot_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.668s] DEBUG:colcon.colcon_core.verb:Building package 'robot_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/zme/self_project/rebotArm_mujoco/build/robot_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/zme/self_project/rebotArm_mujoco/install/robot_msgs', 'merge_install': False, 'path': '/home/zme/self_project/rebotArm_mujoco/src/robot_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.668s] Level 5:colcon.colcon_core.verb:set package 'robot_motion' build argument 'cmake_args' from command line to 'None'
+[0.668s] Level 5:colcon.colcon_core.verb:set package 'robot_motion' build argument 'cmake_target' from command line to 'None'
+[0.668s] Level 5:colcon.colcon_core.verb:set package 'robot_motion' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.668s] Level 5:colcon.colcon_core.verb:set package 'robot_motion' build argument 'cmake_clean_cache' from command line to 'False'
+[0.668s] Level 5:colcon.colcon_core.verb:set package 'robot_motion' build argument 'cmake_clean_first' from command line to 'False'
+[0.668s] Level 5:colcon.colcon_core.verb:set package 'robot_motion' build argument 'cmake_force_configure' from command line to 'False'
+[0.669s] Level 5:colcon.colcon_core.verb:set package 'robot_motion' build argument 'ament_cmake_args' from command line to 'None'
+[0.669s] Level 5:colcon.colcon_core.verb:set package 'robot_motion' build argument 'catkin_cmake_args' from command line to 'None'
+[0.669s] Level 5:colcon.colcon_core.verb:set package 'robot_motion' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.669s] DEBUG:colcon.colcon_core.verb:Building package 'robot_motion' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/zme/self_project/rebotArm_mujoco/build/robot_motion', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/zme/self_project/rebotArm_mujoco/install/robot_motion', 'merge_install': False, 'path': '/home/zme/self_project/rebotArm_mujoco/src/robot_motion', 'symlink_install': False, 'test_result_base': None}
+[0.669s] Level 5:colcon.colcon_core.verb:set package 'test_control' build argument 'cmake_args' from command line to 'None'
+[0.669s] Level 5:colcon.colcon_core.verb:set package 'test_control' build argument 'cmake_target' from command line to 'None'
+[0.669s] Level 5:colcon.colcon_core.verb:set package 'test_control' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.670s] Level 5:colcon.colcon_core.verb:set package 'test_control' build argument 'cmake_clean_cache' from command line to 'False'
+[0.670s] Level 5:colcon.colcon_core.verb:set package 'test_control' build argument 'cmake_clean_first' from command line to 'False'
+[0.670s] Level 5:colcon.colcon_core.verb:set package 'test_control' build argument 'cmake_force_configure' from command line to 'False'
+[0.670s] Level 5:colcon.colcon_core.verb:set package 'test_control' build argument 'ament_cmake_args' from command line to 'None'
+[0.670s] Level 5:colcon.colcon_core.verb:set package 'test_control' build argument 'catkin_cmake_args' from command line to 'None'
+[0.670s] Level 5:colcon.colcon_core.verb:set package 'test_control' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.670s] DEBUG:colcon.colcon_core.verb:Building package 'test_control' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/zme/self_project/rebotArm_mujoco/build/test_control', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/zme/self_project/rebotArm_mujoco/install/test_control', 'merge_install': False, 'path': '/home/zme/self_project/rebotArm_mujoco/src/test_control', 'symlink_install': False, 'test_result_base': None}
+[0.670s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.671s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.672s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/zme/self_project/rebotArm_mujoco/src/robot_msgs' with build type 'ament_cmake'
+[0.672s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/zme/self_project/rebotArm_mujoco/src/robot_msgs'
+[0.676s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.676s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.676s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.686s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/zme/self_project/rebotArm_mujoco/src/rebot_description' with build type 'ament_cmake'
+[0.686s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/zme/self_project/rebotArm_mujoco/src/rebot_description'
+[0.687s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.687s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.704s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zme/self_project/rebotArm_mujoco/build/robot_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/zme/self_project/rebotArm_mujoco/src/robot_msgs -DCMAKE_INSTALL_PREFIX=/home/zme/self_project/rebotArm_mujoco/install/robot_msgs
+[0.713s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zme/self_project/rebotArm_mujoco/build/rebot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/zme/self_project/rebotArm_mujoco/src/rebot_description -DCMAKE_INSTALL_PREFIX=/home/zme/self_project/rebotArm_mujoco/install/rebot_description
+[2.781s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zme/self_project/rebotArm_mujoco/build/rebot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/zme/self_project/rebotArm_mujoco/src/rebot_description -DCMAKE_INSTALL_PREFIX=/home/zme/self_project/rebotArm_mujoco/install/rebot_description
+[2.784s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zme/self_project/rebotArm_mujoco/build/rebot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/zme/self_project/rebotArm_mujoco/build/rebot_description -- -j8 -l8
+[2.865s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zme/self_project/rebotArm_mujoco/build/rebot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/zme/self_project/rebotArm_mujoco/build/rebot_description -- -j8 -l8
+[2.882s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zme/self_project/rebotArm_mujoco/build/rebot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/zme/self_project/rebotArm_mujoco/build/rebot_description
+[3.108s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rebot_description)
+[3.109s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zme/self_project/rebotArm_mujoco/build/rebot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/zme/self_project/rebotArm_mujoco/build/rebot_description
+[3.115s] Level 1:colcon.colcon_core.environment:checking '/home/zme/self_project/rebotArm_mujoco/install/rebot_description' for CMake module files
+[3.117s] Level 1:colcon.colcon_core.environment:checking '/home/zme/self_project/rebotArm_mujoco/install/rebot_description' for CMake config files
+[3.118s] Level 1:colcon.colcon_core.shell:create_environment_hook('rebot_description', 'cmake_prefix_path')
+[3.119s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/hook/cmake_prefix_path.ps1'
+[3.120s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/hook/cmake_prefix_path.dsv'
+[3.121s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/hook/cmake_prefix_path.sh'
+[3.123s] Level 1:colcon.colcon_core.environment:checking '/home/zme/self_project/rebotArm_mujoco/install/rebot_description/lib'
+[3.124s] Level 1:colcon.colcon_core.environment:checking '/home/zme/self_project/rebotArm_mujoco/install/rebot_description/bin'
+[3.124s] Level 1:colcon.colcon_core.environment:checking '/home/zme/self_project/rebotArm_mujoco/install/rebot_description/lib/pkgconfig/rebot_description.pc'
+[3.124s] Level 1:colcon.colcon_core.environment:checking '/home/zme/self_project/rebotArm_mujoco/install/rebot_description/lib/python3.12/site-packages'
+[3.125s] Level 1:colcon.colcon_core.environment:checking '/home/zme/self_project/rebotArm_mujoco/install/rebot_description/bin'
+[3.126s] INFO:colcon.colcon_core.shell:Creating package script '/home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/package.ps1'
+[3.129s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/package.dsv'
+[3.130s] INFO:colcon.colcon_core.shell:Creating package script '/home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/package.sh'
+[3.131s] INFO:colcon.colcon_core.shell:Creating package script '/home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/package.bash'
+[3.133s] INFO:colcon.colcon_core.shell:Creating package script '/home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/package.zsh'
+[3.134s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/colcon-core/packages/rebot_description)
+[3.136s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rebot_description)
+[3.136s] Level 1:colcon.colcon_core.environment:checking '/home/zme/self_project/rebotArm_mujoco/install/rebot_description' for CMake module files
+[3.138s] Level 1:colcon.colcon_core.environment:checking '/home/zme/self_project/rebotArm_mujoco/install/rebot_description' for CMake config files
+[3.138s] Level 1:colcon.colcon_core.shell:create_environment_hook('rebot_description', 'cmake_prefix_path')
+[3.139s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/hook/cmake_prefix_path.ps1'
+[3.140s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/hook/cmake_prefix_path.dsv'
+[3.140s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/hook/cmake_prefix_path.sh'
+[3.141s] Level 1:colcon.colcon_core.environment:checking '/home/zme/self_project/rebotArm_mujoco/install/rebot_description/lib'
+[3.142s] Level 1:colcon.colcon_core.environment:checking '/home/zme/self_project/rebotArm_mujoco/install/rebot_description/bin'
+[3.142s] Level 1:colcon.colcon_core.environment:checking '/home/zme/self_project/rebotArm_mujoco/install/rebot_description/lib/pkgconfig/rebot_description.pc'
+[3.142s] Level 1:colcon.colcon_core.environment:checking '/home/zme/self_project/rebotArm_mujoco/install/rebot_description/lib/python3.12/site-packages'
+[3.143s] Level 1:colcon.colcon_core.environment:checking '/home/zme/self_project/rebotArm_mujoco/install/rebot_description/bin'
+[3.144s] INFO:colcon.colcon_core.shell:Creating package script '/home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/package.ps1'
+[3.147s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/package.dsv'
+[3.149s] INFO:colcon.colcon_core.shell:Creating package script '/home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/package.sh'
+[3.150s] INFO:colcon.colcon_core.shell:Creating package script '/home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/package.bash'
+[3.151s] INFO:colcon.colcon_core.shell:Creating package script '/home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/package.zsh'
+[3.152s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/colcon-core/packages/rebot_description)
+[7.864s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zme/self_project/rebotArm_mujoco/build/robot_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/zme/self_project/rebotArm_mujoco/src/robot_msgs -DCMAKE_INSTALL_PREFIX=/home/zme/self_project/rebotArm_mujoco/install/robot_msgs
+[7.865s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zme/self_project/rebotArm_mujoco/build/robot_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/zme/self_project/rebotArm_mujoco/build/robot_msgs -- -j8 -l8
+[14.402s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zme/self_project/rebotArm_mujoco/build/robot_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/zme/self_project/rebotArm_mujoco/build/robot_msgs -- -j8 -l8
+[14.405s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zme/self_project/rebotArm_mujoco/build/robot_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/zme/self_project/rebotArm_mujoco/build/robot_msgs
+[14.577s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robot_msgs)
+[14.578s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zme/self_project/rebotArm_mujoco/build/robot_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/zme/self_project/rebotArm_mujoco/build/robot_msgs
+[14.579s] Level 1:colcon.colcon_core.environment:checking '/home/zme/self_project/rebotArm_mujoco/install/robot_msgs' for CMake module files
+[14.584s] Level 1:colcon.colcon_core.environment:checking '/home/zme/self_project/rebotArm_mujoco/install/robot_msgs' for CMake config files
+[14.584s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_msgs', 'cmake_prefix_path')
+[14.585s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/hook/cmake_prefix_path.ps1'
+[14.586s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/hook/cmake_prefix_path.dsv'
+[14.586s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/hook/cmake_prefix_path.sh'
+[14.588s] Level 1:colcon.colcon_core.environment:checking '/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib'
+[14.588s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_msgs', 'ld_library_path_lib')
+[14.588s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/hook/ld_library_path_lib.ps1'
+[14.589s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/hook/ld_library_path_lib.dsv'
+[14.590s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/hook/ld_library_path_lib.sh'
+[14.590s] Level 1:colcon.colcon_core.environment:checking '/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/bin'
+[14.591s] Level 1:colcon.colcon_core.environment:checking '/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/pkgconfig/robot_msgs.pc'
+[14.591s] Level 1:colcon.colcon_core.environment:checking '/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/python3.12/site-packages'
+[14.592s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_msgs', 'pythonpath')
+[14.592s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/hook/pythonpath.ps1'
+[14.593s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/hook/pythonpath.dsv'
+[14.594s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/hook/pythonpath.sh'
+[14.596s] Level 1:colcon.colcon_core.environment:checking '/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/bin'
+[14.596s] INFO:colcon.colcon_core.shell:Creating package script '/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/package.ps1'
+[14.598s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/package.dsv'
+[14.599s] INFO:colcon.colcon_core.shell:Creating package script '/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/package.sh'
+[14.600s] INFO:colcon.colcon_core.shell:Creating package script '/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/package.bash'
+[14.601s] INFO:colcon.colcon_core.shell:Creating package script '/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/package.zsh'
+[14.602s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/colcon-core/packages/robot_msgs)
+[14.604s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robot_msgs)
+[14.604s] Level 1:colcon.colcon_core.environment:checking '/home/zme/self_project/rebotArm_mujoco/install/robot_msgs' for CMake module files
+[14.607s] Level 1:colcon.colcon_core.environment:checking '/home/zme/self_project/rebotArm_mujoco/install/robot_msgs' for CMake config files
+[14.607s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_msgs', 'cmake_prefix_path')
+[14.608s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/hook/cmake_prefix_path.ps1'
+[14.609s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/hook/cmake_prefix_path.dsv'
+[14.612s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/hook/cmake_prefix_path.sh'
+[14.616s] Level 1:colcon.colcon_core.environment:checking '/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib'
+[14.616s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_msgs', 'ld_library_path_lib')
+[14.616s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/hook/ld_library_path_lib.ps1'
+[14.617s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/hook/ld_library_path_lib.dsv'
+[14.618s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/hook/ld_library_path_lib.sh'
+[14.619s] Level 1:colcon.colcon_core.environment:checking '/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/bin'
+[14.619s] Level 1:colcon.colcon_core.environment:checking '/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/pkgconfig/robot_msgs.pc'
+[14.620s] Level 1:colcon.colcon_core.environment:checking '/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/python3.12/site-packages'
+[14.620s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_msgs', 'pythonpath')
+[14.620s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/hook/pythonpath.ps1'
+[14.621s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/hook/pythonpath.dsv'
+[14.622s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/hook/pythonpath.sh'
+[14.624s] Level 1:colcon.colcon_core.environment:checking '/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/bin'
+[14.625s] INFO:colcon.colcon_core.shell:Creating package script '/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/package.ps1'
+[14.626s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/package.dsv'
+[14.628s] INFO:colcon.colcon_core.shell:Creating package script '/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/package.sh'
+[14.629s] INFO:colcon.colcon_core.shell:Creating package script '/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/package.bash'
+[14.630s] INFO:colcon.colcon_core.shell:Creating package script '/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/package.zsh'
+[14.630s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/colcon-core/packages/robot_msgs)
+[14.631s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/zme/self_project/rebotArm_mujoco/src/robot_motion' with build type 'ament_cmake'
+[14.632s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/zme/self_project/rebotArm_mujoco/src/robot_motion'
+[14.632s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[14.632s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[14.656s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zme/self_project/rebotArm_mujoco/build/robot_motion': AMENT_PREFIX_PATH=/home/zme/self_project/rebotArm_mujoco/install/robot_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/zme/self_project/rebotArm_mujoco/install/robot_msgs:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/zme/self_project/rebotArm_mujoco/src/robot_motion -DCMAKE_INSTALL_PREFIX=/home/zme/self_project/rebotArm_mujoco/install/robot_motion
+[18.379s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zme/self_project/rebotArm_mujoco/build/robot_motion' returned '0': AMENT_PREFIX_PATH=/home/zme/self_project/rebotArm_mujoco/install/robot_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/zme/self_project/rebotArm_mujoco/install/robot_msgs:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/zme/self_project/rebotArm_mujoco/src/robot_motion -DCMAKE_INSTALL_PREFIX=/home/zme/self_project/rebotArm_mujoco/install/robot_motion
+[18.383s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zme/self_project/rebotArm_mujoco/build/robot_motion': AMENT_PREFIX_PATH=/home/zme/self_project/rebotArm_mujoco/install/robot_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/zme/self_project/rebotArm_mujoco/install/robot_msgs:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/zme/self_project/rebotArm_mujoco/build/robot_motion -- -j8 -l8
+[59.142s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zme/self_project/rebotArm_mujoco/build/robot_motion' returned '0': AMENT_PREFIX_PATH=/home/zme/self_project/rebotArm_mujoco/install/robot_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/zme/self_project/rebotArm_mujoco/install/robot_msgs:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/zme/self_project/rebotArm_mujoco/build/robot_motion -- -j8 -l8
+[59.146s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zme/self_project/rebotArm_mujoco/build/robot_motion': AMENT_PREFIX_PATH=/home/zme/self_project/rebotArm_mujoco/install/robot_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/zme/self_project/rebotArm_mujoco/install/robot_msgs:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/zme/self_project/rebotArm_mujoco/build/robot_motion
+[59.181s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robot_motion)
+[59.182s] Level 1:colcon.colcon_core.environment:checking '/home/zme/self_project/rebotArm_mujoco/install/robot_motion' for CMake module files
+[59.183s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zme/self_project/rebotArm_mujoco/build/robot_motion' returned '0': AMENT_PREFIX_PATH=/home/zme/self_project/rebotArm_mujoco/install/robot_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/zme/self_project/rebotArm_mujoco/install/robot_msgs:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/zme/self_project/rebotArm_mujoco/build/robot_motion
+[59.184s] Level 1:colcon.colcon_core.environment:checking '/home/zme/self_project/rebotArm_mujoco/install/robot_motion' for CMake config files
+[59.185s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_motion', 'cmake_prefix_path')
+[59.185s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zme/self_project/rebotArm_mujoco/install/robot_motion/share/robot_motion/hook/cmake_prefix_path.ps1'
+[59.186s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zme/self_project/rebotArm_mujoco/install/robot_motion/share/robot_motion/hook/cmake_prefix_path.dsv'
+[59.187s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zme/self_project/rebotArm_mujoco/install/robot_motion/share/robot_motion/hook/cmake_prefix_path.sh'
+[59.188s] Level 1:colcon.colcon_core.environment:checking '/home/zme/self_project/rebotArm_mujoco/install/robot_motion/lib'
+[59.188s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_motion', 'ld_library_path_lib')
+[59.189s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zme/self_project/rebotArm_mujoco/install/robot_motion/share/robot_motion/hook/ld_library_path_lib.ps1'
+[59.190s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zme/self_project/rebotArm_mujoco/install/robot_motion/share/robot_motion/hook/ld_library_path_lib.dsv'
+[59.190s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zme/self_project/rebotArm_mujoco/install/robot_motion/share/robot_motion/hook/ld_library_path_lib.sh'
+[59.192s] Level 1:colcon.colcon_core.environment:checking '/home/zme/self_project/rebotArm_mujoco/install/robot_motion/bin'
+[59.192s] Level 1:colcon.colcon_core.environment:checking '/home/zme/self_project/rebotArm_mujoco/install/robot_motion/lib/pkgconfig/robot_motion.pc'
+[59.193s] Level 1:colcon.colcon_core.environment:checking '/home/zme/self_project/rebotArm_mujoco/install/robot_motion/lib/python3.12/site-packages'
+[59.195s] Level 1:colcon.colcon_core.environment:checking '/home/zme/self_project/rebotArm_mujoco/install/robot_motion/bin'
+[59.196s] INFO:colcon.colcon_core.shell:Creating package script '/home/zme/self_project/rebotArm_mujoco/install/robot_motion/share/robot_motion/package.ps1'
+[59.198s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zme/self_project/rebotArm_mujoco/install/robot_motion/share/robot_motion/package.dsv'
+[59.199s] INFO:colcon.colcon_core.shell:Creating package script '/home/zme/self_project/rebotArm_mujoco/install/robot_motion/share/robot_motion/package.sh'
+[59.200s] INFO:colcon.colcon_core.shell:Creating package script '/home/zme/self_project/rebotArm_mujoco/install/robot_motion/share/robot_motion/package.bash'
+[59.201s] INFO:colcon.colcon_core.shell:Creating package script '/home/zme/self_project/rebotArm_mujoco/install/robot_motion/share/robot_motion/package.zsh'
+[59.201s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zme/self_project/rebotArm_mujoco/install/robot_motion/share/colcon-core/packages/robot_motion)
+[59.203s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robot_motion)
+[59.203s] Level 1:colcon.colcon_core.environment:checking '/home/zme/self_project/rebotArm_mujoco/install/robot_motion' for CMake module files
+[59.204s] Level 1:colcon.colcon_core.environment:checking '/home/zme/self_project/rebotArm_mujoco/install/robot_motion' for CMake config files
+[59.204s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_motion', 'cmake_prefix_path')
+[59.204s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zme/self_project/rebotArm_mujoco/install/robot_motion/share/robot_motion/hook/cmake_prefix_path.ps1'
+[59.205s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zme/self_project/rebotArm_mujoco/install/robot_motion/share/robot_motion/hook/cmake_prefix_path.dsv'
+[59.206s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zme/self_project/rebotArm_mujoco/install/robot_motion/share/robot_motion/hook/cmake_prefix_path.sh'
+[59.207s] Level 1:colcon.colcon_core.environment:checking '/home/zme/self_project/rebotArm_mujoco/install/robot_motion/lib'
+[59.207s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_motion', 'ld_library_path_lib')
+[59.207s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zme/self_project/rebotArm_mujoco/install/robot_motion/share/robot_motion/hook/ld_library_path_lib.ps1'
+[59.208s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zme/self_project/rebotArm_mujoco/install/robot_motion/share/robot_motion/hook/ld_library_path_lib.dsv'
+[59.209s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zme/self_project/rebotArm_mujoco/install/robot_motion/share/robot_motion/hook/ld_library_path_lib.sh'
+[59.210s] Level 1:colcon.colcon_core.environment:checking '/home/zme/self_project/rebotArm_mujoco/install/robot_motion/bin'
+[59.210s] Level 1:colcon.colcon_core.environment:checking '/home/zme/self_project/rebotArm_mujoco/install/robot_motion/lib/pkgconfig/robot_motion.pc'
+[59.210s] Level 1:colcon.colcon_core.environment:checking '/home/zme/self_project/rebotArm_mujoco/install/robot_motion/lib/python3.12/site-packages'
+[59.211s] Level 1:colcon.colcon_core.environment:checking '/home/zme/self_project/rebotArm_mujoco/install/robot_motion/bin'
+[59.212s] INFO:colcon.colcon_core.shell:Creating package script '/home/zme/self_project/rebotArm_mujoco/install/robot_motion/share/robot_motion/package.ps1'
+[59.213s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zme/self_project/rebotArm_mujoco/install/robot_motion/share/robot_motion/package.dsv'
+[59.215s] INFO:colcon.colcon_core.shell:Creating package script '/home/zme/self_project/rebotArm_mujoco/install/robot_motion/share/robot_motion/package.sh'
+[59.216s] INFO:colcon.colcon_core.shell:Creating package script '/home/zme/self_project/rebotArm_mujoco/install/robot_motion/share/robot_motion/package.bash'
+[59.217s] INFO:colcon.colcon_core.shell:Creating package script '/home/zme/self_project/rebotArm_mujoco/install/robot_motion/share/robot_motion/package.zsh'
+[59.217s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zme/self_project/rebotArm_mujoco/install/robot_motion/share/colcon-core/packages/robot_motion)
+[59.218s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/zme/self_project/rebotArm_mujoco/src/test_control' with build type 'ament_cmake'
+[59.218s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/zme/self_project/rebotArm_mujoco/src/test_control'
+[59.219s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[59.219s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[59.244s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zme/self_project/rebotArm_mujoco/build/test_control': AMENT_PREFIX_PATH=/home/zme/self_project/rebotArm_mujoco/install/robot_motion:/home/zme/self_project/rebotArm_mujoco/install/robot_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/zme/self_project/rebotArm_mujoco/install/robot_motion:/home/zme/self_project/rebotArm_mujoco/install/robot_msgs:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/zme/self_project/rebotArm_mujoco/install/robot_motion/lib:/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/zme/self_project/rebotArm_mujoco/src/test_control -DCMAKE_INSTALL_PREFIX=/home/zme/self_project/rebotArm_mujoco/install/test_control
+[62.391s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zme/self_project/rebotArm_mujoco/build/test_control' returned '0': AMENT_PREFIX_PATH=/home/zme/self_project/rebotArm_mujoco/install/robot_motion:/home/zme/self_project/rebotArm_mujoco/install/robot_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/zme/self_project/rebotArm_mujoco/install/robot_motion:/home/zme/self_project/rebotArm_mujoco/install/robot_msgs:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/zme/self_project/rebotArm_mujoco/install/robot_motion/lib:/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/zme/self_project/rebotArm_mujoco/src/test_control -DCMAKE_INSTALL_PREFIX=/home/zme/self_project/rebotArm_mujoco/install/test_control
+[62.395s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zme/self_project/rebotArm_mujoco/build/test_control': AMENT_PREFIX_PATH=/home/zme/self_project/rebotArm_mujoco/install/robot_motion:/home/zme/self_project/rebotArm_mujoco/install/robot_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/zme/self_project/rebotArm_mujoco/install/robot_motion:/home/zme/self_project/rebotArm_mujoco/install/robot_msgs:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/zme/self_project/rebotArm_mujoco/install/robot_motion/lib:/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/zme/self_project/rebotArm_mujoco/build/test_control -- -j8 -l8
+[83.071s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zme/self_project/rebotArm_mujoco/build/test_control' returned '2': AMENT_PREFIX_PATH=/home/zme/self_project/rebotArm_mujoco/install/robot_motion:/home/zme/self_project/rebotArm_mujoco/install/robot_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/zme/self_project/rebotArm_mujoco/install/robot_motion:/home/zme/self_project/rebotArm_mujoco/install/robot_msgs:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/zme/self_project/rebotArm_mujoco/install/robot_motion/lib:/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/zme/self_project/rebotArm_mujoco/build/test_control -- -j8 -l8
+[83.074s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(test_control)
+[83.075s] Level 1:colcon.colcon_core.environment:checking '/home/zme/self_project/rebotArm_mujoco/install/test_control' for CMake module files
+[83.078s] Level 1:colcon.colcon_core.environment:checking '/home/zme/self_project/rebotArm_mujoco/install/test_control' for CMake config files
+[83.079s] Level 1:colcon.colcon_core.environment:checking '/home/zme/self_project/rebotArm_mujoco/install/test_control/bin'
+[83.079s] Level 1:colcon.colcon_core.environment:checking '/home/zme/self_project/rebotArm_mujoco/install/test_control/lib/pkgconfig/test_control.pc'
+[83.080s] Level 1:colcon.colcon_core.environment:checking '/home/zme/self_project/rebotArm_mujoco/install/test_control/lib/python3.12/site-packages'
+[83.081s] Level 1:colcon.colcon_core.environment:checking '/home/zme/self_project/rebotArm_mujoco/install/test_control/bin'
+[83.082s] INFO:colcon.colcon_core.shell:Creating package script '/home/zme/self_project/rebotArm_mujoco/install/test_control/share/test_control/package.ps1'
+[83.083s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zme/self_project/rebotArm_mujoco/install/test_control/share/test_control/package.dsv'
+[83.084s] INFO:colcon.colcon_core.shell:Creating package script '/home/zme/self_project/rebotArm_mujoco/install/test_control/share/test_control/package.sh'
+[83.085s] INFO:colcon.colcon_core.shell:Creating package script '/home/zme/self_project/rebotArm_mujoco/install/test_control/share/test_control/package.bash'
+[83.086s] INFO:colcon.colcon_core.shell:Creating package script '/home/zme/self_project/rebotArm_mujoco/install/test_control/share/test_control/package.zsh'
+[83.087s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zme/self_project/rebotArm_mujoco/install/test_control/share/colcon-core/packages/test_control)
+[83.098s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[83.098s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[83.099s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '2'
+[83.099s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[83.116s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[83.116s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[83.117s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[83.151s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[83.152s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/zme/self_project/rebotArm_mujoco/install/local_setup.ps1'
+[83.155s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/zme/self_project/rebotArm_mujoco/install/_local_setup_util_ps1.py'
+[83.160s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/zme/self_project/rebotArm_mujoco/install/setup.ps1'
+[83.169s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/zme/self_project/rebotArm_mujoco/install/local_setup.sh'
+[83.171s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/zme/self_project/rebotArm_mujoco/install/_local_setup_util_sh.py'
+[83.178s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/zme/self_project/rebotArm_mujoco/install/setup.sh'
+[83.182s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/zme/self_project/rebotArm_mujoco/install/local_setup.bash'
+[83.183s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/zme/self_project/rebotArm_mujoco/install/setup.bash'
+[83.186s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/zme/self_project/rebotArm_mujoco/install/local_setup.zsh'
+[83.187s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/zme/self_project/rebotArm_mujoco/install/setup.zsh'

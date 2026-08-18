@@ -1,0 +1,8 @@
+[01m[K/home/zme/self_project/rebotArm_mujoco/src/test_control/src/test_pseudo_inverse_ik.cpp:1:10:[m[K [01;31m[Kfatal error: [m[Kik/pseudo_inverse_ik.hpp: 没有那个文件或目录
+    1 | #include [01;31m[K"ik/pseudo_inverse_ik.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/test_pseudo_inverse_ik_node.dir/build.make:76：CMakeFiles/test_pseudo_inverse_ik_node.dir/src/test_pseudo_inverse_ik.cpp.o] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:165：CMakeFiles/test_pseudo_inverse_ik_node.dir/all] 错误 2
+gmake[1]: *** 正在等待未完成的任务....
+gmake: *** [Makefile:146：all] 错误 2

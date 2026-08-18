@@ -1,0 +1,80 @@
+[01m[K/home/zme/self_project/rebotArm_mujoco/src/test_control/src/test_pseudo_inverse_ik.cpp:[m[K In constructor ‘[01m[KRobotMonitor::[01;32m[KRobotMonitor[m[K()[m[K’:
+[01m[K/home/zme/self_project/rebotArm_mujoco/src/test_control/src/test_pseudo_inverse_ik.cpp:18:41:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KPseudoInverseIK::PseudoInverseIK()[m[K’
+   18 |     RobotMonitor(): Node("robot_monitor"[01;31m[K)[m[K
+      |                                         [01;31m[K^[m[K
+In file included from [01m[K/home/zme/self_project/rebotArm_mujoco/src/test_control/src/test_pseudo_inverse_ik.cpp:1[m[K:
+[01m[K/home/zme/self_project/rebotArm_mujoco/install/robot_motion/include/ik/pseudo_inverse_ik.hpp:19:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KPseudoInverseIK::[01;32m[KPseudoInverseIK[m[K(const std::string&, const std::string&, const std::string&)[m[K’
+   19 |     [01;36m[KPseudoInverseIK[m[K(
+      |     [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/zme/self_project/rebotArm_mujoco/install/robot_motion/include/ik/pseudo_inverse_ik.hpp:19:5:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 0 provided
+[01m[K/home/zme/self_project/rebotArm_mujoco/install/robot_motion/include/ik/pseudo_inverse_ik.hpp:16:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KPseudoInverseIK::[01;32m[KPseudoInverseIK[m[K(PseudoInverseIK&&)[m[K’
+   16 | class [01;36m[KPseudoInverseIK[m[K
+      |       [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/zme/self_project/rebotArm_mujoco/install/robot_motion/include/ik/pseudo_inverse_ik.hpp:16:7:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[01m[K/home/zme/self_project/rebotArm_mujoco/src/test_control/src/test_pseudo_inverse_ik.cpp:28:79:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[KPseudoInverseIK[m[K’ and ‘[01m[KPseudoInverseIK*[m[K’)
+   28 |         pseudoInverseIK_ = new PseudoInverseIK(urdf_path, "base_link", "link6"[01;31m[K)[m[K;
+      |                                                                               [01;31m[K^[m[K
+[01m[K/home/zme/self_project/rebotArm_mujoco/install/robot_motion/include/ik/pseudo_inverse_ik.hpp:16:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KPseudoInverseIK& PseudoInverseIK::[01;32m[Koperator=[m[K(PseudoInverseIK&&)[m[K’
+   16 | class [01;36m[KPseudoInverseIK[m[K
+      |       [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/zme/self_project/rebotArm_mujoco/install/robot_motion/include/ik/pseudo_inverse_ik.hpp:16:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KPseudoInverseIK*[m[K’ to ‘[01m[KPseudoInverseIK&&[m[K’
+[01m[K/home/zme/self_project/rebotArm_mujoco/src/test_control/src/test_pseudo_inverse_ik.cpp:[m[K In member function ‘[01m[Kvoid RobotMonitor::[01;32m[KtimerCallback[m[K()[m[K’:
+[01m[K/home/zme/self_project/rebotArm_mujoco/src/test_control/src/test_pseudo_inverse_ik.cpp:68:27:[m[K [01;31m[Kerror: [m[K‘[01m[Kmsg[m[K’ was not declared in this scope
+   68 |         cmd_pub_->publish([01;31m[Kmsg[m[K);
+      |                           [01;31m[K^~~[m[K
+[01m[K/home/zme/self_project/rebotArm_mujoco/src/test_control/src/test_pseudo_inverse_ik.cpp:68:27:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+In file included from [01m[K/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/list_parameters__struct.hpp:157[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/list_parameters.hpp:7[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/copy_all_parameter_values.hpp:21[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp:175[m[K,
+                 from [01m[K/home/zme/self_project/rebotArm_mujoco/src/test_control/src/test_pseudo_inverse_ik.cpp:2[m[K:
+[01m[K/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/list_parameters_result__struct.hpp:31:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Krcl_interfaces::msg[m[K’
+   31 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/jazzy/include/service_msgs/service_msgs/msg/detail/service_event_info__struct.hpp:24[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/list_parameters__struct.hpp:268[m[K:
+[01m[K/opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.hpp:31:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kbuiltin_interfaces::msg[m[K’
+   31 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+[01m[K/opt/ros/jazzy/include/service_msgs/service_msgs/msg/detail/service_event_info__struct.hpp:35:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kservice_msgs::msg[m[K’
+   35 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/jazzy/include/statistics_msgs/statistics_msgs/msg/detail/metrics_message__struct.hpp:27[m[K,
+                 from [01m[K/opt/ros/jazzy/include/statistics_msgs/statistics_msgs/msg/metrics_message.hpp:7[m[K,
+                 from [01m[K/opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/collector/generate_statistics_message.hpp:21[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/topic_statistics/subscription_topic_statistics.hpp:23[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/subscription.hpp:50[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/any_executable.hpp:25[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executor_options.hpp:22[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executor.hpp:38[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp:176[m[K:
+[01m[K/opt/ros/jazzy/include/statistics_msgs/statistics_msgs/msg/detail/statistic_data_point__struct.hpp:31:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstatistics_msgs::msg[m[K’
+   31 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/jazzy/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__struct.hpp:24[m[K,
+                 from [01m[K/opt/ros/jazzy/include/sensor_msgs/sensor_msgs/msg/joint_state.hpp:7[m[K,
+                 from [01m[K/home/zme/self_project/rebotArm_mujoco/src/test_control/src/test_pseudo_inverse_ik.cpp:3[m[K:
+[01m[K/opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/header__struct.hpp:35:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd_msgs::msg[m[K’
+   35 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+[01m[K/opt/ros/jazzy/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__struct.hpp:35:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksensor_msgs::msg[m[K’
+   35 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+In file included from [01m[K/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg/arm_position_cmd.hpp:7[m[K,
+                 from [01m[K/home/zme/self_project/rebotArm_mujoco/src/test_control/src/test_pseudo_inverse_ik.cpp:4[m[K:
+[01m[K/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail/arm_position_cmd__struct.hpp:31:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Krobot_msgs::msg[m[K’
+   31 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/copy_all_parameter_values.hpp:27[m[K:
+[01m[K/home/zme/self_project/rebotArm_mujoco/src/test_control/src/test_pseudo_inverse_ik.cpp:[m[K In member function ‘[01m[Kvoid RobotMonitor::[01;32m[KjointStateCallback[m[K(sensor_msgs::msg::JointState_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/zme/self_project/rebotArm_mujoco/src/test_control/src/test_pseudo_inverse_ik.cpp:90:80:[m[K [01;31m[Kerror: [m[K‘[01m[Kpos[m[K’ was not declared in this scope; did you mean ‘[01m[Kpow[m[K’?
+   90 |             RCLCPP_INFO( this->get_logger(),"%s : %.4f", msg->name[i].c_str(), [01;31m[Kpos[m[K);
+      |                                                                                [01;31m[K^~~[m[K
+gmake[2]: *** [CMakeFiles/test_pseudo_inverse_ik_node.dir/build.make:76：CMakeFiles/test_pseudo_inverse_ik_node.dir/src/test_pseudo_inverse_ik.cpp.o] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:165：CMakeFiles/test_pseudo_inverse_ik_node.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

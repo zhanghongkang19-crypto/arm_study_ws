@@ -1,11 +1,12 @@
-#include "pseudo_inverse_ik.h" 
+#include "ik/pseudo_inverse_ik.hpp" 
+#include <ament_index_cpp/get_package_prefix.hpp>
  
-PseudoInverseIK(const std::string& urdf_path,const std::string& base_link,const std::string& end_effector_link)
+PseudoInverseIK::PseudoInverseIK(const std::string& urdf_path,const std::string& base_link,const std::string& end_effector_link)
 {
     std::string ros_package_path = ament_index_cpp::get_package_prefix("arm_configuration");
     std::string  configuration_path_ = ros_package_path + "/share/arm_configuration/";
-    urdf_path = configuration_path_ + urdf_path;
-	pinocchio::urdf::buildModel(urdf_path, model_);
+    configuration_path_ = configuration_path_ + urdf_path;
+	pinocchio::urdf::buildModel(configuration_path_, model_);
 	std::cout << "Model loaded. nq = " << model_.nq << ", nv = " << model_.nv << std::endl;
 
     data_ = std::make_unique<pinocchio::Data>(model_);
@@ -14,7 +15,7 @@ PseudoInverseIK(const std::string& urdf_path,const std::string& base_link,const 
     tolerance_ = 1e-6;
 }
 
-Eigen::Matrix<double,7,1>  get_fk(const Eigen::VectorXd& joint_angles, const std::string& link_name)
+Eigen::Matrix<double,7,1>  PseudoInverseIK::get_fk(const Eigen::VectorXd& joint_angles, const std::string& link_name)
 {
     pinocchio::forwardKinematics(model_, *data_, joint_angles);
     pinocchio::updateFramePlacements(model_, *data_);
@@ -28,7 +29,7 @@ Eigen::Matrix<double,7,1>  get_fk(const Eigen::VectorXd& joint_angles, const std
 }
 
 
-bool get_ik(const Eigen::VectorXd& initial_joint_angles, const Eigen::VectorXd& target_pose, 
+bool PseudoInverseIK::get_ik(Eigen::VectorXd& initial_joint_angles, const Eigen::VectorXd& target_pose, 
             const std::string& link_name,Eigen::VectorXd& result_joint_angles)
 {
     for(int i=0; i<iteration_limit_; ++i)
@@ -66,7 +67,7 @@ bool get_ik(const Eigen::VectorXd& initial_joint_angles, const Eigen::VectorXd& 
 }
 
 
-Eigen::VectorXd calc_delta_x(const Eigen::Matrix4d& cur_pose, const Eigen::Matrix4d& tar_pose)
+Eigen::VectorXd PseudoInverseIK::calc_delta_x(const Eigen::Matrix4d& cur_pose, const Eigen::Matrix4d& tar_pose)
 {
     Eigen::VectorXd twist;
     Eigen::Vector3d position_error = tar_pose.block<3, 1>(0, 3) - cur_pose.block<3, 1>(0, 3);

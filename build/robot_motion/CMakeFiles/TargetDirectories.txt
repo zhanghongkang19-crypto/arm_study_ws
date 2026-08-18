@@ -1,0 +1,10 @@
+/home/zme/self_project/rebotArm_mujoco/build/robot_motion/CMakeFiles/uninstall.dir
+/home/zme/self_project/rebotArm_mujoco/build/robot_motion/CMakeFiles/robot_motion_uninstall.dir
+/home/zme/self_project/rebotArm_mujoco/build/robot_motion/CMakeFiles/robot_motion.dir
+/home/zme/self_project/rebotArm_mujoco/build/robot_motion/CMakeFiles/test.dir
+/home/zme/self_project/rebotArm_mujoco/build/robot_motion/CMakeFiles/edit_cache.dir
+/home/zme/self_project/rebotArm_mujoco/build/robot_motion/CMakeFiles/rebuild_cache.dir
+/home/zme/self_project/rebotArm_mujoco/build/robot_motion/CMakeFiles/list_install_components.dir
+/home/zme/self_project/rebotArm_mujoco/build/robot_motion/CMakeFiles/install.dir
+/home/zme/self_project/rebotArm_mujoco/build/robot_motion/CMakeFiles/install/local.dir
+/home/zme/self_project/rebotArm_mujoco/build/robot_motion/CMakeFiles/install/strip.dir

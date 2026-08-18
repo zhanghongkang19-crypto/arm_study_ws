@@ -1,0 +1,43 @@
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+-- Found rclcpp: 28.1.21 (/opt/ros/jazzy/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+-- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 8.4.4 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+-- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found std_msgs: 5.3.8 (/opt/ros/jazzy/share/std_msgs/cmake)
+-- Found sensor_msgs: 5.3.8 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+-- Found robot_msgs: 0.0.0 (/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/cmake)
+-- Found robot_motion: 0.0.0 (/home/zme/self_project/rebotArm_mujoco/install/robot_motion/share/robot_motion/cmake)
+-- Configuring done (3.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/zme/self_project/rebotArm_mujoco/build/test_control
+[ 25%] [32mBuilding CXX object CMakeFiles/robot_monitor.dir/src/test_control.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/test_pseudo_inverse_ik_node.dir/src/test_pseudo_inverse_ik.cpp.o[0m
+[01m[K/home/zme/self_project/rebotArm_mujoco/src/test_control/src/test_pseudo_inverse_ik.cpp:1:10:[m[K [01;31m[Kfatal error: [m[Kik/pseudo_inverse_ik.hpp: 没有那个文件或目录
+    1 | #include [01;31m[K"ik/pseudo_inverse_ik.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/test_pseudo_inverse_ik_node.dir/build.make:76：CMakeFiles/test_pseudo_inverse_ik_node.dir/src/test_pseudo_inverse_ik.cpp.o] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:165：CMakeFiles/test_pseudo_inverse_ik_node.dir/all] 错误 2
+gmake[1]: *** 正在等待未完成的任务....
+[ 75%] [32m[1mLinking CXX executable robot_monitor[0m
+[ 75%] Built target robot_monitor
+gmake: *** [Makefile:146：all] 错误 2

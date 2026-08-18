@@ -1,0 +1,47 @@
+[0.023s] Invoking command in '/home/zme/self_project/rebotArm_mujoco/build/test_control': AMENT_PREFIX_PATH=/home/zme/self_project/rebotArm_mujoco/install/robot_motion:/home/zme/self_project/rebotArm_mujoco/install/robot_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/zme/self_project/rebotArm_mujoco/install/robot_motion:/home/zme/self_project/rebotArm_mujoco/install/robot_msgs:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/zme/self_project/rebotArm_mujoco/install/robot_motion/lib:/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/zme/self_project/rebotArm_mujoco/src/test_control -DCMAKE_INSTALL_PREFIX=/home/zme/self_project/rebotArm_mujoco/install/test_control
+[0.155s] -- The C compiler identification is GNU 13.3.0
+[0.299s] -- The CXX compiler identification is GNU 13.3.0
+[0.341s] -- Detecting C compiler ABI info
+[0.536s] -- Detecting C compiler ABI info - done
+[0.563s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.564s] -- Detecting C compile features
+[0.564s] -- Detecting C compile features - done
+[0.585s] -- Detecting CXX compiler ABI info
+[0.815s] -- Detecting CXX compiler ABI info - done
+[0.843s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.843s] -- Detecting CXX compile features
+[0.845s] -- Detecting CXX compile features - done
+[0.852s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[1.212s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[1.583s] -- Found rclcpp: 28.1.21 (/opt/ros/jazzy/share/rclcpp/cmake)
+[1.692s] -- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[1.735s] -- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[1.781s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.840s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.078s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[2.089s] -- Found rmw_fastrtps_cpp: 8.4.4 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[2.285s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[2.335s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[2.397s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.639s] -- Found std_msgs: 5.3.8 (/opt/ros/jazzy/share/std_msgs/cmake)
+[2.678s] -- Found sensor_msgs: 5.3.8 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+[2.806s] -- Found robot_msgs: 0.0.0 (/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/cmake)
+[2.838s] -- Found robot_motion: 0.0.0 (/home/zme/self_project/rebotArm_mujoco/install/robot_motion/share/robot_motion/cmake)
+[3.076s] -- Configuring done (3.0s)
+[3.128s] -- Generating done (0.0s)
+[3.145s] -- Build files have been written to: /home/zme/self_project/rebotArm_mujoco/build/test_control
+[3.170s] Invoked command in '/home/zme/self_project/rebotArm_mujoco/build/test_control' returned '0': AMENT_PREFIX_PATH=/home/zme/self_project/rebotArm_mujoco/install/robot_motion:/home/zme/self_project/rebotArm_mujoco/install/robot_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/zme/self_project/rebotArm_mujoco/install/robot_motion:/home/zme/self_project/rebotArm_mujoco/install/robot_msgs:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/zme/self_project/rebotArm_mujoco/install/robot_motion/lib:/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/zme/self_project/rebotArm_mujoco/src/test_control -DCMAKE_INSTALL_PREFIX=/home/zme/self_project/rebotArm_mujoco/install/test_control
+[3.174s] Invoking command in '/home/zme/self_project/rebotArm_mujoco/build/test_control': AMENT_PREFIX_PATH=/home/zme/self_project/rebotArm_mujoco/install/robot_motion:/home/zme/self_project/rebotArm_mujoco/install/robot_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/zme/self_project/rebotArm_mujoco/install/robot_motion:/home/zme/self_project/rebotArm_mujoco/install/robot_msgs:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/zme/self_project/rebotArm_mujoco/install/robot_motion/lib:/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/zme/self_project/rebotArm_mujoco/build/test_control -- -j8 -l8
+[3.274s] [ 25%] [32mBuilding CXX object CMakeFiles/robot_monitor.dir/src/test_control.cpp.o[0m
+[3.277s] [ 50%] [32mBuilding CXX object CMakeFiles/test_pseudo_inverse_ik_node.dir/src/test_pseudo_inverse_ik.cpp.o[0m
+[3.299s] [01m[K/home/zme/self_project/rebotArm_mujoco/src/test_control/src/test_pseudo_inverse_ik.cpp:1:10:[m[K [01;31m[Kfatal error: [m[Kik/pseudo_inverse_ik.hpp: 没有那个文件或目录
+[3.300s]     1 | #include [01;31m[K"ik/pseudo_inverse_ik.hpp"[m[K
+[3.301s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.301s] compilation terminated.
+[3.310s] gmake[2]: *** [CMakeFiles/test_pseudo_inverse_ik_node.dir/build.make:76：CMakeFiles/test_pseudo_inverse_ik_node.dir/src/test_pseudo_inverse_ik.cpp.o] 错误 1
+[3.314s] gmake[1]: *** [CMakeFiles/Makefile2:165：CMakeFiles/test_pseudo_inverse_ik_node.dir/all] 错误 2
+[3.314s] gmake[1]: *** 正在等待未完成的任务....
+[22.781s] [ 75%] [32m[1mLinking CXX executable robot_monitor[0m
+[23.840s] [ 75%] Built target robot_monitor
+[23.843s] gmake: *** [Makefile:146：all] 错误 2
+[23.850s] Invoked command in '/home/zme/self_project/rebotArm_mujoco/build/test_control' returned '2': AMENT_PREFIX_PATH=/home/zme/self_project/rebotArm_mujoco/install/robot_motion:/home/zme/self_project/rebotArm_mujoco/install/robot_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/zme/self_project/rebotArm_mujoco/install/robot_motion:/home/zme/self_project/rebotArm_mujoco/install/robot_msgs:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/zme/self_project/rebotArm_mujoco/install/robot_motion/lib:/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/zme/self_project/rebotArm_mujoco/build/test_control -- -j8 -l8

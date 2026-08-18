@@ -1,4 +1,4 @@
-#include "robot_motion/pseudo_inverse_ik.h"
+#include "ik/pseudo_inverse_ik.hpp"
 #include "rclcpp/rclcpp.hpp"
 #include "sensor_msgs/msg/joint_state.hpp"
 #include "robot_msgs/msg/arm_position_cmd.hpp"
@@ -15,21 +15,16 @@ namespace fs = std::filesystem;
 class RobotMonitor : public rclcpp::Node
 {
 public:
-    RobotMonitor(): Node("robot_monitor")
+    RobotMonitor(): Node("robot_monitor"), pseudoInverseIK_("reBot_B601_DM_with_gripper.urdf", "base_link", "link6")
     {
         for(int i=0;i<8;i++)
         {
             cmd[i]=0.0;
         }
 
-        std::string package_path =
-    ament_index_cpp::get_package_share_directory("robot_description");
+        // 拼接 URDF 路径
+        fs::path urdf_path ="reBot_B601_DM_with_gripper.urdf";
 
-// 拼接 URDF 路径
-fs::path urdf_path =
-    fs::path(package_path) / "urdf" / "your_robot.urdf";
-
-        pseudoInverseIK_ = new PseudoInverseIK()
         // 发布机械臂控制指令
         cmd_pub_ = this->create_publisher<robot_msgs::msg::ArmPositionCmd>( "/rebot/joint_group_cmd", 10);
         // 订阅机械臂状态
@@ -47,8 +42,29 @@ private:
     // ============================
     void timerCallback()
     {
+        Eigen::VectorXd joint_positions = Eigen::Map<Eigen::VectorXd>(joint_positions_.data(), joint_positions_.size());
+        Eigen::Matrix<double,7,1> pose = pseudoInverseIK_.get_fk(joint_positions, "link6");
+        RCLCPP_INFO(this->get_logger(),"Current pose: x: %.4f, y: %.4f, z: %.4f, qx: %.4f, qy: %.4f, qz: %.4f, qw: %.4f", pose(0), pose(1), pose(2), pose(3), pose(4), pose(5), pose(6));
+        pose(0) += 0.01; // Move 1 cm in x direction
+        Eigen::VectorXd result_joint_angles;
+        robot_msgs::msg::ArmPositionCmd msg;
+        msg.position.resize(8);
+        bool success = pseudoInverseIK_.get_ik(joint_positions, pose, "link6", result_joint_angles);
+        if(success)
+        {
+            RCLCPP_INFO(this->get_logger(),"IK solution found.");
+            for(int i=0;i<result_joint_angles.size();i++)
+            {
+                msg.position[i] = result_joint_angles[i];
+            }
+        }
+        else
+        {
+            RCLCPP_WARN(this->get_logger(),"IK solution not found.");       
+            return;
+        }
 
-       
+
 
         cmd_pub_->publish(msg);
         RCLCPP_INFO(this->get_logger(),"Publish joint command");
@@ -66,12 +82,13 @@ private:
 
         for(size_t i=0;i<msg->name.size();i++)
         {
-            double pos=0.0;
+          
             if(i < msg->position.size())
             {
-                pos=msg->position[i];
+                double pos = msg->position[i];
+                joint_positions_.push_back(pos);
             }
-            RCLCPP_INFO( this->get_logger(),"%s : %.4f", msg->name[i].c_str(), pos);
+            RCLCPP_INFO( this->get_logger(),"%s : %.4f", msg->name[i].c_str(), joint_positions_[i]);
         }
     }
 
@@ -79,6 +96,7 @@ private:
 
 private:
     double cmd[8];
+    std::vector<double> joint_positions_;
     PseudoInverseIK pseudoInverseIK_;
     rclcpp::Publisher<robot_msgs::msg::ArmPositionCmd>::SharedPtr cmd_pub_;
     rclcpp::Subscription<sensor_msgs::msg::JointState>::SharedPtr joint_state_sub_;

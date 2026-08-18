@@ -1,0 +1,793 @@
+[0.000000] (-) TimerEvent: {}
+[0.000762] (rebot_description) JobQueued: {'identifier': 'rebot_description', 'dependencies': OrderedDict()}
+[0.001038] (robot_msgs) JobQueued: {'identifier': 'robot_msgs', 'dependencies': OrderedDict()}
+[0.001434] (robot_motion) JobQueued: {'identifier': 'robot_motion', 'dependencies': OrderedDict({'robot_msgs': '/home/zme/self_project/rebotArm_mujoco/install/robot_msgs'})}
+[0.001577] (test_control) JobQueued: {'identifier': 'test_control', 'dependencies': OrderedDict({'robot_msgs': '/home/zme/self_project/rebotArm_mujoco/install/robot_msgs', 'robot_motion': '/home/zme/self_project/rebotArm_mujoco/install/robot_motion'})}
+[0.001629] (robot_msgs) JobStarted: {'identifier': 'robot_msgs'}
+[0.011837] (rebot_description) JobStarted: {'identifier': 'rebot_description'}
+[0.020390] (robot_msgs) JobProgress: {'identifier': 'robot_msgs', 'progress': 'cmake'}
+[0.023867] (robot_msgs) JobProgress: {'identifier': 'robot_msgs', 'progress': 'build'}
+[0.024225] (robot_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/zme/self_project/rebotArm_mujoco/build/robot_msgs', '--', '-j8', '-l8'], 'cwd': '/home/zme/self_project/rebotArm_mujoco/build/robot_msgs', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'CONDA_PROMPT_MODIFIER': '', 'HTTPS_PROXY': 'http://127.0.0.1:7897/', 'no_proxy': 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,::1', 'USER': 'zme', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/sdformat_vendor/share/gz', 'all_proxy': 'socks://127.0.0.1:7897/', 'XDG_SESSION_TYPE': 'wayland', 'GIT_ASKPASS': '/usr/share/code/resources/app/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/zme', 'CHROME_DESKTOP': 'code.desktop', 'CONDA_SHLVL': '0', 'TERM_PROGRAM_VERSION': '1.128.0', 'DESKTOP_SESSION': 'ubuntu', 'NO_PROXY': 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,::1', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'VSCODE_GIT_ASKPASS_MAIN': '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/usr/share/code/code', 'DBUS_STARTER_BUS_TYPE': 'session', 'SYSTEMD_EXEC_PID': '2503', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus,guid=685ff883809049c16d18d15d6a83b261', 'COLORTERM': 'truecolor', '_CE_M': '', '_CONDA_ROOT': '/home/zme/miniconda3', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'https_proxy': 'http://127.0.0.1:7897/', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'zme', 'ALL_PROXY': 'socks://127.0.0.1:7897/', 'http_proxy': 'http://127.0.0.1:7897/', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/app-gnome\\x2dsession\\x2dmanager.slice/gnome-session-manager@ubuntu.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'zme', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', '_CE_CONDA': '', 'FC_FONTATIONS': '1', 'PATH': '/home/zme/.config/Code/User/globalStorage/github.copilot-chat/debugCommand:/home/zme/.config/Code/User/globalStorage/github.copilot-chat/copilotCli:/home/zme/miniconda3/condabin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/zme-TM1701:@/tmp/.ICE-unix/2503,unix/zme-TM1701:/tmp/.ICE-unix/2503', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/8bce8bc9_c789_40d4_bc5d_78d9afcb8cd0', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'wayland', 'DISPLAY': ':0', 'LANG': 'zh_CN.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'CONDA_PREFIX_1': '', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.06RCU3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-aea9a77a82.sock', 'GNOME_TERMINAL_SERVICE': ':1.168', 'CONDA_PREFIX_2': '', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'CONDA_PYTHON_EXE': '/home/zme/miniconda3/bin/python', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'NO_AT_BRIDGE': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'CONDA_DEFAULT_ENV': '', '_CONDA_EXE': '/home/zme/miniconda3/bin/conda', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/zme/self_project/rebotArm_mujoco/build/robot_msgs', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'COPILOT_DEBUG_NONCE': 'e49f91454af2fbacc6dd69ee2b739470', 'CONDA_EXE': '/home/zme/miniconda3/bin/conda', 'DBUS_STARTER_ADDRESS': 'unix:path=/run/user/1000/bus,guid=685ff883809049c16d18d15d6a83b261', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'HTTP_PROXY': 'http://127.0.0.1:7897/', 'CONDA_PREFIX': '', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.032390] (rebot_description) JobProgress: {'identifier': 'rebot_description', 'progress': 'cmake'}
+[0.033411] (rebot_description) JobProgress: {'identifier': 'rebot_description', 'progress': 'build'}
+[0.034171] (rebot_description) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/zme/self_project/rebotArm_mujoco/build/rebot_description', '--', '-j8', '-l8'], 'cwd': '/home/zme/self_project/rebotArm_mujoco/build/rebot_description', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'CONDA_PROMPT_MODIFIER': '', 'HTTPS_PROXY': 'http://127.0.0.1:7897/', 'no_proxy': 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,::1', 'USER': 'zme', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/sdformat_vendor/share/gz', 'all_proxy': 'socks://127.0.0.1:7897/', 'XDG_SESSION_TYPE': 'wayland', 'GIT_ASKPASS': '/usr/share/code/resources/app/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/zme', 'CHROME_DESKTOP': 'code.desktop', 'CONDA_SHLVL': '0', 'TERM_PROGRAM_VERSION': '1.128.0', 'DESKTOP_SESSION': 'ubuntu', 'NO_PROXY': 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,::1', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'VSCODE_GIT_ASKPASS_MAIN': '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/usr/share/code/code', 'DBUS_STARTER_BUS_TYPE': 'session', 'SYSTEMD_EXEC_PID': '2503', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus,guid=685ff883809049c16d18d15d6a83b261', 'COLORTERM': 'truecolor', '_CE_M': '', '_CONDA_ROOT': '/home/zme/miniconda3', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'https_proxy': 'http://127.0.0.1:7897/', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'zme', 'ALL_PROXY': 'socks://127.0.0.1:7897/', 'http_proxy': 'http://127.0.0.1:7897/', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/app-gnome\\x2dsession\\x2dmanager.slice/gnome-session-manager@ubuntu.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'zme', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', '_CE_CONDA': '', 'FC_FONTATIONS': '1', 'PATH': '/home/zme/.config/Code/User/globalStorage/github.copilot-chat/debugCommand:/home/zme/.config/Code/User/globalStorage/github.copilot-chat/copilotCli:/home/zme/miniconda3/condabin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/zme-TM1701:@/tmp/.ICE-unix/2503,unix/zme-TM1701:/tmp/.ICE-unix/2503', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/8bce8bc9_c789_40d4_bc5d_78d9afcb8cd0', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'wayland', 'DISPLAY': ':0', 'LANG': 'zh_CN.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'CONDA_PREFIX_1': '', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.06RCU3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-aea9a77a82.sock', 'GNOME_TERMINAL_SERVICE': ':1.168', 'CONDA_PREFIX_2': '', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'CONDA_PYTHON_EXE': '/home/zme/miniconda3/bin/python', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'NO_AT_BRIDGE': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'CONDA_DEFAULT_ENV': '', '_CONDA_EXE': '/home/zme/miniconda3/bin/conda', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/zme/self_project/rebotArm_mujoco/build/rebot_description', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'COPILOT_DEBUG_NONCE': 'e49f91454af2fbacc6dd69ee2b739470', 'CONDA_EXE': '/home/zme/miniconda3/bin/conda', 'DBUS_STARTER_ADDRESS': 'unix:path=/run/user/1000/bus,guid=685ff883809049c16d18d15d6a83b261', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'HTTP_PROXY': 'http://127.0.0.1:7897/', 'CONDA_PREFIX': '', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.101351] (-) TimerEvent: {}
+[0.120704] (rebot_description) CommandEnded: {'returncode': 0}
+[0.122816] (rebot_description) JobProgress: {'identifier': 'rebot_description', 'progress': 'install'}
+[0.134668] (robot_msgs) StdoutLine: {'line': b'[  2%] Built target robot_msgs__rs\n'}
+[0.148748] (rebot_description) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/zme/self_project/rebotArm_mujoco/build/rebot_description'], 'cwd': '/home/zme/self_project/rebotArm_mujoco/build/rebot_description', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'CONDA_PROMPT_MODIFIER': '', 'HTTPS_PROXY': 'http://127.0.0.1:7897/', 'no_proxy': 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,::1', 'USER': 'zme', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/sdformat_vendor/share/gz', 'all_proxy': 'socks://127.0.0.1:7897/', 'XDG_SESSION_TYPE': 'wayland', 'GIT_ASKPASS': '/usr/share/code/resources/app/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/zme', 'CHROME_DESKTOP': 'code.desktop', 'CONDA_SHLVL': '0', 'TERM_PROGRAM_VERSION': '1.128.0', 'DESKTOP_SESSION': 'ubuntu', 'NO_PROXY': 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,::1', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'VSCODE_GIT_ASKPASS_MAIN': '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/usr/share/code/code', 'DBUS_STARTER_BUS_TYPE': 'session', 'SYSTEMD_EXEC_PID': '2503', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus,guid=685ff883809049c16d18d15d6a83b261', 'COLORTERM': 'truecolor', '_CE_M': '', '_CONDA_ROOT': '/home/zme/miniconda3', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'https_proxy': 'http://127.0.0.1:7897/', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'zme', 'ALL_PROXY': 'socks://127.0.0.1:7897/', 'http_proxy': 'http://127.0.0.1:7897/', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/app-gnome\\x2dsession\\x2dmanager.slice/gnome-session-manager@ubuntu.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'zme', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', '_CE_CONDA': '', 'FC_FONTATIONS': '1', 'PATH': '/home/zme/.config/Code/User/globalStorage/github.copilot-chat/debugCommand:/home/zme/.config/Code/User/globalStorage/github.copilot-chat/copilotCli:/home/zme/miniconda3/condabin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/zme-TM1701:@/tmp/.ICE-unix/2503,unix/zme-TM1701:/tmp/.ICE-unix/2503', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/8bce8bc9_c789_40d4_bc5d_78d9afcb8cd0', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'wayland', 'DISPLAY': ':0', 'LANG': 'zh_CN.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'CONDA_PREFIX_1': '', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.06RCU3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-aea9a77a82.sock', 'GNOME_TERMINAL_SERVICE': ':1.168', 'CONDA_PREFIX_2': '', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'CONDA_PYTHON_EXE': '/home/zme/miniconda3/bin/python', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'NO_AT_BRIDGE': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'CONDA_DEFAULT_ENV': '', '_CONDA_EXE': '/home/zme/miniconda3/bin/conda', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/zme/self_project/rebotArm_mujoco/build/rebot_description', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'COPILOT_DEBUG_NONCE': 'e49f91454af2fbacc6dd69ee2b739470', 'CONDA_EXE': '/home/zme/miniconda3/bin/conda', 'DBUS_STARTER_ADDRESS': 'unix:path=/run/user/1000/bus,guid=685ff883809049c16d18d15d6a83b261', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'HTTP_PROXY': 'http://127.0.0.1:7897/', 'CONDA_PREFIX': '', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.152773] (robot_msgs) StdoutLine: {'line': b'[  5%] Built target robot_msgs__rosidl_generator_type_description\n'}
+[0.164378] (robot_msgs) StdoutLine: {'line': b'[  5%] Built target ament_cmake_python_copy_robot_msgs\n'}
+[0.168447] (rebot_description) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.168857] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/lib/rebot_description/arm_mujoco_node.py\n'}
+[0.169573] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/urdf\n'}
+[0.170626] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/urdf/reBot-DevArm_fixend.urdf\n'}
+[0.171383] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/urdf/reBot_B601_DM_with_gripper.xml\n'}
+[0.171787] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/urdf/00-arm-rs_asm-v3.urdf\n'}
+[0.172109] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/urdf/meshes_b601_gripper\n'}
+[0.172526] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/urdf/meshes_b601_gripper/link3.STL\n'}
+[0.172800] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/urdf/meshes_b601_gripper/link1.STL\n'}
+[0.173062] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/urdf/meshes_b601_gripper/link2.STL\n'}
+[0.173955] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/urdf/meshes_b601_gripper/link4.STL\n'}
+[0.174510] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/urdf/meshes_b601_gripper/gripper_link.STL\n'}
+[0.175038] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/urdf/meshes_b601_gripper/link5.STL\n'}
+[0.175614] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/urdf/meshes_b601_gripper/link6.STL\n'}
+[0.176420] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/urdf/meshes_b601_gripper/base_link.STL\n'}
+[0.176719] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/urdf/meshes_b601_gripper/gripper_left.STL\n'}
+[0.177909] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/urdf/meshes_b601_gripper/gripper_right.STL\n'}
+[0.181398] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/urdf/meshes\n'}
+[0.181613] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/urdf/meshes/link5.stl\n'}
+[0.181796] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/urdf/meshes/link4.stl\n'}
+[0.181969] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/urdf/meshes/end_link.stl\n'}
+[0.182140] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/urdf/meshes/link1.stl\n'}
+[0.182846] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/urdf/meshes/base_link.stl\n'}
+[0.183034] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/urdf/meshes/link2.stl\n'}
+[0.183216] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/urdf/meshes/link6.stl\n'}
+[0.183416] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/urdf/meshes/link3.stl\n'}
+[0.183603] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/urdf/reBot_B601_DM_with_gripper.urdf\n'}
+[0.183800] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/urdf/meshes_rs\n'}
+[0.183991] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/urdf/meshes_rs/cnc_right.STL\n'}
+[0.184176] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/urdf/meshes_rs/link3.STL\n'}
+[0.184364] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/urdf/meshes_rs/gripper_end.STL\n'}
+[0.184538] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/urdf/meshes_rs/motor_2_3.STL\n'}
+[0.184727] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/urdf/meshes_rs/pla3_black.STL\n'}
+[0.184902] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/urdf/meshes_rs/cnc_left.STL\n'}
+[0.185090] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/urdf/meshes_rs/link1.STL\n'}
+[0.189349] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/urdf/meshes_rs/link2.STL\n'}
+[0.192686] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/urdf/meshes_rs/link4.STL\n'}
+[0.192940] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/urdf/meshes_rs/pla2_black.STL\n'}
+[0.193190] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/urdf/meshes_rs/pla_left.STL\n'}
+[0.193579] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/urdf/meshes_rs/link5.STL\n'}
+[0.193850] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/urdf/meshes_rs/link6.STL\n'}
+[0.194117] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/urdf/meshes_rs/pla3_green.STL\n'}
+[0.194398] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/urdf/meshes_rs/motor_4.STL\n'}
+[0.195488] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/urdf/meshes_rs/base_link.STL\n'}
+[0.197841] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/urdf/meshes_rs/pla7_green.STL\n'}
+[0.198595] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/urdf/meshes_rs/motor_5.STL\n'}
+[0.200324] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/urdf/meshes_rs/cnc3.STL\n'}
+[0.201791] (-) TimerEvent: {}
+[0.201987] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/urdf/meshes_rs/motor_6.STL\n'}
+[0.202206] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/urdf/meshes_rs/pla2_green.STL\n'}
+[0.202405] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/urdf/meshes_rs/cnc4.STL\n'}
+[0.202578] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/urdf/meshes_rs/motor_7.STL\n'}
+[0.202737] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/urdf/meshes_rs/cnc5.STL\n'}
+[0.202898] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/urdf/meshes_rs/pla5_green.STL\n'}
+[0.203071] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/urdf/meshes_rs/gripper_left.STL\n'}
+[0.203233] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/urdf/meshes_rs/cnc7.STL\n'}
+[0.203418] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/urdf/meshes_rs/pla_right.STL\n'}
+[0.204996] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/urdf/meshes_rs/gripper_right.STL\n'}
+[0.210246] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/urdf/meshes_rs/cnc2.STL\n'}
+[0.210482] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/urdf/reBot_DevArm_fixend.xml\n'}
+[0.210670] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/ament_index/resource_index/package_run_dependencies/rebot_description\n'}
+[0.210880] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/ament_index/resource_index/parent_prefix_path/rebot_description\n'}
+[0.211078] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/environment/ament_prefix_path.sh\n'}
+[0.211275] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/environment/ament_prefix_path.dsv\n'}
+[0.220567] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/environment/path.sh\n'}
+[0.220827] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/environment/path.dsv\n'}
+[0.221046] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/local_setup.bash\n'}
+[0.221270] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/local_setup.sh\n'}
+[0.221507] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/local_setup.zsh\n'}
+[0.221725] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/local_setup.dsv\n'}
+[0.221927] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/package.dsv\n'}
+[0.222126] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/ament_index/resource_index/packages/rebot_description\n'}
+[0.222369] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/cmake/rebot_descriptionConfig.cmake\n'}
+[0.222571] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/cmake/rebot_descriptionConfig-version.cmake\n'}
+[0.222769] (rebot_description) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/rebot_description/share/rebot_description/package.xml\n'}
+[0.222984] (rebot_description) CommandEnded: {'returncode': 0}
+[0.227654] (robot_msgs) StdoutLine: {'line': b'[  8%] Built target robot_msgs__cpp\n'}
+[0.232078] (robot_msgs) StdoutLine: {'line': b'[ 22%] Built target robot_msgs__rosidl_generator_c\n'}
+[0.260461] (rebot_description) JobEnded: {'identifier': 'rebot_description', 'rc': 0}
+[0.289656] (robot_msgs) StdoutLine: {'line': b'[ 31%] Built target robot_msgs__rosidl_typesupport_c\n'}
+[0.299674] (robot_msgs) StdoutLine: {'line': b'[ 40%] Built target robot_msgs__rosidl_typesupport_cpp\n'}
+[0.301887] (-) TimerEvent: {}
+[0.306433] (robot_msgs) StdoutLine: {'line': b'[ 48%] Built target robot_msgs__rosidl_typesupport_introspection_c\n'}
+[0.311247] (robot_msgs) StdoutLine: {'line': b'[ 57%] Built target robot_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[0.325122] (robot_msgs) StdoutLine: {'line': b'[ 74%] Built target robot_msgs__rosidl_typesupport_fastrtps_c\n'}
+[0.326567] (robot_msgs) StdoutLine: {'line': b'[ 74%] Built target robot_msgs__rosidl_typesupport_introspection_cpp\n'}
+[0.371165] (robot_msgs) StdoutLine: {'line': b'[ 74%] Built target robot_msgs\n'}
+[0.403316] (-) TimerEvent: {}
+[0.426314] (robot_msgs) StdoutLine: {'line': b'[ 77%] Built target robot_msgs__py\n'}
+[0.487577] (robot_msgs) StdoutLine: {'line': b'[ 82%] Built target robot_msgs__rosidl_generator_py\n'}
+[0.503441] (-) TimerEvent: {}
+[0.559385] (robot_msgs) StdoutLine: {'line': b'[ 88%] Built target robot_msgs_s__rosidl_typesupport_fastrtps_c\n'}
+[0.568327] (robot_msgs) StdoutLine: {'line': b'[ 94%] Built target robot_msgs_s__rosidl_typesupport_c\n'}
+[0.573225] (robot_msgs) StdoutLine: {'line': b'[100%] Built target robot_msgs_s__rosidl_typesupport_introspection_c\n'}
+[0.603871] (-) TimerEvent: {}
+[0.704341] (-) TimerEvent: {}
+[0.766914] (robot_msgs) StdoutLine: {'line': b'running egg_info\n'}
+[0.804441] (-) TimerEvent: {}
+[0.810888] (robot_msgs) StdoutLine: {'line': b'writing robot_msgs.egg-info/PKG-INFO\n'}
+[0.811409] (robot_msgs) StdoutLine: {'line': b'writing dependency_links to robot_msgs.egg-info/dependency_links.txt\n'}
+[0.811706] (robot_msgs) StdoutLine: {'line': b'writing top-level names to robot_msgs.egg-info/top_level.txt\n'}
+[0.904582] (-) TimerEvent: {}
+[0.959142] (robot_msgs) StdoutLine: {'line': b"reading manifest file 'robot_msgs.egg-info/SOURCES.txt'\n"}
+[0.960909] (robot_msgs) StdoutLine: {'line': b"writing manifest file 'robot_msgs.egg-info/SOURCES.txt'\n"}
+[1.004712] (-) TimerEvent: {}
+[1.031913] (robot_msgs) StdoutLine: {'line': b'[100%] Built target ament_cmake_python_build_robot_msgs_egg\n'}
+[1.057422] (robot_msgs) CommandEnded: {'returncode': 0}
+[1.058903] (robot_msgs) JobProgress: {'identifier': 'robot_msgs', 'progress': 'install'}
+[1.059948] (robot_msgs) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/zme/self_project/rebotArm_mujoco/build/robot_msgs'], 'cwd': '/home/zme/self_project/rebotArm_mujoco/build/robot_msgs', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'CONDA_PROMPT_MODIFIER': '', 'HTTPS_PROXY': 'http://127.0.0.1:7897/', 'no_proxy': 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,::1', 'USER': 'zme', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/sdformat_vendor/share/gz', 'all_proxy': 'socks://127.0.0.1:7897/', 'XDG_SESSION_TYPE': 'wayland', 'GIT_ASKPASS': '/usr/share/code/resources/app/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/zme', 'CHROME_DESKTOP': 'code.desktop', 'CONDA_SHLVL': '0', 'TERM_PROGRAM_VERSION': '1.128.0', 'DESKTOP_SESSION': 'ubuntu', 'NO_PROXY': 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,::1', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'VSCODE_GIT_ASKPASS_MAIN': '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/usr/share/code/code', 'DBUS_STARTER_BUS_TYPE': 'session', 'SYSTEMD_EXEC_PID': '2503', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus,guid=685ff883809049c16d18d15d6a83b261', 'COLORTERM': 'truecolor', '_CE_M': '', '_CONDA_ROOT': '/home/zme/miniconda3', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'https_proxy': 'http://127.0.0.1:7897/', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'zme', 'ALL_PROXY': 'socks://127.0.0.1:7897/', 'http_proxy': 'http://127.0.0.1:7897/', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/app-gnome\\x2dsession\\x2dmanager.slice/gnome-session-manager@ubuntu.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'zme', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', '_CE_CONDA': '', 'FC_FONTATIONS': '1', 'PATH': '/home/zme/.config/Code/User/globalStorage/github.copilot-chat/debugCommand:/home/zme/.config/Code/User/globalStorage/github.copilot-chat/copilotCli:/home/zme/miniconda3/condabin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/zme-TM1701:@/tmp/.ICE-unix/2503,unix/zme-TM1701:/tmp/.ICE-unix/2503', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/8bce8bc9_c789_40d4_bc5d_78d9afcb8cd0', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'wayland', 'DISPLAY': ':0', 'LANG': 'zh_CN.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'CONDA_PREFIX_1': '', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.06RCU3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-aea9a77a82.sock', 'GNOME_TERMINAL_SERVICE': ':1.168', 'CONDA_PREFIX_2': '', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'CONDA_PYTHON_EXE': '/home/zme/miniconda3/bin/python', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'NO_AT_BRIDGE': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'CONDA_DEFAULT_ENV': '', '_CONDA_EXE': '/home/zme/miniconda3/bin/conda', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/zme/self_project/rebotArm_mujoco/build/robot_msgs', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'COPILOT_DEBUG_NONCE': 'e49f91454af2fbacc6dd69ee2b739470', 'CONDA_EXE': '/home/zme/miniconda3/bin/conda', 'DBUS_STARTER_ADDRESS': 'unix:path=/run/user/1000/bus,guid=685ff883809049c16d18d15d6a83b261', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'HTTP_PROXY': 'http://127.0.0.1:7897/', 'CONDA_PREFIX': '', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[1.075865] (robot_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[1.076322] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/ament_index/resource_index/rosidl_interfaces/robot_msgs\n'}
+[1.076542] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/msg/ArmPositionCmd.json\n'}
+[1.076898] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs\n'}
+[1.077157] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg\n'}
+[1.077403] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[1.077667] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg/arm_position_cmd.h\n'}
+[1.077919] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail\n'}
+[1.078284] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail/arm_position_cmd__functions.c\n'}
+[1.078608] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail/arm_position_cmd__struct.h\n'}
+[1.078953] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail/arm_position_cmd__description.c\n'}
+[1.079458] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail/arm_position_cmd__type_support.h\n'}
+[1.079767] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail/arm_position_cmd__functions.h\n'}
+[1.080097] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail/arm_position_cmd__type_support.c\n'}
+[1.080506] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/environment/library_path.sh\n'}
+[1.080834] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/environment/library_path.dsv\n'}
+[1.081128] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/librobot_msgs__rosidl_generator_c.so\n'}
+[1.081751] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs\n'}
+[1.082303] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg\n'}
+[1.082780] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[1.083192] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail\n'}
+[1.083637] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail/arm_position_cmd__rosidl_typesupport_fastrtps_c.h\n'}
+[1.083985] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/librobot_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[1.084314] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs\n'}
+[1.084567] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg\n'}
+[1.084836] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[1.085045] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail\n'}
+[1.085360] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail/arm_position_cmd__rosidl_typesupport_introspection_c.h\n'}
+[1.085707] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail/arm_position_cmd__type_support.c\n'}
+[1.085968] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/librobot_msgs__rosidl_typesupport_introspection_c.so\n'}
+[1.086205] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/librobot_msgs__rosidl_typesupport_c.so\n'}
+[1.086440] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs\n'}
+[1.086658] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg\n'}
+[1.086861] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[1.087050] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg/arm_position_cmd.hpp\n'}
+[1.087232] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail\n'}
+[1.087806] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail/arm_position_cmd__traits.hpp\n'}
+[1.088011] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail/arm_position_cmd__struct.hpp\n'}
+[1.088214] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail/arm_position_cmd__type_support.hpp\n'}
+[1.088435] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail/arm_position_cmd__builder.hpp\n'}
+[1.088637] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs\n'}
+[1.088838] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg\n'}
+[1.089046] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[1.089253] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail\n'}
+[1.089478] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail/dds_fastrtps\n'}
+[1.089685] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail/arm_position_cmd__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.089890] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/librobot_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[1.090098] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs\n'}
+[1.090305] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg\n'}
+[1.090518] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail\n'}
+[1.090709] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail/arm_position_cmd__type_support.cpp\n'}
+[1.090900] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail/arm_position_cmd__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.091099] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/librobot_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[1.091303] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/librobot_msgs__rosidl_typesupport_cpp.so\n'}
+[1.091493] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/environment/pythonpath.sh\n'}
+[1.091707] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/environment/pythonpath.dsv\n'}
+[1.091903] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/python3.12/site-packages/robot_msgs-0.0.0-py3.12.egg-info\n'}
+[1.092093] (robot_msgs) StdoutLine: {'line': b'-- Installing: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/python3.12/site-packages/robot_msgs-0.0.0-py3.12.egg-info/PKG-INFO\n'}
+[1.092292] (robot_msgs) StdoutLine: {'line': b'-- Installing: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/python3.12/site-packages/robot_msgs-0.0.0-py3.12.egg-info/top_level.txt\n'}
+[1.092491] (robot_msgs) StdoutLine: {'line': b'-- Installing: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/python3.12/site-packages/robot_msgs-0.0.0-py3.12.egg-info/dependency_links.txt\n'}
+[1.092683] (robot_msgs) StdoutLine: {'line': b'-- Installing: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/python3.12/site-packages/robot_msgs-0.0.0-py3.12.egg-info/SOURCES.txt\n'}
+[1.092873] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/python3.12/site-packages/robot_msgs\n'}
+[1.093069] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/python3.12/site-packages/robot_msgs/_robot_msgs_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[1.093272] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/python3.12/site-packages/robot_msgs/__init__.py\n'}
+[1.093463] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/python3.12/site-packages/robot_msgs/robot_msgs_s__rosidl_typesupport_c.so\n'}
+[1.093660] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/python3.12/site-packages/robot_msgs/robot_msgs_s__rosidl_typesupport_fastrtps_c.so\n'}
+[1.093850] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/python3.12/site-packages/robot_msgs/_robot_msgs_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[1.094039] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/python3.12/site-packages/robot_msgs/msg\n'}
+[1.094231] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/python3.12/site-packages/robot_msgs/msg/__init__.py\n'}
+[1.094444] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/python3.12/site-packages/robot_msgs/msg/_arm_position_cmd.py\n'}
+[1.094638] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/python3.12/site-packages/robot_msgs/msg/_arm_position_cmd_s.c\n'}
+[1.094833] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/python3.12/site-packages/robot_msgs/robot_msgs_s__rosidl_typesupport_introspection_c.so\n'}
+[1.095035] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/python3.12/site-packages/robot_msgs/_robot_msgs_s.ep.rosidl_typesupport_c.c\n'}
+[1.104822] (-) TimerEvent: {}
+[1.161003] (robot_msgs) StdoutLine: {'line': b"Listing '/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/python3.12/site-packages/robot_msgs'...\n"}
+[1.161605] (robot_msgs) StdoutLine: {'line': b"Listing '/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/python3.12/site-packages/robot_msgs/msg'...\n"}
+[1.177516] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/python3.12/site-packages/robot_msgs/robot_msgs_s__rosidl_typesupport_fastrtps_c.so\n'}
+[1.178379] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/python3.12/site-packages/robot_msgs/robot_msgs_s__rosidl_typesupport_introspection_c.so\n'}
+[1.179368] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/python3.12/site-packages/robot_msgs/robot_msgs_s__rosidl_typesupport_c.so\n'}
+[1.180284] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/librobot_msgs__rosidl_generator_py.so\n'}
+[1.180749] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/ament_index/resource_index/rust_packages/robot_msgs\n'}
+[1.181278] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/rust\n'}
+[1.181846] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/rust/Cargo.toml\n'}
+[1.182225] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/rust/src\n'}
+[1.182611] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/rust/src/msg.rs\n'}
+[1.182863] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/rust/src/msg\n'}
+[1.183231] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/rust/src/msg/rmw.rs\n'}
+[1.183526] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/rust/src/lib.rs\n'}
+[1.183816] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/rust/build.rs\n'}
+[1.184090] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/msg/ArmPositionCmd.idl\n'}
+[1.184351] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/msg/ArmPositionCmd.msg\n'}
+[1.184597] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/ament_index/resource_index/package_run_dependencies/robot_msgs\n'}
+[1.184836] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/ament_index/resource_index/parent_prefix_path/robot_msgs\n'}
+[1.185106] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/environment/ament_prefix_path.sh\n'}
+[1.185550] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/environment/ament_prefix_path.dsv\n'}
+[1.185797] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/environment/path.sh\n'}
+[1.186019] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/environment/path.dsv\n'}
+[1.186223] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/local_setup.bash\n'}
+[1.186445] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/local_setup.sh\n'}
+[1.186654] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/local_setup.zsh\n'}
+[1.186857] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/local_setup.dsv\n'}
+[1.187070] (robot_msgs) StdoutLine: {'line': b'-- Installing: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/package.dsv\n'}
+[1.187586] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/ament_index/resource_index/packages/robot_msgs\n'}
+[1.187874] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/cmake/export_robot_msgs__rosidl_generator_cExport.cmake\n'}
+[1.188192] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/cmake/export_robot_msgs__rosidl_generator_cExport-noconfig.cmake\n'}
+[1.188448] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/cmake/export_robot_msgs__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[1.188668] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/cmake/export_robot_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[1.188909] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/cmake/robot_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[1.189140] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/cmake/robot_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[1.189427] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/cmake/robot_msgs__rosidl_typesupport_cExport.cmake\n'}
+[1.189679] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/cmake/robot_msgs__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[1.189924] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/cmake/export_robot_msgs__rosidl_generator_cppExport.cmake\n'}
+[1.190169] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/cmake/export_robot_msgs__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[1.190436] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/cmake/export_robot_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[1.190682] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/cmake/robot_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[1.190936] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/cmake/robot_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[1.191306] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/cmake/robot_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[1.191917] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/cmake/robot_msgs__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[1.193129] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/cmake/export_robot_msgs__rosidl_generator_pyExport.cmake\n'}
+[1.194394] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/cmake/export_robot_msgs__rosidl_generator_pyExport-noconfig.cmake\n'}
+[1.195078] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[1.195426] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[1.195867] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[1.196728] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[1.197047] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[1.197433] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[1.197859] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[1.199672] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/cmake/rosidl_cmake_aggregate_target-extras.cmake\n'}
+[1.200096] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/cmake/robot_msgsConfig.cmake\n'}
+[1.201302] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/cmake/robot_msgsConfig-version.cmake\n'}
+[1.201573] (robot_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/package.xml\n'}
+[1.201830] (robot_msgs) CommandEnded: {'returncode': 0}
+[1.205740] (-) TimerEvent: {}
+[1.241462] (robot_msgs) JobEnded: {'identifier': 'robot_msgs', 'rc': 0}
+[1.244217] (robot_motion) JobStarted: {'identifier': 'robot_motion'}
+[1.259690] (robot_motion) JobProgress: {'identifier': 'robot_motion', 'progress': 'cmake'}
+[1.260931] (robot_motion) JobProgress: {'identifier': 'robot_motion', 'progress': 'build'}
+[1.262034] (robot_motion) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/zme/self_project/rebotArm_mujoco/build/robot_motion', '--', '-j8', '-l8'], 'cwd': '/home/zme/self_project/rebotArm_mujoco/build/robot_motion', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'CONDA_PROMPT_MODIFIER': '', 'HTTPS_PROXY': 'http://127.0.0.1:7897/', 'no_proxy': 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,::1', 'USER': 'zme', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/sdformat_vendor/share/gz', 'all_proxy': 'socks://127.0.0.1:7897/', 'XDG_SESSION_TYPE': 'wayland', 'GIT_ASKPASS': '/usr/share/code/resources/app/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/zme', 'CHROME_DESKTOP': 'code.desktop', 'CONDA_SHLVL': '0', 'TERM_PROGRAM_VERSION': '1.128.0', 'DESKTOP_SESSION': 'ubuntu', 'NO_PROXY': 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,::1', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'VSCODE_GIT_ASKPASS_MAIN': '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/usr/share/code/code', 'DBUS_STARTER_BUS_TYPE': 'session', 'SYSTEMD_EXEC_PID': '2503', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus,guid=685ff883809049c16d18d15d6a83b261', 'COLORTERM': 'truecolor', '_CE_M': '', '_CONDA_ROOT': '/home/zme/miniconda3', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'https_proxy': 'http://127.0.0.1:7897/', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'zme', 'ALL_PROXY': 'socks://127.0.0.1:7897/', 'http_proxy': 'http://127.0.0.1:7897/', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/app-gnome\\x2dsession\\x2dmanager.slice/gnome-session-manager@ubuntu.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'zme', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', '_CE_CONDA': '', 'FC_FONTATIONS': '1', 'PATH': '/home/zme/.config/Code/User/globalStorage/github.copilot-chat/debugCommand:/home/zme/.config/Code/User/globalStorage/github.copilot-chat/copilotCli:/home/zme/miniconda3/condabin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/zme-TM1701:@/tmp/.ICE-unix/2503,unix/zme-TM1701:/tmp/.ICE-unix/2503', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/8bce8bc9_c789_40d4_bc5d_78d9afcb8cd0', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'wayland', 'DISPLAY': ':0', 'LANG': 'zh_CN.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'CONDA_PREFIX_1': '', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.06RCU3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-aea9a77a82.sock', 'GNOME_TERMINAL_SERVICE': ':1.168', 'CONDA_PREFIX_2': '', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/zme/self_project/rebotArm_mujoco/install/robot_msgs:/opt/ros/jazzy', 'CONDA_PYTHON_EXE': '/home/zme/miniconda3/bin/python', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'NO_AT_BRIDGE': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'CONDA_DEFAULT_ENV': '', '_CONDA_EXE': '/home/zme/miniconda3/bin/conda', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/zme/self_project/rebotArm_mujoco/build/robot_motion', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'COPILOT_DEBUG_NONCE': 'e49f91454af2fbacc6dd69ee2b739470', 'CONDA_EXE': '/home/zme/miniconda3/bin/conda', 'DBUS_STARTER_ADDRESS': 'unix:path=/run/user/1000/bus,guid=685ff883809049c16d18d15d6a83b261', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'HTTP_PROXY': 'http://127.0.0.1:7897/', 'CONDA_PREFIX': '', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/zme/self_project/rebotArm_mujoco/install/robot_msgs:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[1.305932] (-) TimerEvent: {}
+[1.316597] (robot_motion) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[1.406075] (-) TimerEvent: {}
+[1.506593] (-) TimerEvent: {}
+[1.606924] (-) TimerEvent: {}
+[1.707270] (-) TimerEvent: {}
+[1.807638] (-) TimerEvent: {}
+[1.821098] (robot_motion) StdoutLine: {'line': b'-- Found rclcpp: 28.1.21 (/opt/ros/jazzy/share/rclcpp/cmake)\n'}
+[1.895564] (robot_motion) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[1.907761] (-) TimerEvent: {}
+[1.924402] (robot_motion) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[1.957668] (robot_motion) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.997331] (robot_motion) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[2.007879] (-) TimerEvent: {}
+[2.108301] (-) TimerEvent: {}
+[2.186878] (robot_motion) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)\n'}
+[2.190289] (robot_motion) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 8.4.4 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)\n'}
+[2.208438] (-) TimerEvent: {}
+[2.308780] (-) TimerEvent: {}
+[2.333000] (robot_motion) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[2.408892] (-) TimerEvent: {}
+[2.499063] (robot_motion) StdoutLine: {'line': b'-- Found std_msgs: 5.3.8 (/opt/ros/jazzy/share/std_msgs/cmake)\n'}
+[2.509006] (-) TimerEvent: {}
+[2.529534] (robot_motion) StdoutLine: {'line': b'-- Found sensor_msgs: 5.3.8 (/opt/ros/jazzy/share/sensor_msgs/cmake)\n'}
+[2.608943] (robot_motion) StdoutLine: {'line': b'-- Found robot_msgs: 0.0.0 (/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/cmake)\n'}
+[2.609347] (-) TimerEvent: {}
+[2.632689] (robot_motion) StdoutLine: {'line': b'-- pinocchio_default FOUND. pinocchio_default at /usr/local/lib/libpinocchio_default.so\n'}
+[2.634348] (robot_motion) StdoutLine: {'line': b'-- pinocchio_parsers FOUND. pinocchio_parsers at /usr/local/lib/libpinocchio_parsers.so\n'}
+[2.635897] (robot_motion) StdoutLine: {'line': b'-- pinocchio_casadi FOUND. pinocchio_casadi at /usr/local/lib/libpinocchio_casadi.so\n'}
+[2.639007] (robot_motion) StdoutLine: {'line': b'-- boost_filesystem FOUND. boost_filesystem at /usr/lib/x86_64-linux-gnu/libboost_filesystem.so\n'}
+[2.661123] (robot_motion) StdoutLine: {'line': b'-- Found Boost: /usr/include (found version "1.83.0") found components: filesystem serialization system \n'}
+[2.664251] (robot_motion) StdoutLine: {'line': b'-- hpp-fcl FOUND. hpp-fcl at /usr/local/lib/libhpp-fcl.so\n'}
+[2.676525] (robot_motion) StdoutLine: {'line': b'-- Found Boost: /usr/include (found version "1.83.0") found components: chrono serialization \n'}
+[2.709521] (-) TimerEvent: {}
+[2.810078] (-) TimerEvent: {}
+[2.910660] (-) TimerEvent: {}
+[3.011067] (-) TimerEvent: {}
+[3.111478] (-) TimerEvent: {}
+[3.211878] (-) TimerEvent: {}
+[3.312281] (-) TimerEvent: {}
+[3.412869] (-) TimerEvent: {}
+[3.476468] (robot_motion) StdoutLine: {'line': b'-- Default C++ standard: 201703\n'}
+[3.476942] (robot_motion) StdoutLine: {'line': b'-- C++ standard sufficient: Minimal required 11, currently defined: 17\n'}
+[3.479861] (robot_motion) StdoutLine: {'line': b'-- C++ standard sufficient: Minimal required 11, currently defined: 17\n'}
+[3.512962] (-) TimerEvent: {}
+[3.613396] (-) TimerEvent: {}
+[3.693375] (robot_motion) StdoutLine: {'line': b'-- Configuring done (2.4s)\n'}
+[3.713508] (-) TimerEvent: {}
+[3.727481] (robot_motion) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[3.746412] (robot_motion) StdoutLine: {'line': b'-- Build files have been written to: /home/zme/self_project/rebotArm_mujoco/build/robot_motion\n'}
+[3.813649] (-) TimerEvent: {}
+[3.871933] (robot_motion) StdoutLine: {'line': b'[100%] Built target robot_motion\n'}
+[3.897234] (robot_motion) CommandEnded: {'returncode': 0}
+[3.899979] (robot_motion) JobProgress: {'identifier': 'robot_motion', 'progress': 'install'}
+[3.902105] (robot_motion) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/zme/self_project/rebotArm_mujoco/build/robot_motion'], 'cwd': '/home/zme/self_project/rebotArm_mujoco/build/robot_motion', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'CONDA_PROMPT_MODIFIER': '', 'HTTPS_PROXY': 'http://127.0.0.1:7897/', 'no_proxy': 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,::1', 'USER': 'zme', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/sdformat_vendor/share/gz', 'all_proxy': 'socks://127.0.0.1:7897/', 'XDG_SESSION_TYPE': 'wayland', 'GIT_ASKPASS': '/usr/share/code/resources/app/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/zme', 'CHROME_DESKTOP': 'code.desktop', 'CONDA_SHLVL': '0', 'TERM_PROGRAM_VERSION': '1.128.0', 'DESKTOP_SESSION': 'ubuntu', 'NO_PROXY': 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,::1', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'VSCODE_GIT_ASKPASS_MAIN': '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/usr/share/code/code', 'DBUS_STARTER_BUS_TYPE': 'session', 'SYSTEMD_EXEC_PID': '2503', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus,guid=685ff883809049c16d18d15d6a83b261', 'COLORTERM': 'truecolor', '_CE_M': '', '_CONDA_ROOT': '/home/zme/miniconda3', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'https_proxy': 'http://127.0.0.1:7897/', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'zme', 'ALL_PROXY': 'socks://127.0.0.1:7897/', 'http_proxy': 'http://127.0.0.1:7897/', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/app-gnome\\x2dsession\\x2dmanager.slice/gnome-session-manager@ubuntu.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'zme', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', '_CE_CONDA': '', 'FC_FONTATIONS': '1', 'PATH': '/home/zme/.config/Code/User/globalStorage/github.copilot-chat/debugCommand:/home/zme/.config/Code/User/globalStorage/github.copilot-chat/copilotCli:/home/zme/miniconda3/condabin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/zme-TM1701:@/tmp/.ICE-unix/2503,unix/zme-TM1701:/tmp/.ICE-unix/2503', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/8bce8bc9_c789_40d4_bc5d_78d9afcb8cd0', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'wayland', 'DISPLAY': ':0', 'LANG': 'zh_CN.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'CONDA_PREFIX_1': '', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.06RCU3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-aea9a77a82.sock', 'GNOME_TERMINAL_SERVICE': ':1.168', 'CONDA_PREFIX_2': '', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/zme/self_project/rebotArm_mujoco/install/robot_msgs:/opt/ros/jazzy', 'CONDA_PYTHON_EXE': '/home/zme/miniconda3/bin/python', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'NO_AT_BRIDGE': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'CONDA_DEFAULT_ENV': '', '_CONDA_EXE': '/home/zme/miniconda3/bin/conda', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/zme/self_project/rebotArm_mujoco/build/robot_motion', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'COPILOT_DEBUG_NONCE': 'e49f91454af2fbacc6dd69ee2b739470', 'CONDA_EXE': '/home/zme/miniconda3/bin/conda', 'DBUS_STARTER_ADDRESS': 'unix:path=/run/user/1000/bus,guid=685ff883809049c16d18d15d6a83b261', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'HTTP_PROXY': 'http://127.0.0.1:7897/', 'CONDA_PREFIX': '', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/zme/self_project/rebotArm_mujoco/install/robot_msgs:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[3.913778] (-) TimerEvent: {}
+[3.916437] (robot_motion) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[3.917102] (robot_motion) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_motion/lib/librobot_motion.so\n'}
+[3.917626] (robot_motion) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_motion/include\n'}
+[3.918194] (robot_motion) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_motion/include/ik\n'}
+[3.918793] (robot_motion) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_motion/include/ik/pseudo_inverse_ik.hpp\n'}
+[3.919298] (robot_motion) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_motion/share/robot_motion/cmake/robot_motionTargets.cmake\n'}
+[3.919787] (robot_motion) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_motion/share/robot_motion/cmake/robot_motionTargets-noconfig.cmake\n'}
+[3.920679] (robot_motion) StdoutLine: {'line': b'-- Installing: /home/zme/self_project/rebotArm_mujoco/install/robot_motion/share/robot_motion/environment/library_path.sh\n'}
+[3.920953] (robot_motion) StdoutLine: {'line': b'-- Installing: /home/zme/self_project/rebotArm_mujoco/install/robot_motion/share/robot_motion/environment/library_path.dsv\n'}
+[3.922674] (robot_motion) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_motion/share/ament_index/resource_index/package_run_dependencies/robot_motion\n'}
+[3.923085] (robot_motion) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_motion/share/ament_index/resource_index/parent_prefix_path/robot_motion\n'}
+[3.923312] (robot_motion) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_motion/share/robot_motion/environment/ament_prefix_path.sh\n'}
+[3.923528] (robot_motion) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_motion/share/robot_motion/environment/ament_prefix_path.dsv\n'}
+[3.923728] (robot_motion) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_motion/share/robot_motion/environment/path.sh\n'}
+[3.923941] (robot_motion) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_motion/share/robot_motion/environment/path.dsv\n'}
+[3.924153] (robot_motion) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_motion/share/robot_motion/local_setup.bash\n'}
+[3.925184] (robot_motion) StdoutLine: {'line': b'-- Installing: /home/zme/self_project/rebotArm_mujoco/install/robot_motion/share/robot_motion/local_setup.sh\n'}
+[3.927683] (robot_motion) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_motion/share/robot_motion/local_setup.zsh\n'}
+[3.929673] (robot_motion) StdoutLine: {'line': b'-- Installing: /home/zme/self_project/rebotArm_mujoco/install/robot_motion/share/robot_motion/local_setup.dsv\n'}
+[3.930185] (robot_motion) StdoutLine: {'line': b'-- Installing: /home/zme/self_project/rebotArm_mujoco/install/robot_motion/share/robot_motion/package.dsv\n'}
+[3.930637] (robot_motion) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_motion/share/ament_index/resource_index/packages/robot_motion\n'}
+[3.931854] (robot_motion) StdoutLine: {'line': b'-- Installing: /home/zme/self_project/rebotArm_mujoco/install/robot_motion/share/robot_motion/cmake/robot_motionTargetsExport.cmake\n'}
+[3.932558] (robot_motion) StdoutLine: {'line': b'-- Installing: /home/zme/self_project/rebotArm_mujoco/install/robot_motion/share/robot_motion/cmake/robot_motionTargetsExport-noconfig.cmake\n'}
+[3.932928] (robot_motion) StdoutLine: {'line': b'-- Installing: /home/zme/self_project/rebotArm_mujoco/install/robot_motion/share/robot_motion/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[3.933302] (robot_motion) StdoutLine: {'line': b'-- Installing: /home/zme/self_project/rebotArm_mujoco/install/robot_motion/share/robot_motion/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[3.933612] (robot_motion) StdoutLine: {'line': b'-- Installing: /home/zme/self_project/rebotArm_mujoco/install/robot_motion/share/robot_motion/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[3.933966] (robot_motion) StdoutLine: {'line': b'-- Installing: /home/zme/self_project/rebotArm_mujoco/install/robot_motion/share/robot_motion/cmake/robot_motionConfig.cmake\n'}
+[3.934295] (robot_motion) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_motion/share/robot_motion/cmake/robot_motionConfig-version.cmake\n'}
+[3.934601] (robot_motion) StdoutLine: {'line': b'-- Up-to-date: /home/zme/self_project/rebotArm_mujoco/install/robot_motion/share/robot_motion/package.xml\n'}
+[3.935009] (robot_motion) CommandEnded: {'returncode': 0}
+[3.970464] (robot_motion) JobEnded: {'identifier': 'robot_motion', 'rc': 0}
+[3.972764] (test_control) JobStarted: {'identifier': 'test_control'}
+[3.998480] (test_control) JobProgress: {'identifier': 'test_control', 'progress': 'cmake'}
+[3.999163] (test_control) JobProgress: {'identifier': 'test_control', 'progress': 'build'}
+[4.000031] (test_control) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/zme/self_project/rebotArm_mujoco/build/test_control', '--', '-j8', '-l8'], 'cwd': '/home/zme/self_project/rebotArm_mujoco/build/test_control', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'CONDA_PROMPT_MODIFIER': '', 'HTTPS_PROXY': 'http://127.0.0.1:7897/', 'no_proxy': 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,::1', 'USER': 'zme', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/sdformat_vendor/share/gz', 'all_proxy': 'socks://127.0.0.1:7897/', 'XDG_SESSION_TYPE': 'wayland', 'GIT_ASKPASS': '/usr/share/code/resources/app/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/home/zme/self_project/rebotArm_mujoco/install/robot_motion/lib:/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/zme', 'CHROME_DESKTOP': 'code.desktop', 'CONDA_SHLVL': '0', 'TERM_PROGRAM_VERSION': '1.128.0', 'DESKTOP_SESSION': 'ubuntu', 'NO_PROXY': 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,::1', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'VSCODE_GIT_ASKPASS_MAIN': '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/usr/share/code/code', 'DBUS_STARTER_BUS_TYPE': 'session', 'SYSTEMD_EXEC_PID': '2503', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus,guid=685ff883809049c16d18d15d6a83b261', 'COLORTERM': 'truecolor', '_CE_M': '', '_CONDA_ROOT': '/home/zme/miniconda3', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'https_proxy': 'http://127.0.0.1:7897/', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'zme', 'ALL_PROXY': 'socks://127.0.0.1:7897/', 'http_proxy': 'http://127.0.0.1:7897/', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/app-gnome\\x2dsession\\x2dmanager.slice/gnome-session-manager@ubuntu.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'zme', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', '_CE_CONDA': '', 'FC_FONTATIONS': '1', 'PATH': '/home/zme/.config/Code/User/globalStorage/github.copilot-chat/debugCommand:/home/zme/.config/Code/User/globalStorage/github.copilot-chat/copilotCli:/home/zme/miniconda3/condabin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/zme-TM1701:@/tmp/.ICE-unix/2503,unix/zme-TM1701:/tmp/.ICE-unix/2503', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/8bce8bc9_c789_40d4_bc5d_78d9afcb8cd0', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'wayland', 'DISPLAY': ':0', 'LANG': 'zh_CN.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'CONDA_PREFIX_1': '', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.06RCU3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-aea9a77a82.sock', 'GNOME_TERMINAL_SERVICE': ':1.168', 'CONDA_PREFIX_2': '', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/zme/self_project/rebotArm_mujoco/install/robot_motion:/home/zme/self_project/rebotArm_mujoco/install/robot_msgs:/opt/ros/jazzy', 'CONDA_PYTHON_EXE': '/home/zme/miniconda3/bin/python', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'NO_AT_BRIDGE': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'CONDA_DEFAULT_ENV': '', '_CONDA_EXE': '/home/zme/miniconda3/bin/conda', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/zme/self_project/rebotArm_mujoco/build/test_control', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'COPILOT_DEBUG_NONCE': 'e49f91454af2fbacc6dd69ee2b739470', 'CONDA_EXE': '/home/zme/miniconda3/bin/conda', 'DBUS_STARTER_ADDRESS': 'unix:path=/run/user/1000/bus,guid=685ff883809049c16d18d15d6a83b261', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'HTTP_PROXY': 'http://127.0.0.1:7897/', 'CONDA_PREFIX': '', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/zme/self_project/rebotArm_mujoco/install/robot_motion:/home/zme/self_project/rebotArm_mujoco/install/robot_msgs:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[4.013904] (-) TimerEvent: {}
+[4.055368] (test_control) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[4.114041] (-) TimerEvent: {}
+[4.214497] (-) TimerEvent: {}
+[4.315009] (-) TimerEvent: {}
+[4.415415] (-) TimerEvent: {}
+[4.515767] (-) TimerEvent: {}
+[4.521579] (test_control) StdoutLine: {'line': b'-- Found rclcpp: 28.1.21 (/opt/ros/jazzy/share/rclcpp/cmake)\n'}
+[4.588768] (test_control) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[4.609617] (test_control) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[4.615871] (-) TimerEvent: {}
+[4.634589] (test_control) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[4.665325] (test_control) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[4.716031] (-) TimerEvent: {}
+[4.815837] (test_control) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)\n'}
+[4.824644] (-) TimerEvent: {}
+[4.824926] (test_control) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 8.4.4 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)\n'}
+[4.924801] (-) TimerEvent: {}
+[4.963586] (test_control) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[5.024927] (-) TimerEvent: {}
+[5.118314] (test_control) StdoutLine: {'line': b'-- Found std_msgs: 5.3.8 (/opt/ros/jazzy/share/std_msgs/cmake)\n'}
+[5.125053] (-) TimerEvent: {}
+[5.150039] (test_control) StdoutLine: {'line': b'-- Found sensor_msgs: 5.3.8 (/opt/ros/jazzy/share/sensor_msgs/cmake)\n'}
+[5.225181] (-) TimerEvent: {}
+[5.246289] (test_control) StdoutLine: {'line': b'-- Found robot_msgs: 0.0.0 (/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/cmake)\n'}
+[5.269858] (test_control) StdoutLine: {'line': b'-- Found robot_motion: 0.0.0 (/home/zme/self_project/rebotArm_mujoco/install/robot_motion/share/robot_motion/cmake)\n'}
+[5.293330] (test_control) StdoutLine: {'line': b'-- pinocchio_default FOUND. pinocchio_default at /usr/local/lib/libpinocchio_default.so\n'}
+[5.294716] (test_control) StdoutLine: {'line': b'-- pinocchio_parsers FOUND. pinocchio_parsers at /usr/local/lib/libpinocchio_parsers.so\n'}
+[5.296348] (test_control) StdoutLine: {'line': b'-- pinocchio_casadi FOUND. pinocchio_casadi at /usr/local/lib/libpinocchio_casadi.so\n'}
+[5.299134] (test_control) StdoutLine: {'line': b'-- boost_filesystem FOUND. boost_filesystem at /usr/lib/x86_64-linux-gnu/libboost_filesystem.so\n'}
+[5.325327] (-) TimerEvent: {}
+[5.425654] (-) TimerEvent: {}
+[5.444730] (test_control) StdoutLine: {'line': b'-- hpp-fcl FOUND. hpp-fcl at /usr/local/lib/libhpp-fcl.so\n'}
+[5.525811] (-) TimerEvent: {}
+[5.626278] (-) TimerEvent: {}
+[5.726705] (-) TimerEvent: {}
+[5.827050] (-) TimerEvent: {}
+[5.927700] (-) TimerEvent: {}
+[6.028500] (-) TimerEvent: {}
+[6.128929] (-) TimerEvent: {}
+[6.229299] (-) TimerEvent: {}
+[6.316193] (test_control) StdoutLine: {'line': b'-- Default C++ standard: 201703\n'}
+[6.316729] (test_control) StdoutLine: {'line': b'-- C++ standard sufficient: Minimal required 11, currently defined: 17\n'}
+[6.320593] (test_control) StdoutLine: {'line': b'-- C++ standard sufficient: Minimal required 11, currently defined: 17\n'}
+[6.329469] (-) TimerEvent: {}
+[6.430040] (-) TimerEvent: {}
+[6.530353] (-) TimerEvent: {}
+[6.566408] (test_control) StdoutLine: {'line': b'-- Configuring done (2.5s)\n'}
+[6.619916] (test_control) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[6.630462] (-) TimerEvent: {}
+[6.632163] (test_control) StdoutLine: {'line': b'-- Build files have been written to: /home/zme/self_project/rebotArm_mujoco/build/test_control\n'}
+[6.723598] (test_control) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/test_pseudo_inverse_ik_node.dir/src/test_pseudo_inverse_ik.cpp.o\x1b[0m\n'}
+[6.731661] (-) TimerEvent: {}
+[6.746796] (test_control) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/robot_monitor.dir/src/test_control.cpp.o\x1b[0m\n'}
+[6.831805] (-) TimerEvent: {}
+[6.932236] (-) TimerEvent: {}
+[7.033162] (-) TimerEvent: {}
+[7.133751] (-) TimerEvent: {}
+[7.234210] (-) TimerEvent: {}
+[7.334683] (-) TimerEvent: {}
+[7.435095] (-) TimerEvent: {}
+[7.535549] (-) TimerEvent: {}
+[7.635969] (-) TimerEvent: {}
+[7.738501] (-) TimerEvent: {}
+[7.839102] (-) TimerEvent: {}
+[7.939548] (-) TimerEvent: {}
+[8.039918] (-) TimerEvent: {}
+[8.140303] (-) TimerEvent: {}
+[8.240752] (-) TimerEvent: {}
+[8.341147] (-) TimerEvent: {}
+[8.441566] (-) TimerEvent: {}
+[8.542042] (-) TimerEvent: {}
+[8.642420] (-) TimerEvent: {}
+[8.742805] (-) TimerEvent: {}
+[8.843156] (-) TimerEvent: {}
+[8.943532] (-) TimerEvent: {}
+[9.044376] (-) TimerEvent: {}
+[9.144935] (-) TimerEvent: {}
+[9.245505] (-) TimerEvent: {}
+[9.345955] (-) TimerEvent: {}
+[9.446423] (-) TimerEvent: {}
+[9.546868] (-) TimerEvent: {}
+[9.647292] (-) TimerEvent: {}
+[9.747710] (-) TimerEvent: {}
+[9.848240] (-) TimerEvent: {}
+[9.949446] (-) TimerEvent: {}
+[10.050124] (-) TimerEvent: {}
+[10.150531] (-) TimerEvent: {}
+[10.250941] (-) TimerEvent: {}
+[10.351451] (-) TimerEvent: {}
+[10.452995] (-) TimerEvent: {}
+[10.553523] (-) TimerEvent: {}
+[10.654086] (-) TimerEvent: {}
+[10.754541] (-) TimerEvent: {}
+[10.855550] (-) TimerEvent: {}
+[10.955998] (-) TimerEvent: {}
+[11.058629] (-) TimerEvent: {}
+[11.159903] (-) TimerEvent: {}
+[11.260329] (-) TimerEvent: {}
+[11.361225] (-) TimerEvent: {}
+[11.461618] (-) TimerEvent: {}
+[11.562035] (-) TimerEvent: {}
+[11.662661] (-) TimerEvent: {}
+[11.764015] (-) TimerEvent: {}
+[11.865161] (-) TimerEvent: {}
+[11.965584] (-) TimerEvent: {}
+[12.066031] (-) TimerEvent: {}
+[12.168054] (-) TimerEvent: {}
+[12.269347] (-) TimerEvent: {}
+[12.372245] (-) TimerEvent: {}
+[12.472717] (-) TimerEvent: {}
+[12.573319] (-) TimerEvent: {}
+[12.673813] (-) TimerEvent: {}
+[12.774213] (-) TimerEvent: {}
+[12.874854] (-) TimerEvent: {}
+[12.975279] (-) TimerEvent: {}
+[13.075664] (-) TimerEvent: {}
+[13.176086] (-) TimerEvent: {}
+[13.276641] (-) TimerEvent: {}
+[13.377021] (-) TimerEvent: {}
+[13.477429] (-) TimerEvent: {}
+[13.577856] (-) TimerEvent: {}
+[13.678795] (-) TimerEvent: {}
+[13.779262] (-) TimerEvent: {}
+[13.879783] (-) TimerEvent: {}
+[13.980731] (-) TimerEvent: {}
+[14.081191] (-) TimerEvent: {}
+[14.181607] (-) TimerEvent: {}
+[14.282008] (-) TimerEvent: {}
+[14.382454] (-) TimerEvent: {}
+[14.482917] (-) TimerEvent: {}
+[14.583562] (-) TimerEvent: {}
+[14.684084] (-) TimerEvent: {}
+[14.784533] (-) TimerEvent: {}
+[14.884947] (-) TimerEvent: {}
+[14.985395] (-) TimerEvent: {}
+[15.085784] (-) TimerEvent: {}
+[15.186218] (-) TimerEvent: {}
+[15.287620] (-) TimerEvent: {}
+[15.388588] (-) TimerEvent: {}
+[15.489036] (-) TimerEvent: {}
+[15.589504] (-) TimerEvent: {}
+[15.689991] (-) TimerEvent: {}
+[15.790460] (-) TimerEvent: {}
+[15.890964] (-) TimerEvent: {}
+[15.991441] (-) TimerEvent: {}
+[16.091942] (-) TimerEvent: {}
+[16.192857] (-) TimerEvent: {}
+[16.293502] (-) TimerEvent: {}
+[16.393990] (-) TimerEvent: {}
+[16.494440] (-) TimerEvent: {}
+[16.594852] (-) TimerEvent: {}
+[16.695283] (-) TimerEvent: {}
+[16.795796] (-) TimerEvent: {}
+[16.896330] (-) TimerEvent: {}
+[16.996771] (-) TimerEvent: {}
+[17.097336] (-) TimerEvent: {}
+[17.198355] (-) TimerEvent: {}
+[17.298856] (-) TimerEvent: {}
+[17.399437] (-) TimerEvent: {}
+[17.500358] (-) TimerEvent: {}
+[17.601358] (-) TimerEvent: {}
+[17.701795] (-) TimerEvent: {}
+[17.802109] (-) TimerEvent: {}
+[17.902620] (-) TimerEvent: {}
+[18.003037] (-) TimerEvent: {}
+[18.105225] (-) TimerEvent: {}
+[18.205835] (-) TimerEvent: {}
+[18.306340] (-) TimerEvent: {}
+[18.406812] (-) TimerEvent: {}
+[18.507341] (-) TimerEvent: {}
+[18.607751] (-) TimerEvent: {}
+[18.708189] (-) TimerEvent: {}
+[18.808725] (-) TimerEvent: {}
+[18.909127] (-) TimerEvent: {}
+[19.009492] (-) TimerEvent: {}
+[19.109853] (-) TimerEvent: {}
+[19.210209] (-) TimerEvent: {}
+[19.310586] (-) TimerEvent: {}
+[19.410945] (-) TimerEvent: {}
+[19.511426] (-) TimerEvent: {}
+[19.611973] (-) TimerEvent: {}
+[19.712572] (-) TimerEvent: {}
+[19.812930] (-) TimerEvent: {}
+[19.913349] (-) TimerEvent: {}
+[20.013811] (-) TimerEvent: {}
+[20.114230] (-) TimerEvent: {}
+[20.214702] (-) TimerEvent: {}
+[20.315533] (-) TimerEvent: {}
+[20.418332] (-) TimerEvent: {}
+[20.518755] (-) TimerEvent: {}
+[20.620382] (-) TimerEvent: {}
+[20.720891] (-) TimerEvent: {}
+[20.821302] (-) TimerEvent: {}
+[20.921785] (-) TimerEvent: {}
+[21.022334] (-) TimerEvent: {}
+[21.122738] (-) TimerEvent: {}
+[21.223122] (-) TimerEvent: {}
+[21.323506] (-) TimerEvent: {}
+[21.424137] (-) TimerEvent: {}
+[21.525200] (-) TimerEvent: {}
+[21.626494] (-) TimerEvent: {}
+[21.727689] (-) TimerEvent: {}
+[21.828437] (-) TimerEvent: {}
+[21.930887] (-) TimerEvent: {}
+[22.031328] (-) TimerEvent: {}
+[22.131740] (-) TimerEvent: {}
+[22.232415] (-) TimerEvent: {}
+[22.332990] (-) TimerEvent: {}
+[22.433410] (-) TimerEvent: {}
+[22.533803] (-) TimerEvent: {}
+[22.634492] (-) TimerEvent: {}
+[22.744050] (-) TimerEvent: {}
+[22.845203] (-) TimerEvent: {}
+[22.946346] (-) TimerEvent: {}
+[23.046743] (-) TimerEvent: {}
+[23.149279] (-) TimerEvent: {}
+[23.249960] (-) TimerEvent: {}
+[23.350651] (-) TimerEvent: {}
+[23.451332] (-) TimerEvent: {}
+[23.552661] (-) TimerEvent: {}
+[23.653075] (-) TimerEvent: {}
+[23.754355] (-) TimerEvent: {}
+[23.854915] (-) TimerEvent: {}
+[23.957810] (-) TimerEvent: {}
+[24.058246] (-) TimerEvent: {}
+[24.158830] (-) TimerEvent: {}
+[24.259332] (-) TimerEvent: {}
+[24.360082] (-) TimerEvent: {}
+[24.460519] (-) TimerEvent: {}
+[24.560889] (-) TimerEvent: {}
+[24.668380] (-) TimerEvent: {}
+[24.769426] (-) TimerEvent: {}
+[24.869920] (-) TimerEvent: {}
+[24.970441] (-) TimerEvent: {}
+[25.070821] (-) TimerEvent: {}
+[25.171241] (-) TimerEvent: {}
+[25.271717] (-) TimerEvent: {}
+[25.372223] (-) TimerEvent: {}
+[25.473843] (-) TimerEvent: {}
+[25.574271] (-) TimerEvent: {}
+[25.674622] (-) TimerEvent: {}
+[25.774960] (-) TimerEvent: {}
+[25.875430] (-) TimerEvent: {}
+[25.975791] (-) TimerEvent: {}
+[26.078411] (-) TimerEvent: {}
+[26.178887] (-) TimerEvent: {}
+[26.220515] (test_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/zme/self_project/rebotArm_mujoco/src/test_control/src/test_pseudo_inverse_ik.cpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[KRobotMonitor::\x1b[01;32m\x1b[KRobotMonitor\x1b[m\x1b[K()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[26.221016] (test_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/zme/self_project/rebotArm_mujoco/src/test_control/src/test_pseudo_inverse_ik.cpp:18:41:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno matching function for call to \xe2\x80\x98\x1b[01m\x1b[KPseudoInverseIK::PseudoInverseIK()\x1b[m\x1b[K\xe2\x80\x99\n'}
+[26.221300] (test_control) StderrLine: {'line': b'   18 |     RobotMonitor(): Node("robot_monitor"\x1b[01;31m\x1b[K)\x1b[m\x1b[K\n'}
+[26.221560] (test_control) StderrLine: {'line': b'      |                                         \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[26.221791] (test_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/zme/self_project/rebotArm_mujoco/src/test_control/src/test_pseudo_inverse_ik.cpp:1\x1b[m\x1b[K:\n'}
+[26.222021] (test_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/zme/self_project/rebotArm_mujoco/install/robot_motion/include/ik/pseudo_inverse_ik.hpp:19:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[KPseudoInverseIK::\x1b[01;32m\x1b[KPseudoInverseIK\x1b[m\x1b[K(const std::string&, const std::string&, const std::string&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[26.222269] (test_control) StderrLine: {'line': b'   19 |     \x1b[01;36m\x1b[KPseudoInverseIK\x1b[m\x1b[K(\n'}
+[26.222487] (test_control) StderrLine: {'line': b'      |     \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[26.222708] (test_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/zme/self_project/rebotArm_mujoco/install/robot_motion/include/ik/pseudo_inverse_ik.hpp:19:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 3 arguments, 0 provided\n'}
+[26.222958] (test_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/zme/self_project/rebotArm_mujoco/install/robot_motion/include/ik/pseudo_inverse_ik.hpp:16:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[KPseudoInverseIK::\x1b[01;32m\x1b[KPseudoInverseIK\x1b[m\x1b[K(PseudoInverseIK&&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[26.223601] (test_control) StderrLine: {'line': b'   16 | class \x1b[01;36m\x1b[KPseudoInverseIK\x1b[m\x1b[K\n'}
+[26.223839] (test_control) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[26.224089] (test_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/zme/self_project/rebotArm_mujoco/install/robot_motion/include/ik/pseudo_inverse_ik.hpp:16:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 1 argument, 0 provided\n'}
+[26.224501] (test_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/zme/self_project/rebotArm_mujoco/src/test_control/src/test_pseudo_inverse_ik.cpp:28:79:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno match for \xe2\x80\x98\x1b[01m\x1b[Koperator=\x1b[m\x1b[K\xe2\x80\x99 (operand types are \xe2\x80\x98\x1b[01m\x1b[KPseudoInverseIK\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[KPseudoInverseIK*\x1b[m\x1b[K\xe2\x80\x99)\n'}
+[26.224742] (test_control) StderrLine: {'line': b'   28 |         pseudoInverseIK_ = new PseudoInverseIK(urdf_path, "base_link", "link6"\x1b[01;31m\x1b[K)\x1b[m\x1b[K;\n'}
+[26.224962] (test_control) StderrLine: {'line': b'      |                                                                               \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[26.225149] (test_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/zme/self_project/rebotArm_mujoco/install/robot_motion/include/ik/pseudo_inverse_ik.hpp:16:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[KPseudoInverseIK& PseudoInverseIK::\x1b[01;32m\x1b[Koperator=\x1b[m\x1b[K(PseudoInverseIK&&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[26.225384] (test_control) StderrLine: {'line': b'   16 | class \x1b[01;36m\x1b[KPseudoInverseIK\x1b[m\x1b[K\n'}
+[26.225587] (test_control) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[26.225785] (test_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/zme/self_project/rebotArm_mujoco/install/robot_motion/include/ik/pseudo_inverse_ik.hpp:16:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[KPseudoInverseIK*\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[KPseudoInverseIK&&\x1b[m\x1b[K\xe2\x80\x99\n'}
+[26.279016] (-) TimerEvent: {}
+[26.339863] (test_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/zme/self_project/rebotArm_mujoco/src/test_control/src/test_pseudo_inverse_ik.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid RobotMonitor::\x1b[01;32m\x1b[KtimerCallback\x1b[m\x1b[K()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[26.340369] (test_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/zme/self_project/rebotArm_mujoco/src/test_control/src/test_pseudo_inverse_ik.cpp:68:27:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kmsg\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[26.340920] (test_control) StderrLine: {'line': b'   68 |         cmd_pub_->publish(\x1b[01;31m\x1b[Kmsg\x1b[m\x1b[K);\n'}
+[26.341120] (test_control) StderrLine: {'line': b'      |                           \x1b[01;31m\x1b[K^~~\x1b[m\x1b[K\n'}
+[26.341342] (test_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/zme/self_project/rebotArm_mujoco/src/test_control/src/test_pseudo_inverse_ik.cpp:68:27:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Ksuggested alternatives:\n'}
+[26.341565] (test_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/list_parameters__struct.hpp:157\x1b[m\x1b[K,\n'}
+[26.341813] (test_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/list_parameters.hpp:7\x1b[m\x1b[K,\n'}
+[26.342053] (test_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/include/rclcpp/rclcpp/copy_all_parameter_values.hpp:21\x1b[m\x1b[K,\n'}
+[26.342240] (test_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp:175\x1b[m\x1b[K,\n'}
+[26.342469] (test_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/zme/self_project/rebotArm_mujoco/src/test_control/src/test_pseudo_inverse_ik.cpp:2\x1b[m\x1b[K:\n'}
+[26.342690] (test_control) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/list_parameters_result__struct.hpp:31:11:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Krcl_interfaces::msg\x1b[m\x1b[K\xe2\x80\x99\n'}
+[26.342950] (test_control) StderrLine: {'line': b'   31 | namespace \x1b[01;36m\x1b[Kmsg\x1b[m\x1b[K\n'}
+[26.343192] (test_control) StderrLine: {'line': b'      |           \x1b[01;36m\x1b[K^~~\x1b[m\x1b[K\n'}
+[26.343458] (test_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/jazzy/include/service_msgs/service_msgs/msg/detail/service_event_info__struct.hpp:24\x1b[m\x1b[K,\n'}
+[26.343704] (test_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/list_parameters__struct.hpp:268\x1b[m\x1b[K:\n'}
+[26.343948] (test_control) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.hpp:31:11:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Kbuiltin_interfaces::msg\x1b[m\x1b[K\xe2\x80\x99\n'}
+[26.344201] (test_control) StderrLine: {'line': b'   31 | namespace \x1b[01;36m\x1b[Kmsg\x1b[m\x1b[K\n'}
+[26.344460] (test_control) StderrLine: {'line': b'      |           \x1b[01;36m\x1b[K^~~\x1b[m\x1b[K\n'}
+[26.344704] (test_control) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/jazzy/include/service_msgs/service_msgs/msg/detail/service_event_info__struct.hpp:35:11:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Kservice_msgs::msg\x1b[m\x1b[K\xe2\x80\x99\n'}
+[26.344947] (test_control) StderrLine: {'line': b'   35 | namespace \x1b[01;36m\x1b[Kmsg\x1b[m\x1b[K\n'}
+[26.345188] (test_control) StderrLine: {'line': b'      |           \x1b[01;36m\x1b[K^~~\x1b[m\x1b[K\n'}
+[26.345420] (test_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/jazzy/include/statistics_msgs/statistics_msgs/msg/detail/metrics_message__struct.hpp:27\x1b[m\x1b[K,\n'}
+[26.345593] (test_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/include/statistics_msgs/statistics_msgs/msg/metrics_message.hpp:7\x1b[m\x1b[K,\n'}
+[26.345812] (test_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/collector/generate_statistics_message.hpp:21\x1b[m\x1b[K,\n'}
+[26.346011] (test_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/include/rclcpp/rclcpp/topic_statistics/subscription_topic_statistics.hpp:23\x1b[m\x1b[K,\n'}
+[26.346200] (test_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/include/rclcpp/rclcpp/subscription.hpp:50\x1b[m\x1b[K,\n'}
+[26.346414] (test_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/include/rclcpp/rclcpp/any_executable.hpp:25\x1b[m\x1b[K,\n'}
+[26.346638] (test_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[26.346861] (test_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[26.347105] (test_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/include/rclcpp/rclcpp/executor_options.hpp:22\x1b[m\x1b[K,\n'}
+[26.347364] (test_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/include/rclcpp/rclcpp/executor.hpp:38\x1b[m\x1b[K,\n'}
+[26.347633] (test_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[26.347824] (test_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[26.348028] (test_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp:176\x1b[m\x1b[K:\n'}
+[26.348253] (test_control) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/jazzy/include/statistics_msgs/statistics_msgs/msg/detail/statistic_data_point__struct.hpp:31:11:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Kstatistics_msgs::msg\x1b[m\x1b[K\xe2\x80\x99\n'}
+[26.348505] (test_control) StderrLine: {'line': b'   31 | namespace \x1b[01;36m\x1b[Kmsg\x1b[m\x1b[K\n'}
+[26.349101] (test_control) StderrLine: {'line': b'      |           \x1b[01;36m\x1b[K^~~\x1b[m\x1b[K\n'}
+[26.349341] (test_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/jazzy/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__struct.hpp:24\x1b[m\x1b[K,\n'}
+[26.349605] (test_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/include/sensor_msgs/sensor_msgs/msg/joint_state.hpp:7\x1b[m\x1b[K,\n'}
+[26.349861] (test_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/zme/self_project/rebotArm_mujoco/src/test_control/src/test_pseudo_inverse_ik.cpp:3\x1b[m\x1b[K:\n'}
+[26.350106] (test_control) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/header__struct.hpp:35:11:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Kstd_msgs::msg\x1b[m\x1b[K\xe2\x80\x99\n'}
+[26.350385] (test_control) StderrLine: {'line': b'   35 | namespace \x1b[01;36m\x1b[Kmsg\x1b[m\x1b[K\n'}
+[26.350649] (test_control) StderrLine: {'line': b'      |           \x1b[01;36m\x1b[K^~~\x1b[m\x1b[K\n'}
+[26.350906] (test_control) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/jazzy/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__struct.hpp:35:11:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Ksensor_msgs::msg\x1b[m\x1b[K\xe2\x80\x99\n'}
+[26.351164] (test_control) StderrLine: {'line': b'   35 | namespace \x1b[01;36m\x1b[Kmsg\x1b[m\x1b[K\n'}
+[26.351427] (test_control) StderrLine: {'line': b'      |           \x1b[01;36m\x1b[K^~~\x1b[m\x1b[K\n'}
+[26.351625] (test_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg/arm_position_cmd.hpp:7\x1b[m\x1b[K,\n'}
+[26.351828] (test_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/zme/self_project/rebotArm_mujoco/src/test_control/src/test_pseudo_inverse_ik.cpp:4\x1b[m\x1b[K:\n'}
+[26.352390] (test_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail/arm_position_cmd__struct.hpp:31:11:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Krobot_msgs::msg\x1b[m\x1b[K\xe2\x80\x99\n'}
+[26.352663] (test_control) StderrLine: {'line': b'   31 | namespace \x1b[01;36m\x1b[Kmsg\x1b[m\x1b[K\n'}
+[26.353390] (test_control) StderrLine: {'line': b'      |           \x1b[01;36m\x1b[K^~~\x1b[m\x1b[K\n'}
+[26.373838] (test_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/jazzy/include/rclcpp/rclcpp/logging.hpp:24\x1b[m\x1b[K,\n'}
+[26.374197] (test_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/include/rclcpp/rclcpp/copy_all_parameter_values.hpp:27\x1b[m\x1b[K:\n'}
+[26.374495] (test_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/zme/self_project/rebotArm_mujoco/src/test_control/src/test_pseudo_inverse_ik.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid RobotMonitor::\x1b[01;32m\x1b[KjointStateCallback\x1b[m\x1b[K(sensor_msgs::msg::JointState_<std::allocator<void> >::SharedPtr)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[26.374732] (test_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/zme/self_project/rebotArm_mujoco/src/test_control/src/test_pseudo_inverse_ik.cpp:90:80:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpos\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kpow\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[26.374966] (test_control) StderrLine: {'line': b'   90 |             RCLCPP_INFO( this->get_logger(),"%s : %.4f", msg->name[i].c_str(), \x1b[01;31m\x1b[Kpos\x1b[m\x1b[K);\n'}
+[26.375172] (test_control) StderrLine: {'line': b'      |                                                                                \x1b[01;31m\x1b[K^~~\x1b[m\x1b[K\n'}
+[26.379138] (-) TimerEvent: {}
+[26.479538] (-) TimerEvent: {}
+[26.579937] (-) TimerEvent: {}
+[26.680546] (-) TimerEvent: {}
+[26.781040] (-) TimerEvent: {}
+[26.881498] (-) TimerEvent: {}
+[26.981808] (-) TimerEvent: {}
+[27.082268] (-) TimerEvent: {}
+[27.182676] (-) TimerEvent: {}
+[27.283224] (-) TimerEvent: {}
+[27.387040] (-) TimerEvent: {}
+[27.487606] (-) TimerEvent: {}
+[27.588758] (-) TimerEvent: {}
+[27.689339] (-) TimerEvent: {}
+[27.789749] (-) TimerEvent: {}
+[27.890152] (-) TimerEvent: {}
+[27.990714] (-) TimerEvent: {}
+[28.091216] (-) TimerEvent: {}
+[28.191756] (-) TimerEvent: {}
+[28.292330] (-) TimerEvent: {}
+[28.392790] (-) TimerEvent: {}
+[28.493208] (-) TimerEvent: {}
+[28.593585] (-) TimerEvent: {}
+[28.695430] (-) TimerEvent: {}
+[28.781246] (test_control) StdoutLine: {'line': b'[ 75%] \x1b[32m\x1b[1mLinking CXX executable robot_monitor\x1b[0m\n'}
+[28.795558] (-) TimerEvent: {}
+[28.896026] (-) TimerEvent: {}
+[28.996600] (-) TimerEvent: {}
+[29.097002] (-) TimerEvent: {}
+[29.197382] (-) TimerEvent: {}
+[29.297817] (-) TimerEvent: {}
+[29.398206] (-) TimerEvent: {}
+[29.498653] (-) TimerEvent: {}
+[29.599202] (-) TimerEvent: {}
+[29.624822] (test_control) StdoutLine: {'line': b'[ 75%] Built target robot_monitor\n'}
+[29.700363] (-) TimerEvent: {}
+[29.801050] (-) TimerEvent: {}
+[29.901361] (-) TimerEvent: {}
+[30.001708] (-) TimerEvent: {}
+[30.102045] (-) TimerEvent: {}
+[30.202526] (-) TimerEvent: {}
+[30.303060] (-) TimerEvent: {}
+[30.403517] (-) TimerEvent: {}
+[30.503845] (-) TimerEvent: {}
+[30.604182] (-) TimerEvent: {}
+[30.704592] (-) TimerEvent: {}
+[30.805018] (-) TimerEvent: {}
+[30.905363] (-) TimerEvent: {}
+[31.005796] (-) TimerEvent: {}
+[31.106301] (-) TimerEvent: {}
+[31.206653] (-) TimerEvent: {}
+[31.307054] (-) TimerEvent: {}
+[31.407467] (-) TimerEvent: {}
+[31.507851] (-) TimerEvent: {}
+[31.608246] (-) TimerEvent: {}
+[31.708738] (-) TimerEvent: {}
+[31.809220] (-) TimerEvent: {}
+[31.909649] (-) TimerEvent: {}
+[32.010064] (-) TimerEvent: {}
+[32.110466] (-) TimerEvent: {}
+[32.210870] (-) TimerEvent: {}
+[32.311363] (-) TimerEvent: {}
+[32.412153] (-) TimerEvent: {}
+[32.512584] (-) TimerEvent: {}
+[32.612925] (-) TimerEvent: {}
+[32.713347] (-) TimerEvent: {}
+[32.813727] (-) TimerEvent: {}
+[32.914200] (-) TimerEvent: {}
+[33.014644] (-) TimerEvent: {}
+[33.115158] (-) TimerEvent: {}
+[33.215744] (-) TimerEvent: {}
+[33.316219] (-) TimerEvent: {}
+[33.416628] (-) TimerEvent: {}
+[33.516940] (-) TimerEvent: {}
+[33.617293] (-) TimerEvent: {}
+[33.717692] (-) TimerEvent: {}
+[33.818161] (-) TimerEvent: {}
+[33.918820] (-) TimerEvent: {}
+[34.019475] (-) TimerEvent: {}
+[34.119979] (-) TimerEvent: {}
+[34.220636] (-) TimerEvent: {}
+[34.321413] (-) TimerEvent: {}
+[34.421819] (-) TimerEvent: {}
+[34.522355] (-) TimerEvent: {}
+[34.622854] (-) TimerEvent: {}
+[34.723320] (-) TimerEvent: {}
+[34.823719] (-) TimerEvent: {}
+[34.924102] (-) TimerEvent: {}
+[35.024516] (-) TimerEvent: {}
+[35.124933] (-) TimerEvent: {}
+[35.225405] (-) TimerEvent: {}
+[35.325910] (-) TimerEvent: {}
+[35.426346] (-) TimerEvent: {}
+[35.526771] (-) TimerEvent: {}
+[35.627168] (-) TimerEvent: {}
+[35.727504] (-) TimerEvent: {}
+[35.827853] (-) TimerEvent: {}
+[35.928269] (-) TimerEvent: {}
+[36.028725] (-) TimerEvent: {}
+[36.129324] (-) TimerEvent: {}
+[36.229693] (-) TimerEvent: {}
+[36.330041] (-) TimerEvent: {}
+[36.430477] (-) TimerEvent: {}
+[36.530854] (-) TimerEvent: {}
+[36.546386] (test_control) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/test_pseudo_inverse_ik_node.dir/build.make:76\xef\xbc\x9aCMakeFiles/test_pseudo_inverse_ik_node.dir/src/test_pseudo_inverse_ik.cpp.o] \xe9\x94\x99\xe8\xaf\xaf 1\n'}
+[36.547011] (test_control) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:165\xef\xbc\x9aCMakeFiles/test_pseudo_inverse_ik_node.dir/all] \xe9\x94\x99\xe8\xaf\xaf 2\n'}
+[36.547513] (test_control) StderrLine: {'line': b'gmake: *** [Makefile:146\xef\xbc\x9aall] \xe9\x94\x99\xe8\xaf\xaf 2\n'}
+[36.551645] (test_control) CommandEnded: {'returncode': 2}
+[36.566057] (test_control) JobEnded: {'identifier': 'test_control', 'rc': 2}
+[36.578103] (-) EventReactorShutdown: {}

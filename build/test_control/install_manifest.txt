@@ -1,0 +1,17 @@
+/home/zme/self_project/rebotArm_mujoco/install/test_control/lib/test_control/robot_monitor
+/home/zme/self_project/rebotArm_mujoco/install/test_control/lib/test_control/test_pseudo_inverse_ik_node
+/home/zme/self_project/rebotArm_mujoco/install/test_control/share/ament_index/resource_index/package_run_dependencies/test_control
+/home/zme/self_project/rebotArm_mujoco/install/test_control/share/ament_index/resource_index/parent_prefix_path/test_control
+/home/zme/self_project/rebotArm_mujoco/install/test_control/share/test_control/environment/ament_prefix_path.sh
+/home/zme/self_project/rebotArm_mujoco/install/test_control/share/test_control/environment/ament_prefix_path.dsv
+/home/zme/self_project/rebotArm_mujoco/install/test_control/share/test_control/environment/path.sh
+/home/zme/self_project/rebotArm_mujoco/install/test_control/share/test_control/environment/path.dsv
+/home/zme/self_project/rebotArm_mujoco/install/test_control/share/test_control/local_setup.bash
+/home/zme/self_project/rebotArm_mujoco/install/test_control/share/test_control/local_setup.sh
+/home/zme/self_project/rebotArm_mujoco/install/test_control/share/test_control/local_setup.zsh
+/home/zme/self_project/rebotArm_mujoco/install/test_control/share/test_control/local_setup.dsv
+/home/zme/self_project/rebotArm_mujoco/install/test_control/share/test_control/package.dsv
+/home/zme/self_project/rebotArm_mujoco/install/test_control/share/ament_index/resource_index/packages/test_control
+/home/zme/self_project/rebotArm_mujoco/install/test_control/share/test_control/cmake/test_controlConfig.cmake
+/home/zme/self_project/rebotArm_mujoco/install/test_control/share/test_control/cmake/test_controlConfig-version.cmake
+/home/zme/self_project/rebotArm_mujoco/install/test_control/share/test_control/package.xml

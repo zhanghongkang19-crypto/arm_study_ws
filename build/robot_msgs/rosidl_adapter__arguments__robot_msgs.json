@@ -1,0 +1,6 @@
+{
+  "package_name": "robot_msgs",
+  "non_idl_tuples": [
+    "/home/zme/self_project/rebotArm_mujoco/src/robot_msgs:msg/ArmPositionCmd.msg"
+  ]
+}

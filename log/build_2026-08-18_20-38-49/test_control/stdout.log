@@ -1,0 +1,28 @@
+-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found rclcpp: 28.1.21 (/opt/ros/jazzy/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+-- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 8.4.4 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found std_msgs: 5.3.8 (/opt/ros/jazzy/share/std_msgs/cmake)
+-- Found sensor_msgs: 5.3.8 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+-- Found robot_msgs: 0.0.0 (/home/zme/self_project/rebotArm_mujoco/install/robot_msgs/share/robot_msgs/cmake)
+-- Found robot_motion: 0.0.0 (/home/zme/self_project/rebotArm_mujoco/install/robot_motion/share/robot_motion/cmake)
+-- pinocchio_default FOUND. pinocchio_default at /usr/local/lib/libpinocchio_default.so
+-- pinocchio_parsers FOUND. pinocchio_parsers at /usr/local/lib/libpinocchio_parsers.so
+-- pinocchio_casadi FOUND. pinocchio_casadi at /usr/local/lib/libpinocchio_casadi.so
+-- boost_filesystem FOUND. boost_filesystem at /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+-- hpp-fcl FOUND. hpp-fcl at /usr/local/lib/libhpp-fcl.so
+-- Default C++ standard: 201703
+-- C++ standard sufficient: Minimal required 11, currently defined: 17
+-- C++ standard sufficient: Minimal required 11, currently defined: 17
+-- Configuring done (2.5s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/zme/self_project/rebotArm_mujoco/build/test_control
+[ 25%] [32mBuilding CXX object CMakeFiles/test_pseudo_inverse_ik_node.dir/src/test_pseudo_inverse_ik.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/robot_monitor.dir/src/test_control.cpp.o[0m
+[ 75%] [32m[1mLinking CXX executable robot_monitor[0m
+[ 75%] Built target robot_monitor
