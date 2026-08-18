@@ -10,7 +10,7 @@ find_package(std_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
 
 find_package(robot_msgs REQUIRED)
-
+find_package(robot_motion REQUIRED)
 
 add_executable(robot_monitor
   src/test_control.cpp
@@ -22,6 +22,7 @@ ament_target_dependencies(robot_monitor
   std_msgs
   sensor_msgs
   robot_msgs
+  robot_motion
 )
 
 

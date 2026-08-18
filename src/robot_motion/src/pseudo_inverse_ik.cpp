@@ -14,7 +14,7 @@ PseudoInverseIK(const std::string& urdf_path,const std::string& base_link,const 
     tolerance_ = 1e-6;
 }
 
-Eigen::Matrix<double,7,1>   get_fk(const Eigen::VectorXd& joint_angles, const std::string& link_name)
+Eigen::Matrix<double,7,1>  get_fk(const Eigen::VectorXd& joint_angles, const std::string& link_name)
 {
     pinocchio::forwardKinematics(model_, *data_, joint_angles);
     pinocchio::updateFramePlacements(model_, *data_);
@@ -28,7 +28,8 @@ Eigen::Matrix<double,7,1>   get_fk(const Eigen::VectorXd& joint_angles, const st
 }
 
 
-bool get_ik(const Eigen::VectorXd& initial_joint_angles, const Eigen::VectorXd& target_pose, const std::string& link_name,Eigen::VectorXd& result_joint_angles)
+bool get_ik(const Eigen::VectorXd& initial_joint_angles, const Eigen::VectorXd& target_pose, 
+            const std::string& link_name,Eigen::VectorXd& result_joint_angles)
 {
     for(int i=0; i<iteration_limit_; ++i)
     {
@@ -54,6 +55,7 @@ bool get_ik(const Eigen::VectorXd& initial_joint_angles, const Eigen::VectorXd& 
         pinocchio::updateFramePlacements(model_, *data_);
         Eigen::MatrixXd J = pinocchio::getFrameJacobian(model_, *data_, ee_frame_id_, pinocchio::LOCAL_WORLD_ALIGNED);
         
+        //使用 Eigen 的完全正交分解计算 Jacobian 的 Moore-Penrose 伪逆。
         Eigen::MatrixXd J_pseudo_inverse = J.completeOrthogonalDecomposition().pseudoInverse();
         
         Eigen::VectorXd delta_theta = J_pseudo_inverse * delta_x;
