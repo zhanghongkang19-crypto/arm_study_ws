@@ -1,7 +1,0 @@
-{
-  "package_name": "robot_msgs",
-  "output_dir": "/home/zme/self_project/rebotArm_mujoco/build/robot_msgs/rosidl_generator_type_description/robot_msgs",
-  "idl_tuples": [
-    "/home/zme/self_project/rebotArm_mujoco/build/robot_msgs/rosidl_adapter/robot_msgs:msg/ArmPositionCmd.idl"
-  ]
-}

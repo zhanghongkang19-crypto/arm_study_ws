@@ -1,4 +1,0 @@
-[01m[K/home/zme/self_project/rebotArm_mujoco/src/robot_motion/src/pseudo_inverse_ik.cpp:[m[K In member function ‘[01m[Kbool PseudoInverseIK::[01;32m[Kget_ik[m[K(Eigen::VectorXd&, const Eigen::VectorXd&, const std::string&, Eigen::VectorXd&)[m[K’:
-[01m[K/home/zme/self_project/rebotArm_mujoco/src/robot_motion/src/pseudo_inverse_ik.cpp:67:1:[m[K [01;35m[Kwarning: [m[Kcontrol reaches end of non-void function [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-type-Wreturn-type]8;;[m[K]
-   67 | [01;35m[K}[m[K
-      | [01;35m[K^[m[K
