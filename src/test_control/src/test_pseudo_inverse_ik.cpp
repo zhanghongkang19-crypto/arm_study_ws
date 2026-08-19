@@ -7,6 +7,7 @@
 #include <chrono>
 #include <filesystem>
 #include <iostream>
+#include <mutex>
 
 
 using namespace std::chrono_literals;
@@ -22,6 +23,8 @@ public:
             cmd[i]=0.0;
         }
 
+        target_pose_ << 0.1, 0.0, 0.1908, 0.7173, 0.0001, 0.6967, -0.0001;
+
         // 拼接 URDF 路径
         fs::path urdf_path ="reBot_B601_DM_with_gripper.urdf";
 
@@ -30,7 +33,7 @@ public:
         // 订阅机械臂状态
         joint_state_sub_ = this->create_subscription<sensor_msgs::msg::JointState>( "/joint_states", 10,std::bind( &RobotMonitor::jointStateCallback, this,std::placeholders::_1));
         // 定时发送控制命令
-        timer_ = this->create_wall_timer(500ms,std::bind(&RobotMonitor::timerCallback,this));
+        timer_ = this->create_wall_timer(20ms,std::bind(&RobotMonitor::timerCallback,this));
         RCLCPP_INFO(this->get_logger(),"Robot monitor node started.");
     }
 
@@ -42,17 +45,32 @@ private:
     // ============================
     void timerCallback()
     {
+        std::unique_lock<std::mutex> lock(mutex_);
+        if(joint_positions_.empty()){
+            lock.unlock();
+            return;
+        }
         Eigen::VectorXd joint_positions = Eigen::Map<Eigen::VectorXd>(joint_positions_.data(), joint_positions_.size());
+        lock.unlock();
         Eigen::Matrix<double,7,1> pose = pseudoInverseIK_.get_fk(joint_positions, "link6");
-        RCLCPP_INFO(this->get_logger(),"Current pose: x: %.4f, y: %.4f, z: %.4f, qx: %.4f, qy: %.4f, qz: %.4f, qw: %.4f", pose(0), pose(1), pose(2), pose(3), pose(4), pose(5), pose(6));
-        pose(0) += 0.01; // Move 1 cm in x direction
+
+        //RCLCPP_INFO(this->get_logger(),"Current pose: x: %.4f, y: %.4f, z: %.4f, qx: %.4f, qy: %.4f, qz: %.4f, qw: %.4f", pose(0), pose(1), pose(2), pose(3), pose(4), pose(5), pose(6));
+        
+        
+        
+        target_pose_(0) += 0.002; // Move 1 cm in x direction
+        if(target_pose_(0) > 1){
+            target_pose_(0) -=0.002;
+        }
+        
         Eigen::VectorXd result_joint_angles;
         robot_msgs::msg::ArmPositionCmd msg;
         msg.position.resize(8);
-        bool success = pseudoInverseIK_.get_ik(joint_positions, pose, "link6", result_joint_angles);
+        bool success = pseudoInverseIK_.get_null_space_ik(joint_positions, target_pose_, "link6", result_joint_angles);
+         
         if(success)
         {
-            RCLCPP_INFO(this->get_logger(),"IK solution found.");
+            //RCLCPP_INFO(this->get_logger(),"IK solution found.");
             for(int i=0;i<result_joint_angles.size();i++)
             {
                 msg.position[i] = result_joint_angles[i];
@@ -67,7 +85,7 @@ private:
 
 
         cmd_pub_->publish(msg);
-        RCLCPP_INFO(this->get_logger(),"Publish joint command");
+        //RCLCPP_INFO(this->get_logger(),"Publish joint command");
     }
 
 
@@ -78,8 +96,9 @@ private:
     // ============================
     void jointStateCallback(const sensor_msgs::msg::JointState::SharedPtr msg)
     {
-        RCLCPP_INFO( this->get_logger(),"Received joint state");
-
+        //RCLCPP_INFO( this->get_logger(),"Received joint state");
+        std::lock_guard<std::mutex> lock_guard(mutex_);
+        joint_positions_.clear();
         for(size_t i=0;i<msg->name.size();i++)
         {
           
@@ -88,19 +107,21 @@ private:
                 double pos = msg->position[i];
                 joint_positions_.push_back(pos);
             }
-            RCLCPP_INFO( this->get_logger(),"%s : %.4f", msg->name[i].c_str(), joint_positions_[i]);
+           // RCLCPP_INFO( this->get_logger(),"%s : %.4f", msg->name[i].c_str(), joint_positions_[i]);
         }
     }
 
 
 
 private:
+    Eigen::Matrix<double,7,1> target_pose_;
     double cmd[8];
     std::vector<double> joint_positions_;
     PseudoInverseIK pseudoInverseIK_;
     rclcpp::Publisher<robot_msgs::msg::ArmPositionCmd>::SharedPtr cmd_pub_;
     rclcpp::Subscription<sensor_msgs::msg::JointState>::SharedPtr joint_state_sub_;
     rclcpp::TimerBase::SharedPtr timer_;
+    std::mutex mutex_;
 };
 
 

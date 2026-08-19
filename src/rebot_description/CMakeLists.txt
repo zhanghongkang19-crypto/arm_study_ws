@@ -19,6 +19,7 @@ install(
 install(
   DIRECTORY
     urdf
+    script
   DESTINATION share/${PROJECT_NAME}
 )
 

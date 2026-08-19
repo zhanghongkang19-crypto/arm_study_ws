@@ -28,7 +28,7 @@ public:
     // IK
     bool get_ik(Eigen::VectorXd& initial_joint_angles, const Eigen::VectorXd& target_pose, const std::string& link_name, Eigen::VectorXd& result_joint_angles);
 
-
+    bool get_null_space_ik(Eigen::VectorXd& initial_joint_angles, const Eigen::VectorXd& target_pose, const std::string& link_name, Eigen::VectorXd& result_joint_angles);
 
 private:
     Eigen::VectorXd calc_delta_x(const Eigen::Matrix4d& cur_pose, const Eigen::Matrix4d& tar_pose);
