@@ -324,7 +324,6 @@ end
 if h_3d(x_new) <= 1e-9
     x_new = x - 0.1 * alpha * g;  % 步长缩小 10 倍
 end
-
 ```
 该机制能够防止固定步长更新时“冲出”可行域。
 
@@ -566,4 +565,168 @@ Newton 迭代法的几何解释如下所述：
 因此，Newton 法也称为**切线法**，因为它是沿着曲线 $y = f(x)$ 上某一点作切线逐步外推逼近的。
 由于 $y = f(x)$ 通常为非线性曲线而非直线，从点 $p_k$ 作切线与 $x$ 轴交出的 $x_{k+1}$ 处，$f(x_{k+1})$ 一般不可能恰好为零。因此必须以 $x_{k+1}$ 作为新的起点，从与之对应的 $p_{k+1}$ 点继续作切线，重复上述步骤，直至 $f(x_{k+1})$ 充分小（逼近于零）时为止。   
 ![alt text](image-2.png)
+
+## 实现相关
+### 1.CasDi
+
+**CasADi** 是一个开源的**符号计算与数值优化框架**，在机器人学、控制理论（如 MPC）及非线性优化领域应用广泛。其核心能力包括：  
+* **符号变量与计算图构建**（Symbolic Variables & Expressions）
+* **高效算法自动微分**（Algorithmic / Automatic Differentiation, AD）
+* **快速构建非线性规划问题**（Formulating NLP / Optimal Control Problems）
+* **集成高阶模型预测控制**（MPC Formulation）
+* **无缝对接底层优化求解器**（原生支持 IPOPT, SNOPT, KNITRO, OSQP, qpOASES 等）
+
+CasADi 允许定义**符号变量**以搭建计算图，并在底层自动推导精确的一阶梯度（Jacobian）与二阶导数（Hessian）。
+```cpp
+// 在 CasADi Opti 接口中定义 7 维优化决策变量
+casadi::MX q = opti.variable(7);
+
+```
+此时的 `q` 并不是具体的浮点数，而是抽象的符号向量：
+$$\boldsymbol{q} = [q_1, q_2, \dots, q_7]^T$$
+CasADi 会在其内部的计算图（Expression Graph）中完整追踪并构建以下数学依赖链：
+$$f(\boldsymbol{q}), \quad \nabla f(\boldsymbol{q}) = \frac{\partial f}{\partial \boldsymbol{q}}, \quad \nabla^2 f(\boldsymbol{q}) = \frac{\partial^2 f}{\partial \boldsymbol{q}^2}$$
+| 维度 | Eigen | CasADi |
+| --- | --- | --- |
+| **操作对象** | 具体的**数值**（Numbers / Arrays） | 抽象的**数学表达式 / 计算图**（Expressions） |
+| **导数计算** | 需手写解析式或利用数值差分 | 基于计算图的高效**自动微分（AD）** |
+| **典型用途** | 正运动学计算、几何变换、矩阵运算 | 构建 NLP / MPC 目标与约束，并传递给 IPOPT 等求解器 |
+
+#### 1.1 casadi::SX::sym 与 ADModel::ConfigVectorType 区别与联系
+
+```cpp
+casadi::SX q_sym = casadi::SX::sym("q", model_.nq);
+```
+这是 CasADi 的符号变量（Symbolic Variable）。
+假设自由度 `model_.nq = 7`，那么 `q_sym` 实际上代表一个抽象的列向量：
+$$\boldsymbol{q}_{sym} = [q_1, q_2, q_3, q_4, q_5, q_6, q_7]^T$$
+需要注意的是，这里的 $q_1 \sim q_7$ **并不是具体的浮点数**：
+* `q_sym(0)` 仅代表符号变量表达式 $q[0]$，而不是形如 `0.5 rad` 的具体数值。
+CasADi 后续会基于这个符号变量建立目标函数或约束 $f(\boldsymbol{q})$，并自动提取偏导数：
+$$\frac{\partial f}{\partial \boldsymbol{q}}, \quad \frac{\partial^2 f}{\partial \boldsymbol{q}^2}$$
+因此，`q_sym` 的作用是明确告知 CasADi：**“在此处将 $\boldsymbol{q}$ 作为决策/符号变量。”**
+
+```cpp
+ADModel::ConfigVectorType q_ad(model_.nq);
+
+```
+这是 Pinocchio 动力学库中定义的机器人构型向量（Configuration Vector）。
+这里的关键在于 `ADModel`：它是一个将底层标量类型（Scalar Type）重定向/替换为 `casadi::SX` 的 Pinocchio 模型。
+因此，`ADModel::ConfigVectorType` 在底层的数据结构实际上类似于：
+```cpp
+Eigen::Matrix<casadi::SX, Eigen::Dynamic, 1>
+```
+即 `q_ad` 是一个 **Eigen 风格的向量**，但其中填充的每一个元素都是 `casadi::SX` 符号类型：
+$$\boldsymbol{q}_{ad} = \begin{bmatrix} \text{casadi::SX}_0 \\ \text{casadi::SX}_1 \\ \vdots \\ \text{casadi::SX}_6 \end{bmatrix}$$
+虽然它们在数学语义上都代表关节变量 $\boldsymbol{q} = [q_1, \dots, q_7]^T$，但归属的数据体系完全不同：
+| 变量 | 归属体系 | 核心定位 |
+| --- | --- | --- |
+| **`q_sym`** | CasADi 符号表达体系 (`casadi::SX`) | 用于构建优化问题、提取雅可比/黑塞矩阵 |
+| **`q_ad`** | Pinocchio 算法接口体系 (`Eigen::Matrix<casadi::SX, ...>`) | 用于传给 Pinocchio 计算正运动学/动力学 |
+它们并不是两组独立无关的变量，而是**同一组符号 $\boldsymbol{q}$ 在两个不同库/接口中的容器映射**。
+
+这句赋值代码起到了跨库适配的关键作用：
+```cpp
+pinocchio::casadi::copy(q_sym, q_ad);
+```
+它并不是简单的内存复制，而是**将 CasADi 侧的 `SX` 符号表达式拆解并桥接到 Pinocchio 兼容的 Eigen 容器 (`q_ad`) 中**。
+整个数据桥接转换过程如下：
+```text
+CasADi 表达式体系 (q_sym)           Pinocchio 算法体系 (q_ad)
+┌──────────────────────┐          ┌──────────────────────────────────────────────┐
+│  casadi::SX (7x1)    │          │  Eigen::Matrix<casadi::SX, Dynamic, 1> (7x1) │
+│  [ q0, q1, ..., q6 ] │ ───────> │  [ casadi::SX_0, casadi::SX_1, ..., SX_6 ]  │
+└──────────────────────┘  copy()  └──────────────────────────────────────────────┘
+```
+完成该映射后，即可将 `q_ad` 作为参数传入 Pinocchio 的标准运动学算子中：
+```cpp
+pinocchio::forwardKinematics(ad_model, ad_data, q_ad);
+```
+此时 Pinocchio 计算出的前向运动学结果，其内部将保留完好的 **CasADi 符号计算图**。
+
+### 2.反对乘矩阵
+#### 2.1 为什么叫“反对称部分”？
+对于任意方阵 $\boldsymbol{R}$，都可以唯一分解为一个**对称矩阵**和一个**反对称矩阵**之和：
+$$\boldsymbol{R} = \underbrace{\frac{1}{2}(\boldsymbol{R} + \boldsymbol{R}^T)}_{\text{对称部分 } \boldsymbol{R}_s} + \underbrace{\frac{1}{2}(\boldsymbol{R} - \boldsymbol{R}^T)}_{\text{反对称部分 } \boldsymbol{R}_a}$$
+其中，对称部分 $\boldsymbol{R}_s = \frac{1}{2}(\boldsymbol{R} + \boldsymbol{R}^T)$ 满足转置相等特性：
+$$\boldsymbol{R}_s^T = \boldsymbol{R}_s \implies \text{对称矩阵 (Symmetric Matrix)}$$
+而反对称部分 $\boldsymbol{R}_a = \frac{1}{2}(\boldsymbol{R} - \boldsymbol{R}^T)$ 满足转置变号特性：
+$$\boldsymbol{R}_a^T = -\boldsymbol{R}_a \implies \text{反对称矩阵 (Skew-symmetric Matrix)}$$
+
+### 2. 算例验证
+
+假设有一个 $3 \times 3$ 矩阵：
+
+$$\boldsymbol{R} = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \end{bmatrix}$$
+
+其转置矩阵为：
+
+$$\boldsymbol{R}^T = \begin{bmatrix} 1 & 4 & 7 \\ 2 & 5 & 8 \\ 3 & 6 & 9 \end{bmatrix}$$
+
+计算两阵之差：
+
+$$\boldsymbol{R} - \boldsymbol{R}^T = \begin{bmatrix} 0 & -2 & -4 \\ 2 & 0 & -2 \\ 4 & 2 & 0 \end{bmatrix}$$
+
+乘以系数 $\frac{1}{2}$ 得到反对称部分：
+
+$$\boldsymbol{R}_a = \frac{1}{2}(\boldsymbol{R} - \boldsymbol{R}^T) = \begin{bmatrix} 0 & -1 & -2 \\ 1 & 0 & -1 \\ 2 & 1 & 0 \end{bmatrix}$$
+
+验算其转置可得：
+
+$$\boldsymbol{R}_a^T = \begin{bmatrix} 0 & 1 & 2 \\ -1 & 0 & 1 \\ -2 & -1 & 0 \end{bmatrix} = -\boldsymbol{R}_a$$
+
+由此证实 $\frac{1}{2}(\boldsymbol{R} - \boldsymbol{R}^T)$ 确实严格构成了**反对称矩阵**。
+
+---
+
+### 3. 在机械臂姿态控制代码中的物理含义
+
+代码实现逻辑：
+
+```cpp
+Eigen::Matrix<casadi::SX,3,3> Rerr_L = Rl_des.transpose() * R_L;
+
+Eigen::Matrix<casadi::SX,3,3> skew_L = 
+    0.5 * (Rerr_L - Rerr_L.transpose());
+
+```
+
+这里的 `Rerr_L` 描述的是期望姿态与实际姿态之间的相对旋转矩阵 $\boldsymbol{R}_{err}$。
+
+调用 `0.5 * (Rerr_L - Rerr_L.transpose())` 的目的是提取该旋转偏差的反对称矩阵。
+
+对于微小旋转偏差，旋转矩阵可通过一阶泰勒近似表达为：
+
+$$\boldsymbol{R}_{err} \approx \boldsymbol{I} + [\delta\boldsymbol{\theta}]_\times$$
+
+其中 $[\delta\boldsymbol{\theta}]_\times$ 为对应的叉乘反对称矩阵：
+
+$$[\delta\boldsymbol{\theta}]_\times = \begin{bmatrix} 0 & -\delta\theta_z & \delta\theta_y \\ \delta\theta_z & 0 & -\delta\theta_x \\ -\delta\theta_y & \delta\theta_x & 0 \end{bmatrix}$$
+后续代码提取各分量：
+
+```cpp
+rot_err_L << skew_L(2,1),
+             skew_L(0,2),
+             skew_L(1,0);
+```
+就是利用同构映射（Vee mapping），从反对称矩阵非对角元素中还原出真实的三维角偏差向量：
+$$\delta\boldsymbol{\theta} = \begin{bmatrix} \delta\theta_x \\ \delta\theta_y \\ \delta\theta_z \end{bmatrix}$$
+整个算术与转换流程概括如下：
+```text
+       Rerr_L (旋转矩阵残差)
+                 │
+                 ▼
+      skew_L (提取反对称部分)
+                 │
+                 ▼
+    提取非对角元素 (Vee 映射/Unskew)
+                 │
+                 ▼
+rot_err_L = [δθx, δθy, δθz]^T (三维旋转误差向量)
+                 │
+                 ▼
+    接入 Cost / Constraints 交给 IPOPT/SQP 求解器
+```
+核心思想：**将三维旋转矩阵形式的非线性姿态误差，转化为紧凑的三维向量表达 $\delta\boldsymbol{\theta}$，以便优化求解器进行梯度推导与二次型（QP）代价构建。**
+
 
