@@ -76,6 +76,23 @@ PseudoInverseIK::PseudoInverseIK(const std::string& urdf_path,const std::string&
 		{ rot_err }          // 输出
 	);
 
+	var_q_ = opti_.variable(model_.nq);		//定义一个优化变量
+	var_q_last_ = opti_.parameter(model_.nq);
+	param_tf_ = opti_.parameter(4, 4);
+	casadi::MX q_ref = opti_.parameter(model_.nq);
+	casadi::MX joint_w = opti_.parameter(model_.nq);	//关节权重
+
+	// 平移误差 cost
+	casadi::MXVector out1 = translational_error(casadi::MXVector{var_q_, param_tf_});
+	translational_cost_ = casadi::MX::sumsqr(out1.at(0));	//计算平方和。
+	// 旋转误差 cost
+	casadi::MXVector out2 = rotational_error(casadi::MXVector{var_q_, param_tf_});
+	rotational_cost_ = casadi::MX::sumsqr(out2.at(0));
+	// 正则化 cost（// 特定关节目标 / 加权跟踪）
+	regularization_cost_ = casadi::MX::sumsqr(casadi::MX::diag(joint_w) * (var_q_ - q_ref));
+	// 平滑 cost（与上一时刻解接近）
+	smooth_cost_ = casadi::MX::sumsqr(var_q_ - var_q_last_);
+
     
 
 }
