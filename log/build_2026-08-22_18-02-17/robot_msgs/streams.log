@@ -1,0 +1,226 @@
+[0.006s] Invoking command in '/home/zhang/self_project/arm_study_ws/build/robot_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/zhang/self_project/arm_study_ws/src/robot_msgs -DCMAKE_INSTALL_PREFIX=/home/zhang/self_project/arm_study_ws/install/robot_msgs
+[0.043s] -- The C compiler identification is GNU 13.3.0
+[0.083s] -- The CXX compiler identification is GNU 13.3.0
+[0.093s] -- Detecting C compiler ABI info
+[0.160s] -- Detecting C compiler ABI info - done
+[0.166s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.166s] -- Detecting C compile features
+[0.166s] -- Detecting C compile features - done
+[0.178s] -- Detecting CXX compiler ABI info
+[0.249s] -- Detecting CXX compiler ABI info - done
+[0.255s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.255s] -- Detecting CXX compile features
+[0.255s] -- Detecting CXX compile features - done
+[0.261s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.357s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.449s] -- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+[0.449s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.480s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.501s] -- Found rosidl_adapter: 4.6.6 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+[0.896s] -- Found ament_cmake_ros: 0.12.0 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)
+[1.211s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.616s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.618s] -- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)
+[1.717s] -- Found PythonExtra: /usr/bin/python3  
+[2.046s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed 
+[2.068s] -- Configuring done (2.1s)
+[2.093s] -- Generating done (0.0s)
+[2.099s] -- Build files have been written to: /home/zhang/self_project/arm_study_ws/build/robot_msgs
+[2.107s] Invoked command in '/home/zhang/self_project/arm_study_ws/build/robot_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/zhang/self_project/arm_study_ws/src/robot_msgs -DCMAKE_INSTALL_PREFIX=/home/zhang/self_project/arm_study_ws/install/robot_msgs
+[2.107s] Invoking command in '/home/zhang/self_project/arm_study_ws/build/robot_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/zhang/self_project/arm_study_ws/build/robot_msgs -- -j20 -l20
+[2.151s] [  0%] Built target ament_cmake_python_copy_robot_msgs
+[2.151s] [  2%] [34m[1mGenerating type hashes for ROS interfaces[0m
+[2.255s] [  2%] Built target robot_msgs__rosidl_generator_type_description
+[2.264s] [  5%] [34m[1mGenerating C code for ROS interfaces[0m
+[2.266s] running egg_info
+[2.269s] creating robot_msgs.egg-info
+[2.274s] writing robot_msgs.egg-info/PKG-INFO
+[2.274s] writing dependency_links to robot_msgs.egg-info/dependency_links.txt
+[2.274s] writing top-level names to robot_msgs.egg-info/top_level.txt
+[2.274s] [  8%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[2.274s] writing manifest file 'robot_msgs.egg-info/SOURCES.txt'
+[2.296s] reading manifest file 'robot_msgs.egg-info/SOURCES.txt'
+[2.296s] writing manifest file 'robot_msgs.egg-info/SOURCES.txt'
+[2.321s] [  8%] Built target ament_cmake_python_build_robot_msgs_egg
+[2.401s] [ 17%] [32mBuilding C object CMakeFiles/robot_msgs__rosidl_generator_c.dir/rosidl_generator_c/robot_msgs/msg/detail/arm_position_cmd__description.c.o[0m
+[2.401s] [ 17%] [32mBuilding C object CMakeFiles/robot_msgs__rosidl_generator_c.dir/rosidl_generator_c/robot_msgs/msg/detail/arm_position_cmd__functions.c.o[0m
+[2.401s] [ 17%] [32mBuilding C object CMakeFiles/robot_msgs__rosidl_generator_c.dir/rosidl_generator_c/robot_msgs/msg/detail/arm_position_cmd__type_support.c.o[0m
+[2.401s] [ 17%] Built target robot_msgs__cpp
+[2.432s] [ 20%] [32m[1mLinking C shared library librobot_msgs__rosidl_generator_c.so[0m
+[2.455s] [ 20%] Built target robot_msgs__rosidl_generator_c
+[2.462s] [ 29%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[2.462s] [ 29%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[2.462s] [ 32%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[2.462s] [ 32%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[2.462s] [ 38%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[2.462s] [ 38%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[2.586s] [ 41%] [32mBuilding CXX object CMakeFiles/robot_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/robot_msgs/msg/detail/arm_position_cmd__type_support_c.cpp.o[0m
+[2.587s] [ 47%] [32mBuilding CXX object CMakeFiles/robot_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/robot_msgs/msg/arm_position_cmd__type_support.cpp.o[0m
+[2.587s] [ 47%] [32mBuilding CXX object CMakeFiles/robot_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/robot_msgs/msg/arm_position_cmd__type_support.cpp.o[0m
+[2.597s] [ 50%] [32mBuilding C object CMakeFiles/robot_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/robot_msgs/msg/detail/arm_position_cmd__type_support.c.o[0m
+[2.598s] [ 52%] [32mBuilding CXX object CMakeFiles/robot_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/robot_msgs/msg/detail/arm_position_cmd__type_support.cpp.o[0m
+[2.602s] [ 55%] [32mBuilding CXX object CMakeFiles/robot_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/robot_msgs/msg/detail/dds_fastrtps/arm_position_cmd__type_support.cpp.o[0m
+[2.623s] [ 58%] [32m[1mLinking CXX shared library librobot_msgs__rosidl_typesupport_c.so[0m
+[2.626s] [ 61%] [32m[1mLinking C shared library librobot_msgs__rosidl_typesupport_introspection_c.so[0m
+[2.649s] [ 61%] Built target robot_msgs__rosidl_typesupport_introspection_c
+[2.649s] [ 61%] Built target robot_msgs__rosidl_typesupport_c
+[2.757s] [ 64%] [32m[1mLinking CXX shared library librobot_msgs__rosidl_typesupport_cpp.so[0m
+[2.773s] [ 67%] [32m[1mLinking CXX shared library librobot_msgs__rosidl_typesupport_introspection_cpp.so[0m
+[2.787s] [ 67%] Built target robot_msgs__rosidl_typesupport_cpp
+[2.796s] [ 70%] [32m[1mLinking CXX shared library librobot_msgs__rosidl_typesupport_fastrtps_c.so[0m
+[2.831s] [ 70%] Built target robot_msgs__rosidl_typesupport_introspection_cpp
+[2.835s] [ 73%] [32m[1mLinking CXX shared library librobot_msgs__rosidl_typesupport_fastrtps_cpp.so[0m
+[2.838s] [ 73%] Built target robot_msgs__rosidl_typesupport_fastrtps_c
+[2.889s] [ 73%] Built target robot_msgs__rosidl_typesupport_fastrtps_cpp
+[2.907s] [ 73%] Built target robot_msgs
+[2.927s] [ 76%] [34m[1mGenerating Python code for ROS interfaces[0m
+[3.082s] [ 76%] Built target robot_msgs__py
+[3.096s] [ 79%] [32mBuilding C object CMakeFiles/robot_msgs__rosidl_generator_py.dir/rosidl_generator_py/robot_msgs/msg/_arm_position_cmd_s.c.o[0m
+[3.169s] [ 82%] [32m[1mLinking C shared library librobot_msgs__rosidl_generator_py.so[0m
+[3.199s] [ 82%] Built target robot_msgs__rosidl_generator_py
+[3.213s] [ 91%] [32mBuilding C object CMakeFiles/robot_msgs_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/robot_msgs/_robot_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[3.213s] [ 91%] [32mBuilding C object CMakeFiles/robot_msgs_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/robot_msgs/_robot_msgs_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[3.213s] [ 91%] [32mBuilding C object CMakeFiles/robot_msgs_s__rosidl_typesupport_c.dir/rosidl_generator_py/robot_msgs/_robot_msgs_s.ep.rosidl_typesupport_c.c.o[0m
+[3.277s] [ 94%] [32m[1mLinking C shared module rosidl_generator_py/robot_msgs/robot_msgs_s__rosidl_typesupport_c.so[0m
+[3.279s] [ 97%] [32m[1mLinking C shared module rosidl_generator_py/robot_msgs/robot_msgs_s__rosidl_typesupport_introspection_c.so[0m
+[3.281s] [100%] [32m[1mLinking C shared module rosidl_generator_py/robot_msgs/robot_msgs_s__rosidl_typesupport_fastrtps_c.so[0m
+[3.296s] [100%] Built target robot_msgs_s__rosidl_typesupport_c
+[3.301s] [100%] Built target robot_msgs_s__rosidl_typesupport_introspection_c
+[3.301s] [100%] Built target robot_msgs_s__rosidl_typesupport_fastrtps_c
+[3.308s] Invoked command in '/home/zhang/self_project/arm_study_ws/build/robot_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/zhang/self_project/arm_study_ws/build/robot_msgs -- -j20 -l20
+[3.309s] Invoking command in '/home/zhang/self_project/arm_study_ws/build/robot_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/zhang/self_project/arm_study_ws/build/robot_msgs
+[3.319s] -- Install configuration: ""
+[3.319s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/share/ament_index/resource_index/rosidl_interfaces/robot_msgs
+[3.319s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/share/robot_msgs/msg/ArmPositionCmd.json
+[3.319s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/include/robot_msgs/robot_msgs
+[3.320s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/include/robot_msgs/robot_msgs/msg
+[3.320s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/include/robot_msgs/robot_msgs/msg/rosidl_generator_c__visibility_control.h
+[3.320s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/include/robot_msgs/robot_msgs/msg/arm_position_cmd.h
+[3.320s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail
+[3.320s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail/arm_position_cmd__type_support.h
+[3.320s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail/arm_position_cmd__description.c
+[3.320s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail/arm_position_cmd__struct.h
+[3.320s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail/arm_position_cmd__functions.c
+[3.320s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail/arm_position_cmd__functions.h
+[3.320s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail/arm_position_cmd__type_support.c
+[3.320s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/share/robot_msgs/environment/library_path.sh
+[3.320s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/share/robot_msgs/environment/library_path.dsv
+[3.320s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/lib/librobot_msgs__rosidl_generator_c.so
+[3.320s] -- Set non-toolchain portion of runtime path of "/home/zhang/self_project/arm_study_ws/install/robot_msgs/lib/librobot_msgs__rosidl_generator_c.so" to ""
+[3.320s] -- Up-to-date: /home/zhang/self_project/arm_study_ws/install/robot_msgs/include/robot_msgs/robot_msgs
+[3.320s] -- Up-to-date: /home/zhang/self_project/arm_study_ws/install/robot_msgs/include/robot_msgs/robot_msgs/msg
+[3.320s] -- Up-to-date: /home/zhang/self_project/arm_study_ws/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail
+[3.320s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail/arm_position_cmd__rosidl_typesupport_fastrtps_c.h
+[3.320s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/include/robot_msgs/robot_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[3.320s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/lib/librobot_msgs__rosidl_typesupport_fastrtps_c.so
+[3.320s] -- Set non-toolchain portion of runtime path of "/home/zhang/self_project/arm_study_ws/install/robot_msgs/lib/librobot_msgs__rosidl_typesupport_fastrtps_c.so" to ""
+[3.320s] -- Up-to-date: /home/zhang/self_project/arm_study_ws/install/robot_msgs/include/robot_msgs/robot_msgs
+[3.320s] -- Up-to-date: /home/zhang/self_project/arm_study_ws/install/robot_msgs/include/robot_msgs/robot_msgs/msg
+[3.320s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/include/robot_msgs/robot_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[3.320s] -- Up-to-date: /home/zhang/self_project/arm_study_ws/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail
+[3.320s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail/arm_position_cmd__rosidl_typesupport_introspection_c.h
+[3.320s] -- Up-to-date: /home/zhang/self_project/arm_study_ws/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail/arm_position_cmd__type_support.c
+[3.320s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/lib/librobot_msgs__rosidl_typesupport_introspection_c.so
+[3.320s] -- Set non-toolchain portion of runtime path of "/home/zhang/self_project/arm_study_ws/install/robot_msgs/lib/librobot_msgs__rosidl_typesupport_introspection_c.so" to ""
+[3.320s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/lib/librobot_msgs__rosidl_typesupport_c.so
+[3.323s] -- Set non-toolchain portion of runtime path of "/home/zhang/self_project/arm_study_ws/install/robot_msgs/lib/librobot_msgs__rosidl_typesupport_c.so" to ""
+[3.323s] -- Up-to-date: /home/zhang/self_project/arm_study_ws/install/robot_msgs/include/robot_msgs/robot_msgs
+[3.323s] -- Up-to-date: /home/zhang/self_project/arm_study_ws/install/robot_msgs/include/robot_msgs/robot_msgs/msg
+[3.323s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/include/robot_msgs/robot_msgs/msg/arm_position_cmd.hpp
+[3.324s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/include/robot_msgs/robot_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+[3.324s] -- Up-to-date: /home/zhang/self_project/arm_study_ws/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail
+[3.324s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail/arm_position_cmd__struct.hpp
+[3.324s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail/arm_position_cmd__type_support.hpp
+[3.324s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail/arm_position_cmd__builder.hpp
+[3.324s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail/arm_position_cmd__traits.hpp
+[3.324s] -- Up-to-date: /home/zhang/self_project/arm_study_ws/install/robot_msgs/include/robot_msgs/robot_msgs
+[3.324s] -- Up-to-date: /home/zhang/self_project/arm_study_ws/install/robot_msgs/include/robot_msgs/robot_msgs/msg
+[3.324s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/include/robot_msgs/robot_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[3.324s] -- Up-to-date: /home/zhang/self_project/arm_study_ws/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail
+[3.324s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail/dds_fastrtps
+[3.324s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail/arm_position_cmd__rosidl_typesupport_fastrtps_cpp.hpp
+[3.324s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/lib/librobot_msgs__rosidl_typesupport_fastrtps_cpp.so
+[3.324s] -- Set non-toolchain portion of runtime path of "/home/zhang/self_project/arm_study_ws/install/robot_msgs/lib/librobot_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""
+[3.324s] -- Up-to-date: /home/zhang/self_project/arm_study_ws/install/robot_msgs/include/robot_msgs/robot_msgs
+[3.324s] -- Up-to-date: /home/zhang/self_project/arm_study_ws/install/robot_msgs/include/robot_msgs/robot_msgs/msg
+[3.324s] -- Up-to-date: /home/zhang/self_project/arm_study_ws/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail
+[3.324s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail/arm_position_cmd__type_support.cpp
+[3.324s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/include/robot_msgs/robot_msgs/msg/detail/arm_position_cmd__rosidl_typesupport_introspection_cpp.hpp
+[3.324s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/lib/librobot_msgs__rosidl_typesupport_introspection_cpp.so
+[3.324s] -- Set non-toolchain portion of runtime path of "/home/zhang/self_project/arm_study_ws/install/robot_msgs/lib/librobot_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+[3.324s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/lib/librobot_msgs__rosidl_typesupport_cpp.so
+[3.324s] -- Set non-toolchain portion of runtime path of "/home/zhang/self_project/arm_study_ws/install/robot_msgs/lib/librobot_msgs__rosidl_typesupport_cpp.so" to ""
+[3.324s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/share/robot_msgs/environment/pythonpath.sh
+[3.324s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/share/robot_msgs/environment/pythonpath.dsv
+[3.324s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/lib/python3.12/site-packages/robot_msgs-0.0.0-py3.12.egg-info
+[3.324s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/lib/python3.12/site-packages/robot_msgs-0.0.0-py3.12.egg-info/top_level.txt
+[3.324s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/lib/python3.12/site-packages/robot_msgs-0.0.0-py3.12.egg-info/dependency_links.txt
+[3.324s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/lib/python3.12/site-packages/robot_msgs-0.0.0-py3.12.egg-info/PKG-INFO
+[3.324s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/lib/python3.12/site-packages/robot_msgs-0.0.0-py3.12.egg-info/SOURCES.txt
+[3.324s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/lib/python3.12/site-packages/robot_msgs
+[3.324s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/lib/python3.12/site-packages/robot_msgs/robot_msgs_s__rosidl_typesupport_c.so
+[3.324s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/lib/python3.12/site-packages/robot_msgs/msg
+[3.325s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/lib/python3.12/site-packages/robot_msgs/msg/_arm_position_cmd.py
+[3.325s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/lib/python3.12/site-packages/robot_msgs/msg/_arm_position_cmd_s.c
+[3.325s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/lib/python3.12/site-packages/robot_msgs/msg/__init__.py
+[3.326s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/lib/python3.12/site-packages/robot_msgs/_robot_msgs_s.ep.rosidl_typesupport_introspection_c.c
+[3.326s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/lib/python3.12/site-packages/robot_msgs/robot_msgs_s__rosidl_typesupport_introspection_c.so
+[3.326s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/lib/python3.12/site-packages/robot_msgs/_robot_msgs_s.ep.rosidl_typesupport_c.c
+[3.326s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/lib/python3.12/site-packages/robot_msgs/_robot_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+[3.326s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/lib/python3.12/site-packages/robot_msgs/__init__.py
+[3.326s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/lib/python3.12/site-packages/robot_msgs/robot_msgs_s__rosidl_typesupport_fastrtps_c.so
+[3.347s] Listing '/home/zhang/self_project/arm_study_ws/install/robot_msgs/lib/python3.12/site-packages/robot_msgs'...
+[3.347s] Compiling '/home/zhang/self_project/arm_study_ws/install/robot_msgs/lib/python3.12/site-packages/robot_msgs/__init__.py'...
+[3.347s] Listing '/home/zhang/self_project/arm_study_ws/install/robot_msgs/lib/python3.12/site-packages/robot_msgs/msg'...
+[3.347s] Compiling '/home/zhang/self_project/arm_study_ws/install/robot_msgs/lib/python3.12/site-packages/robot_msgs/msg/__init__.py'...
+[3.347s] Compiling '/home/zhang/self_project/arm_study_ws/install/robot_msgs/lib/python3.12/site-packages/robot_msgs/msg/_arm_position_cmd.py'...
+[3.351s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/lib/python3.12/site-packages/robot_msgs/robot_msgs_s__rosidl_typesupport_fastrtps_c.so
+[3.351s] -- Set non-toolchain portion of runtime path of "/home/zhang/self_project/arm_study_ws/install/robot_msgs/lib/python3.12/site-packages/robot_msgs/robot_msgs_s__rosidl_typesupport_fastrtps_c.so" to ""
+[3.351s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/lib/python3.12/site-packages/robot_msgs/robot_msgs_s__rosidl_typesupport_introspection_c.so
+[3.351s] -- Set non-toolchain portion of runtime path of "/home/zhang/self_project/arm_study_ws/install/robot_msgs/lib/python3.12/site-packages/robot_msgs/robot_msgs_s__rosidl_typesupport_introspection_c.so" to ""
+[3.351s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/lib/python3.12/site-packages/robot_msgs/robot_msgs_s__rosidl_typesupport_c.so
+[3.351s] -- Set non-toolchain portion of runtime path of "/home/zhang/self_project/arm_study_ws/install/robot_msgs/lib/python3.12/site-packages/robot_msgs/robot_msgs_s__rosidl_typesupport_c.so" to ""
+[3.351s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/lib/librobot_msgs__rosidl_generator_py.so
+[3.351s] -- Set non-toolchain portion of runtime path of "/home/zhang/self_project/arm_study_ws/install/robot_msgs/lib/librobot_msgs__rosidl_generator_py.so" to ""
+[3.351s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/share/robot_msgs/msg/ArmPositionCmd.idl
+[3.351s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/share/robot_msgs/msg/ArmPositionCmd.msg
+[3.352s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/share/ament_index/resource_index/package_run_dependencies/robot_msgs
+[3.352s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/share/ament_index/resource_index/parent_prefix_path/robot_msgs
+[3.352s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/share/robot_msgs/environment/ament_prefix_path.sh
+[3.352s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/share/robot_msgs/environment/ament_prefix_path.dsv
+[3.352s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/share/robot_msgs/environment/path.sh
+[3.352s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/share/robot_msgs/environment/path.dsv
+[3.352s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/share/robot_msgs/local_setup.bash
+[3.352s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/share/robot_msgs/local_setup.sh
+[3.352s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/share/robot_msgs/local_setup.zsh
+[3.352s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/share/robot_msgs/local_setup.dsv
+[3.352s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/share/robot_msgs/package.dsv
+[3.352s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/share/ament_index/resource_index/packages/robot_msgs
+[3.352s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/share/robot_msgs/cmake/export_robot_msgs__rosidl_generator_cExport.cmake
+[3.352s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/share/robot_msgs/cmake/export_robot_msgs__rosidl_generator_cExport-noconfig.cmake
+[3.352s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/share/robot_msgs/cmake/export_robot_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[3.352s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/share/robot_msgs/cmake/export_robot_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[3.353s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/share/robot_msgs/cmake/robot_msgs__rosidl_typesupport_introspection_cExport.cmake
+[3.353s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/share/robot_msgs/cmake/robot_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[3.353s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/share/robot_msgs/cmake/robot_msgs__rosidl_typesupport_cExport.cmake
+[3.353s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/share/robot_msgs/cmake/robot_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[3.353s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/share/robot_msgs/cmake/export_robot_msgs__rosidl_generator_cppExport.cmake
+[3.353s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/share/robot_msgs/cmake/export_robot_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[3.353s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/share/robot_msgs/cmake/export_robot_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[3.353s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/share/robot_msgs/cmake/robot_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[3.353s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/share/robot_msgs/cmake/robot_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[3.353s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/share/robot_msgs/cmake/robot_msgs__rosidl_typesupport_cppExport.cmake
+[3.353s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/share/robot_msgs/cmake/robot_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[3.353s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/share/robot_msgs/cmake/export_robot_msgs__rosidl_generator_pyExport.cmake
+[3.353s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/share/robot_msgs/cmake/export_robot_msgs__rosidl_generator_pyExport-noconfig.cmake
+[3.353s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/share/robot_msgs/cmake/rosidl_cmake-extras.cmake
+[3.354s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/share/robot_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[3.354s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/share/robot_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[3.354s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/share/robot_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[3.354s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/share/robot_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[3.354s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/share/robot_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[3.354s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/share/robot_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[3.354s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/share/robot_msgs/cmake/robot_msgsConfig.cmake
+[3.354s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/share/robot_msgs/cmake/robot_msgsConfig-version.cmake
+[3.354s] -- Installing: /home/zhang/self_project/arm_study_ws/install/robot_msgs/share/robot_msgs/package.xml
+[3.355s] Invoked command in '/home/zhang/self_project/arm_study_ws/build/robot_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/zhang/self_project/arm_study_ws/build/robot_msgs

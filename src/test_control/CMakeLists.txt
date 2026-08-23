@@ -20,11 +20,11 @@ ament_target_dependencies(robot_monitor
   robot_motion
 )
 
-add_executable(test_pseudo_inverse_ik_node
-  src/test_pseudo_inverse_ik.cpp
+add_executable(test_ik
+  src/test_ik.cpp
 )
 # 直接在这里引入 robot_motion 即可，ament 会自动完成头文件路径添加和库链接
-ament_target_dependencies(test_pseudo_inverse_ik_node
+ament_target_dependencies(test_ik
   rclcpp
   std_msgs
   sensor_msgs
@@ -35,7 +35,7 @@ ament_target_dependencies(test_pseudo_inverse_ik_node
 install(
   TARGETS 
     robot_monitor
-    test_pseudo_inverse_ik_node
+    test_ik
   DESTINATION lib/${PROJECT_NAME}
 )
 

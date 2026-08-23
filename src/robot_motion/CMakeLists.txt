@@ -9,6 +9,30 @@ find_package(sensor_msgs REQUIRED)
 find_package(robot_msgs REQUIRED)
 find_package(ament_index_cpp REQUIRED)
 find_package(pinocchio REQUIRED)
+find_package(qpOASES REQUIRED)
+
+find_path(CASADI_INCLUDE_DIR
+  NAMES casadi/casadi.hpp
+  PATHS /usr/local/include
+)
+
+find_library(CASADI_LIBRARY
+  NAMES casadi
+  PATHS /usr/local/lib
+)
+
+if(NOT CASADI_INCLUDE_DIR)
+  message(FATAL_ERROR "CasADi header not found")
+endif()
+
+if(NOT CASADI_LIBRARY)
+  message(FATAL_ERROR "CasADi library not found")
+endif()
+
+message(STATUS "CasADi include: ${CASADI_INCLUDE_DIR}")
+message(STATUS "CasADi library: ${CASADI_LIBRARY}")
+
+
 
 # =========================
 # Library
@@ -16,6 +40,7 @@ find_package(pinocchio REQUIRED)
 
 add_library(robot_motion SHARED
   src/pseudo_inverse_ik.cpp
+  src/nlp_ik.cpp
 )
 
 # 当前包编译 + 下游包使用的头文件路径
@@ -23,6 +48,8 @@ target_include_directories(robot_motion
   PUBLIC
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
     $<INSTALL_INTERFACE:include>
+    ${CASADI_INCLUDE_DIR}
+    ${QPOASES_INCLUDE_DIR}
 )
 
 # =========================
@@ -39,6 +66,8 @@ ament_target_dependencies(robot_motion
 
 target_link_libraries(robot_motion
   pinocchio::pinocchio
+  ${CASADI_LIBRARY}
+  qpOASES
 )
 
 # =========================
@@ -90,6 +119,7 @@ ament_export_dependencies(
   robot_msgs
   ament_index_cpp
   pinocchio
+  CasADi
 )
 
 ament_package()

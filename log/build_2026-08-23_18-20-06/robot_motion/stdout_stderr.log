@@ -1,0 +1,31 @@
+[100%] Built target robot_motion
+-- Install configuration: ""
+-- Up-to-date: /home/zhang/self_project/arm_study_ws/install/robot_motion/lib/librobot_motion.so
+-- Up-to-date: /home/zhang/self_project/arm_study_ws/install/robot_motion/include
+-- Up-to-date: /home/zhang/self_project/arm_study_ws/install/robot_motion/include/ik
+-- Up-to-date: /home/zhang/self_project/arm_study_ws/install/robot_motion/include/ik/nlp_ik.hpp
+-- Up-to-date: /home/zhang/self_project/arm_study_ws/install/robot_motion/include/ik/pseudo_inverse_ik.hpp
+-- Up-to-date: /home/zhang/self_project/arm_study_ws/install/robot_motion/share/robot_motion/cmake/robot_motionTargets.cmake
+-- Up-to-date: /home/zhang/self_project/arm_study_ws/install/robot_motion/share/robot_motion/cmake/robot_motionTargets-noconfig.cmake
+-- Up-to-date: /home/zhang/self_project/arm_study_ws/install/robot_motion/share/robot_motion/environment/library_path.sh
+-- Up-to-date: /home/zhang/self_project/arm_study_ws/install/robot_motion/share/robot_motion/environment/library_path.dsv
+-- Up-to-date: /home/zhang/self_project/arm_study_ws/install/robot_motion/share/ament_index/resource_index/package_run_dependencies/robot_motion
+-- Up-to-date: /home/zhang/self_project/arm_study_ws/install/robot_motion/share/ament_index/resource_index/parent_prefix_path/robot_motion
+-- Up-to-date: /home/zhang/self_project/arm_study_ws/install/robot_motion/share/robot_motion/environment/ament_prefix_path.sh
+-- Up-to-date: /home/zhang/self_project/arm_study_ws/install/robot_motion/share/robot_motion/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/zhang/self_project/arm_study_ws/install/robot_motion/share/robot_motion/environment/path.sh
+-- Up-to-date: /home/zhang/self_project/arm_study_ws/install/robot_motion/share/robot_motion/environment/path.dsv
+-- Up-to-date: /home/zhang/self_project/arm_study_ws/install/robot_motion/share/robot_motion/local_setup.bash
+-- Up-to-date: /home/zhang/self_project/arm_study_ws/install/robot_motion/share/robot_motion/local_setup.sh
+-- Up-to-date: /home/zhang/self_project/arm_study_ws/install/robot_motion/share/robot_motion/local_setup.zsh
+-- Up-to-date: /home/zhang/self_project/arm_study_ws/install/robot_motion/share/robot_motion/local_setup.dsv
+-- Installing: /home/zhang/self_project/arm_study_ws/install/robot_motion/share/robot_motion/package.dsv
+-- Up-to-date: /home/zhang/self_project/arm_study_ws/install/robot_motion/share/ament_index/resource_index/packages/robot_motion
+-- Up-to-date: /home/zhang/self_project/arm_study_ws/install/robot_motion/share/robot_motion/cmake/robot_motionTargetsExport.cmake
+-- Up-to-date: /home/zhang/self_project/arm_study_ws/install/robot_motion/share/robot_motion/cmake/robot_motionTargetsExport-noconfig.cmake
+-- Up-to-date: /home/zhang/self_project/arm_study_ws/install/robot_motion/share/robot_motion/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Up-to-date: /home/zhang/self_project/arm_study_ws/install/robot_motion/share/robot_motion/cmake/ament_cmake_export_targets-extras.cmake
+-- Up-to-date: /home/zhang/self_project/arm_study_ws/install/robot_motion/share/robot_motion/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Up-to-date: /home/zhang/self_project/arm_study_ws/install/robot_motion/share/robot_motion/cmake/robot_motionConfig.cmake
+-- Up-to-date: /home/zhang/self_project/arm_study_ws/install/robot_motion/share/robot_motion/cmake/robot_motionConfig-version.cmake
+-- Up-to-date: /home/zhang/self_project/arm_study_ws/install/robot_motion/share/robot_motion/package.xml
