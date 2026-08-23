@@ -1,8 +1,0 @@
-[ 33%] [32mBuilding CXX object CMakeFiles/robot_motion.dir/src/nlp_ik.cpp.o[0m
-[01m[K/home/zhang/self_project/arm_study_ws/src/robot_motion/src/nlp_ik.cpp:[m[K In member function ‘[01m[Kbool NlpIK::[01;32m[KsolveQP[m[K(const Eigen::MatrixXd&, const Eigen::VectorXd&, const Eigen::VectorXd&, const Eigen::VectorXd&, Eigen::VectorXd&)[m[K’:
-[01m[K/home/zhang/self_project/arm_study_ws/src/robot_motion/src/nlp_ik.cpp:335:25:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K,[m[K’ token
-  335 |             g_qp.data(),[01;31m[K,[m[K
-      |                         [01;31m[K^[m[K
-gmake[2]: *** [CMakeFiles/robot_motion.dir/build.make:90：CMakeFiles/robot_motion.dir/src/nlp_ik.cpp.o] 错误 1
-gmake[1]: *** [CMakeFiles/Makefile2:137：CMakeFiles/robot_motion.dir/all] 错误 2
-gmake: *** [Makefile:146：all] 错误 2

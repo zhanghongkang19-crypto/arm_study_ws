@@ -1,9 +1,0 @@
-[ 33%] [32mBuilding CXX object CMakeFiles/robot_motion.dir/src/nlp_ik.cpp.o[0m
-[ 66%] [32m[1mLinking CXX shared library librobot_motion.so[0m
-/usr/bin/ld: /usr/local/lib/libqpOASES.a(Constraints.cpp.o): warning: relocation against `_ZTVN7qpOASES11ConstraintsE' in read-only section `.text'
-/usr/bin/ld: /usr/local/lib/libqpOASES.a(QProblem.cpp.o): relocation R_X86_64_PC32 against symbol `_ZNK7qpOASES8QProblem5getNZEv' can not be used when making a shared object; recompile with -fPIC
-/usr/bin/ld: final link failed: bad value
-collect2: error: ld returned 1 exit status
-gmake[2]: *** [CMakeFiles/robot_motion.dir/build.make:225：librobot_motion.so] 错误 1
-gmake[1]: *** [CMakeFiles/Makefile2:137：CMakeFiles/robot_motion.dir/all] 错误 2
-gmake: *** [Makefile:146：all] 错误 2
