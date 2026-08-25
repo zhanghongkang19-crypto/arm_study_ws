@@ -1,0 +1,22 @@
+[ 66%] Built target test_moveit_controller
+[ 66%] Built target robot_monitor
+[100%] Built target test_ik
+-- Install configuration: ""
+-- Up-to-date: /home/zhang/self_project/arm_study_ws/install/test_control/lib/test_control/robot_monitor
+-- Up-to-date: /home/zhang/self_project/arm_study_ws/install/test_control/lib/test_control/test_ik
+-- Up-to-date: /home/zhang/self_project/arm_study_ws/install/test_control/lib/test_control/test_moveit_controller
+-- Up-to-date: /home/zhang/self_project/arm_study_ws/install/test_control/share/ament_index/resource_index/package_run_dependencies/test_control
+-- Up-to-date: /home/zhang/self_project/arm_study_ws/install/test_control/share/ament_index/resource_index/parent_prefix_path/test_control
+-- Up-to-date: /home/zhang/self_project/arm_study_ws/install/test_control/share/test_control/environment/ament_prefix_path.sh
+-- Up-to-date: /home/zhang/self_project/arm_study_ws/install/test_control/share/test_control/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/zhang/self_project/arm_study_ws/install/test_control/share/test_control/environment/path.sh
+-- Up-to-date: /home/zhang/self_project/arm_study_ws/install/test_control/share/test_control/environment/path.dsv
+-- Up-to-date: /home/zhang/self_project/arm_study_ws/install/test_control/share/test_control/local_setup.bash
+-- Up-to-date: /home/zhang/self_project/arm_study_ws/install/test_control/share/test_control/local_setup.sh
+-- Up-to-date: /home/zhang/self_project/arm_study_ws/install/test_control/share/test_control/local_setup.zsh
+-- Up-to-date: /home/zhang/self_project/arm_study_ws/install/test_control/share/test_control/local_setup.dsv
+-- Installing: /home/zhang/self_project/arm_study_ws/install/test_control/share/test_control/package.dsv
+-- Up-to-date: /home/zhang/self_project/arm_study_ws/install/test_control/share/ament_index/resource_index/packages/test_control
+-- Up-to-date: /home/zhang/self_project/arm_study_ws/install/test_control/share/test_control/cmake/test_controlConfig.cmake
+-- Up-to-date: /home/zhang/self_project/arm_study_ws/install/test_control/share/test_control/cmake/test_controlConfig-version.cmake
+-- Up-to-date: /home/zhang/self_project/arm_study_ws/install/test_control/share/test_control/package.xml

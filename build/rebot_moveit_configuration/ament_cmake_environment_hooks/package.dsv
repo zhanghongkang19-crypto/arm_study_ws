@@ -1,0 +1,4 @@
+source;share/rebot_moveit_configuration/local_setup.bash
+source;share/rebot_moveit_configuration/local_setup.dsv
+source;share/rebot_moveit_configuration/local_setup.sh
+source;share/rebot_moveit_configuration/local_setup.zsh

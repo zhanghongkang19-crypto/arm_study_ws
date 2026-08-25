@@ -1,0 +1,6 @@
+{
+  "package_name": "robot_msgs",
+  "non_idl_tuples": [
+    "/home/zhang/self_project/arm_study_ws/src/robot_msgs:msg/ArmPositionCmd.msg"
+  ]
+}

@@ -1,0 +1,87 @@
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+-- Found rclcpp: 28.1.13 (/opt/ros/jazzy/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+-- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+-- Found rmw_cyclonedds_cpp: 2.2.3 (/opt/ros/jazzy/share/rmw_cyclonedds_cpp/cmake)
+-- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+-- Found rclcpp_action: 28.1.13 (/opt/ros/jazzy/share/rclcpp_action/cmake)
+-- Found std_msgs: 5.3.6 (/opt/ros/jazzy/share/std_msgs/cmake)
+-- Found sensor_msgs: 5.3.6 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+-- Found robot_msgs: 0.0.0 (/home/zhang/self_project/arm_study_ws/install/robot_msgs/share/robot_msgs/cmake)
+-- Found robot_motion: 0.0.0 (/home/zhang/self_project/arm_study_ws/install/robot_motion/share/robot_motion/cmake)
+-- pinocchio_default FOUND. pinocchio_default at /opt/ros/jazzy/lib/x86_64-linux-gnu/libpinocchio_default.so
+-- pinocchio_parsers FOUND. pinocchio_parsers at /opt/ros/jazzy/lib/x86_64-linux-gnu/libpinocchio_parsers.so
+-- boost_filesystem FOUND. boost_filesystem at /lib/x86_64-linux-gnu/libboost_filesystem.so
+-- eigenpy FOUND. eigenpy at /opt/ros/jazzy/lib/x86_64-linux-gnu/libeigenpy.so
+-- Checking for NumPy
+--   NUMPY_INCLUDE_DIRS=/usr/lib/python3/dist-packages/numpy/core/include
+--   NUMPY_VERSION=1.26.4
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development.Module NumPy 
+-- PythonLibraryDirs: 
+-- PythonLibVersionString: 3.12.3
+-- Python site lib: lib/python3.12/site-packages
+-- Python include dirs: /usr/include/python3.12
+-- Checking for NumPy
+--   NUMPY_INCLUDE_DIRS=/usr/lib/python3/dist-packages/numpy/core/include
+--   NUMPY_VERSION=1.26.4
+-- NumPy include dir: /usr/lib/python3/dist-packages/numpy/core/include
+-- Found Boost: /usr/include (found version "1.83.0") found components: python312 
+-- Default C++ standard: 201703
+-- Minimal C++ standard upgraded to 11
+-- C++ standard sufficient: Minimal required 11, currently defined: 17
+-- CMAKE_CXX_STANDARD was not set: automatically set to currently defined standard 17
+-- hpp-fcl FOUND. hpp-fcl at /opt/ros/jazzy/lib/x86_64-linux-gnu/libhpp-fcl.so
+-- Minimal C++ standard upgraded to 14
+-- C++ standard sufficient: Minimal required 14, currently defined: 17
+-- C++ standard sufficient: Minimal required 14, currently defined: 17
+-- Found control_msgs: 5.5.0 (/opt/ros/jazzy/share/control_msgs/cmake)
+-- Configuring done (1.4s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/zhang/self_project/arm_study_ws/build/test_control
+[ 33%] [32mBuilding CXX object CMakeFiles/test_ik.dir/src/test_ik.cpp.o[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/robot_monitor.dir/src/test_control.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/test_moveit_controller.dir/src/test_moveit_controller.cpp.o[0m
+[ 66%] [32m[1mLinking CXX executable test_moveit_controller[0m
+[ 66%] Built target test_moveit_controller
+[ 83%] [32m[1mLinking CXX executable robot_monitor[0m
+[ 83%] Built target robot_monitor
+[100%] [32m[1mLinking CXX executable test_ik[0m
+[100%] Built target test_ik
+-- Install configuration: ""
+-- Installing: /home/zhang/self_project/arm_study_ws/install/test_control/lib/test_control/robot_monitor
+-- Set non-toolchain portion of runtime path of "/home/zhang/self_project/arm_study_ws/install/test_control/lib/test_control/robot_monitor" to ""
+-- Installing: /home/zhang/self_project/arm_study_ws/install/test_control/lib/test_control/test_ik
+-- Set non-toolchain portion of runtime path of "/home/zhang/self_project/arm_study_ws/install/test_control/lib/test_control/test_ik" to ""
+-- Installing: /home/zhang/self_project/arm_study_ws/install/test_control/lib/test_control/test_moveit_controller
+-- Set non-toolchain portion of runtime path of "/home/zhang/self_project/arm_study_ws/install/test_control/lib/test_control/test_moveit_controller" to ""
+-- Installing: /home/zhang/self_project/arm_study_ws/install/test_control/share/ament_index/resource_index/package_run_dependencies/test_control
+-- Installing: /home/zhang/self_project/arm_study_ws/install/test_control/share/ament_index/resource_index/parent_prefix_path/test_control
+-- Installing: /home/zhang/self_project/arm_study_ws/install/test_control/share/test_control/environment/ament_prefix_path.sh
+-- Installing: /home/zhang/self_project/arm_study_ws/install/test_control/share/test_control/environment/ament_prefix_path.dsv
+-- Installing: /home/zhang/self_project/arm_study_ws/install/test_control/share/test_control/environment/path.sh
+-- Installing: /home/zhang/self_project/arm_study_ws/install/test_control/share/test_control/environment/path.dsv
+-- Installing: /home/zhang/self_project/arm_study_ws/install/test_control/share/test_control/local_setup.bash
+-- Installing: /home/zhang/self_project/arm_study_ws/install/test_control/share/test_control/local_setup.sh
+-- Installing: /home/zhang/self_project/arm_study_ws/install/test_control/share/test_control/local_setup.zsh
+-- Installing: /home/zhang/self_project/arm_study_ws/install/test_control/share/test_control/local_setup.dsv
+-- Installing: /home/zhang/self_project/arm_study_ws/install/test_control/share/test_control/package.dsv
+-- Installing: /home/zhang/self_project/arm_study_ws/install/test_control/share/ament_index/resource_index/packages/test_control
+-- Installing: /home/zhang/self_project/arm_study_ws/install/test_control/share/test_control/cmake/test_controlConfig.cmake
+-- Installing: /home/zhang/self_project/arm_study_ws/install/test_control/share/test_control/cmake/test_controlConfig-version.cmake
+-- Installing: /home/zhang/self_project/arm_study_ws/install/test_control/share/test_control/package.xml

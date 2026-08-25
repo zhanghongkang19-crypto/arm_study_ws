@@ -1,0 +1,25 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: rebot_description
+    relative_path: urdf/reBot_B601_DM_with_gripper.urdf
+  srdf:
+    relative_path: config/reBot_B601_DM_with_gripper.srdf
+  package_settings:
+    author_name: zhanghongkang
+    author_email: 2432335782@qq.com
+    generated_timestamp: 1787590151
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
+  modified_urdf:
+    xacros:
+      - control_xacro
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity

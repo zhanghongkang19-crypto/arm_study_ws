@@ -1,0 +1,93 @@
+[0.004s] Invoking command in '/home/zhang/self_project/arm_study_ws/build/test_control': AMENT_PREFIX_PATH=/home/zhang/self_project/arm_study_ws/install/robot_motion:/home/zhang/self_project/arm_study_ws/install/robot_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/zhang/self_project/arm_study_ws/install/robot_motion:/home/zhang/self_project/arm_study_ws/install/robot_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/zhang/self_project/arm_study_ws/install/robot_motion/lib:/home/zhang/self_project/arm_study_ws/install/robot_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/zhang/self_project/arm_study_ws/install/robot_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/zhang/self_project/arm_study_ws/src/test_control -DCMAKE_INSTALL_PREFIX=/home/zhang/self_project/arm_study_ws/install/test_control
+[0.036s] -- The C compiler identification is GNU 13.3.0
+[0.067s] -- The CXX compiler identification is GNU 13.3.0
+[0.077s] -- Detecting C compiler ABI info
+[0.129s] -- Detecting C compiler ABI info - done
+[0.134s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.135s] -- Detecting C compile features
+[0.135s] -- Detecting C compile features - done
+[0.140s] -- Detecting CXX compiler ABI info
+[0.197s] -- Detecting CXX compiler ABI info - done
+[0.203s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.203s] -- Detecting CXX compile features
+[0.203s] -- Detecting CXX compile features - done
+[0.205s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.292s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.359s] -- Found rclcpp: 28.1.13 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.391s] -- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.399s] -- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.407s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.417s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.456s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.458s] -- Found rmw_cyclonedds_cpp: 2.2.3 (/opt/ros/jazzy/share/rmw_cyclonedds_cpp/cmake)
+[0.473s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[0.507s] -- Found rclcpp_action: 28.1.13 (/opt/ros/jazzy/share/rclcpp_action/cmake)
+[0.531s] -- Found std_msgs: 5.3.6 (/opt/ros/jazzy/share/std_msgs/cmake)
+[0.538s] -- Found sensor_msgs: 5.3.6 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+[0.557s] -- Found robot_msgs: 0.0.0 (/home/zhang/self_project/arm_study_ws/install/robot_msgs/share/robot_msgs/cmake)
+[0.561s] -- Found robot_motion: 0.0.0 (/home/zhang/self_project/arm_study_ws/install/robot_motion/share/robot_motion/cmake)
+[0.566s] -- pinocchio_default FOUND. pinocchio_default at /opt/ros/jazzy/lib/x86_64-linux-gnu/libpinocchio_default.so
+[0.566s] -- pinocchio_parsers FOUND. pinocchio_parsers at /opt/ros/jazzy/lib/x86_64-linux-gnu/libpinocchio_parsers.so
+[0.568s] -- boost_filesystem FOUND. boost_filesystem at /lib/x86_64-linux-gnu/libboost_filesystem.so
+[0.606s] -- eigenpy FOUND. eigenpy at /opt/ros/jazzy/lib/x86_64-linux-gnu/libeigenpy.so
+[0.623s] -- Checking for NumPy
+[0.731s] --   NUMPY_INCLUDE_DIRS=/usr/lib/python3/dist-packages/numpy/core/include
+[0.789s] --   NUMPY_VERSION=1.26.4
+[0.985s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development.Module NumPy 
+[0.985s] -- PythonLibraryDirs: 
+[0.986s] -- PythonLibVersionString: 3.12.3
+[0.996s] -- Python site lib: lib/python3.12/site-packages
+[0.996s] -- Python include dirs: /usr/include/python3.12
+[1.021s] -- Checking for NumPy
+[1.080s] --   NUMPY_INCLUDE_DIRS=/usr/lib/python3/dist-packages/numpy/core/include
+[1.138s] --   NUMPY_VERSION=1.26.4
+[1.138s] -- NumPy include dir: /usr/lib/python3/dist-packages/numpy/core/include
+[1.143s] -- Found Boost: /usr/include (found version "1.83.0") found components: python312 
+[1.322s] -- Default C++ standard: 201703
+[1.322s] -- Minimal C++ standard upgraded to 11
+[1.322s] -- C++ standard sufficient: Minimal required 11, currently defined: 17
+[1.322s] -- CMAKE_CXX_STANDARD was not set: automatically set to currently defined standard 17
+[1.328s] -- hpp-fcl FOUND. hpp-fcl at /opt/ros/jazzy/lib/x86_64-linux-gnu/libhpp-fcl.so
+[1.339s] -- Minimal C++ standard upgraded to 14
+[1.339s] -- C++ standard sufficient: Minimal required 14, currently defined: 17
+[1.339s] -- C++ standard sufficient: Minimal required 14, currently defined: 17
+[1.345s] -- Found control_msgs: 5.5.0 (/opt/ros/jazzy/share/control_msgs/cmake)
+[1.441s] -- Configuring done (1.4s)
+[1.452s] -- Generating done (0.0s)
+[1.456s] -- Build files have been written to: /home/zhang/self_project/arm_study_ws/build/test_control
+[1.462s] Invoked command in '/home/zhang/self_project/arm_study_ws/build/test_control' returned '0': AMENT_PREFIX_PATH=/home/zhang/self_project/arm_study_ws/install/robot_motion:/home/zhang/self_project/arm_study_ws/install/robot_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/zhang/self_project/arm_study_ws/install/robot_motion:/home/zhang/self_project/arm_study_ws/install/robot_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/zhang/self_project/arm_study_ws/install/robot_motion/lib:/home/zhang/self_project/arm_study_ws/install/robot_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/zhang/self_project/arm_study_ws/install/robot_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/zhang/self_project/arm_study_ws/src/test_control -DCMAKE_INSTALL_PREFIX=/home/zhang/self_project/arm_study_ws/install/test_control
+[1.463s] Invoking command in '/home/zhang/self_project/arm_study_ws/build/test_control': AMENT_PREFIX_PATH=/home/zhang/self_project/arm_study_ws/install/robot_motion:/home/zhang/self_project/arm_study_ws/install/robot_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/zhang/self_project/arm_study_ws/install/robot_motion:/home/zhang/self_project/arm_study_ws/install/robot_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/zhang/self_project/arm_study_ws/install/robot_motion/lib:/home/zhang/self_project/arm_study_ws/install/robot_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/zhang/self_project/arm_study_ws/install/robot_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/zhang/self_project/arm_study_ws/build/test_control -- -j20 -l20
+[1.494s] [ 33%] [32mBuilding CXX object CMakeFiles/test_ik.dir/src/test_ik.cpp.o[0m
+[1.494s] [ 33%] [32mBuilding CXX object CMakeFiles/robot_monitor.dir/src/test_control.cpp.o[0m
+[1.494s] [ 50%] [32mBuilding CXX object CMakeFiles/test_moveit_controller.dir/src/test_moveit_controller.cpp.o[0m
+[4.072s] [ 66%] [32m[1mLinking CXX executable test_moveit_controller[0m
+[4.225s] [ 66%] Built target test_moveit_controller
+[5.335s] [ 83%] [32m[1mLinking CXX executable robot_monitor[0m
+[5.532s] [ 83%] Built target robot_monitor
+[8.831s] [100%] [32m[1mLinking CXX executable test_ik[0m
+[9.429s] [100%] Built target test_ik
+[9.436s] Invoked command in '/home/zhang/self_project/arm_study_ws/build/test_control' returned '0': AMENT_PREFIX_PATH=/home/zhang/self_project/arm_study_ws/install/robot_motion:/home/zhang/self_project/arm_study_ws/install/robot_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/zhang/self_project/arm_study_ws/install/robot_motion:/home/zhang/self_project/arm_study_ws/install/robot_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/zhang/self_project/arm_study_ws/install/robot_motion/lib:/home/zhang/self_project/arm_study_ws/install/robot_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/zhang/self_project/arm_study_ws/install/robot_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/zhang/self_project/arm_study_ws/build/test_control -- -j20 -l20
+[9.436s] Invoking command in '/home/zhang/self_project/arm_study_ws/build/test_control': AMENT_PREFIX_PATH=/home/zhang/self_project/arm_study_ws/install/robot_motion:/home/zhang/self_project/arm_study_ws/install/robot_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/zhang/self_project/arm_study_ws/install/robot_motion:/home/zhang/self_project/arm_study_ws/install/robot_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/zhang/self_project/arm_study_ws/install/robot_motion/lib:/home/zhang/self_project/arm_study_ws/install/robot_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/zhang/self_project/arm_study_ws/install/robot_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/zhang/self_project/arm_study_ws/build/test_control
+[9.441s] -- Install configuration: ""
+[9.441s] -- Installing: /home/zhang/self_project/arm_study_ws/install/test_control/lib/test_control/robot_monitor
+[9.444s] -- Set non-toolchain portion of runtime path of "/home/zhang/self_project/arm_study_ws/install/test_control/lib/test_control/robot_monitor" to ""
+[9.444s] -- Installing: /home/zhang/self_project/arm_study_ws/install/test_control/lib/test_control/test_ik
+[9.446s] -- Set non-toolchain portion of runtime path of "/home/zhang/self_project/arm_study_ws/install/test_control/lib/test_control/test_ik" to ""
+[9.446s] -- Installing: /home/zhang/self_project/arm_study_ws/install/test_control/lib/test_control/test_moveit_controller
+[9.447s] -- Set non-toolchain portion of runtime path of "/home/zhang/self_project/arm_study_ws/install/test_control/lib/test_control/test_moveit_controller" to ""
+[9.447s] -- Installing: /home/zhang/self_project/arm_study_ws/install/test_control/share/ament_index/resource_index/package_run_dependencies/test_control
+[9.447s] -- Installing: /home/zhang/self_project/arm_study_ws/install/test_control/share/ament_index/resource_index/parent_prefix_path/test_control
+[9.447s] -- Installing: /home/zhang/self_project/arm_study_ws/install/test_control/share/test_control/environment/ament_prefix_path.sh
+[9.447s] -- Installing: /home/zhang/self_project/arm_study_ws/install/test_control/share/test_control/environment/ament_prefix_path.dsv
+[9.447s] -- Installing: /home/zhang/self_project/arm_study_ws/install/test_control/share/test_control/environment/path.sh
+[9.447s] -- Installing: /home/zhang/self_project/arm_study_ws/install/test_control/share/test_control/environment/path.dsv
+[9.447s] -- Installing: /home/zhang/self_project/arm_study_ws/install/test_control/share/test_control/local_setup.bash
+[9.447s] -- Installing: /home/zhang/self_project/arm_study_ws/install/test_control/share/test_control/local_setup.sh
+[9.447s] -- Installing: /home/zhang/self_project/arm_study_ws/install/test_control/share/test_control/local_setup.zsh
+[9.447s] -- Installing: /home/zhang/self_project/arm_study_ws/install/test_control/share/test_control/local_setup.dsv
+[9.447s] -- Installing: /home/zhang/self_project/arm_study_ws/install/test_control/share/test_control/package.dsv
+[9.448s] -- Installing: /home/zhang/self_project/arm_study_ws/install/test_control/share/ament_index/resource_index/packages/test_control
+[9.448s] -- Installing: /home/zhang/self_project/arm_study_ws/install/test_control/share/test_control/cmake/test_controlConfig.cmake
+[9.448s] -- Installing: /home/zhang/self_project/arm_study_ws/install/test_control/share/test_control/cmake/test_controlConfig-version.cmake
+[9.448s] -- Installing: /home/zhang/self_project/arm_study_ws/install/test_control/share/test_control/package.xml
+[9.449s] Invoked command in '/home/zhang/self_project/arm_study_ws/build/test_control' returned '0': AMENT_PREFIX_PATH=/home/zhang/self_project/arm_study_ws/install/robot_motion:/home/zhang/self_project/arm_study_ws/install/robot_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/zhang/self_project/arm_study_ws/install/robot_motion:/home/zhang/self_project/arm_study_ws/install/robot_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/zhang/self_project/arm_study_ws/install/robot_motion/lib:/home/zhang/self_project/arm_study_ws/install/robot_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/zhang/self_project/arm_study_ws/install/robot_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/zhang/self_project/arm_study_ws/build/test_control
