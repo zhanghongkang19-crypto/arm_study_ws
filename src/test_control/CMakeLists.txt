@@ -4,10 +4,12 @@ project(test_control)
 
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
+find_package(rclcpp_action REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(robot_msgs REQUIRED)
 find_package(robot_motion REQUIRED)
+find_package(control_msgs REQUIRED)
 
 add_executable(robot_monitor
   src/test_control.cpp
@@ -32,10 +34,24 @@ ament_target_dependencies(test_ik
   robot_motion
 )
 
+add_executable(test_moveit_controller
+  src/test_moveit_controller.cpp
+)
+ament_target_dependencies(test_moveit_controller
+  rclcpp
+  std_msgs
+  sensor_msgs
+  robot_msgs
+  robot_motion
+  control_msgs
+  rclcpp_action
+)
+
 install(
   TARGETS 
     robot_monitor
     test_ik
+    test_moveit_controller
   DESTINATION lib/${PROJECT_NAME}
 )
 
