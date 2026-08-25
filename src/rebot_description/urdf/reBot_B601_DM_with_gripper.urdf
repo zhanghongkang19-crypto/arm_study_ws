@@ -26,7 +26,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes_b601_gripper/base_link.STL" />
+          filename="package://rebot_description/urdf/meshes_b601_gripper/base_link.STL" />
       </geometry>
       <material
         name="">
@@ -40,7 +40,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes_b601_gripper/base_link.STL" />
+          filename="package://rebot_description/urdf/meshes_b601_gripper/base_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -66,7 +66,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes_b601_gripper/link1.STL" />
+          filename="package://rebot_description/urdf/meshes_b601_gripper/link1.STL" />
       </geometry>
       <material
         name="">
@@ -80,7 +80,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes_b601_gripper/link1.STL" />
+          filename="package://rebot_description/urdf/meshes_b601_gripper/link1.STL" />
       </geometry>
     </collision>
   </link>
@@ -124,7 +124,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes_b601_gripper/link2.STL" />
+          filename="package://rebot_description/urdf/meshes_b601_gripper/link2.STL" />
       </geometry>
       <material
         name="">
@@ -138,7 +138,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes_b601_gripper/link2.STL" />
+          filename="package://rebot_description/urdf/meshes_b601_gripper/link2.STL" />
       </geometry>
     </collision>
   </link>
@@ -182,7 +182,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes_b601_gripper/link3.STL" />
+          filename="package://rebot_description/urdf/meshes_b601_gripper/link3.STL" />
       </geometry>
       <material
         name="">
@@ -196,7 +196,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes_b601_gripper/link3.STL" />
+          filename="package://rebot_description/urdf/meshes_b601_gripper/link3.STL" />
       </geometry>
     </collision>
   </link>
@@ -240,7 +240,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes_b601_gripper/link4.STL" />
+          filename="package://rebot_description/urdf/meshes_b601_gripper/link4.STL" />
       </geometry>
       <material
         name="">
@@ -254,7 +254,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes_b601_gripper/link4.STL" />
+          filename="package://rebot_description/urdf/meshes_b601_gripper/link4.STL" />
       </geometry>
     </collision>
   </link>
@@ -298,7 +298,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes_b601_gripper/link5.STL" />
+          filename="package://rebot_description/urdf/meshes_b601_gripper/link5.STL" />
       </geometry>
       <material
         name="">
@@ -312,7 +312,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes_b601_gripper/link5.STL" />
+          filename="package://rebot_description/urdf/meshes_b601_gripper/link5.STL" />
       </geometry>
     </collision>
   </link>
@@ -356,7 +356,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes_b601_gripper/link6.STL" />
+          filename="package://rebot_description/urdf/meshes_b601_gripper/link6.STL" />
       </geometry>
       <material
         name="">
@@ -370,7 +370,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes_b601_gripper/link6.STL" />
+          filename="package://rebot_description/urdf/meshes_b601_gripper/link6.STL" />
       </geometry>
     </collision>
   </link>
@@ -414,7 +414,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes_b601_gripper/gripper_link.STL" />
+          filename="package://rebot_description/urdf/meshes_b601_gripper/gripper_link.STL" />
       </geometry>
       <material
         name="">
@@ -428,7 +428,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes_b601_gripper/gripper_link.STL" />
+          filename="package://rebot_description/urdf/meshes_b601_gripper/gripper_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -467,7 +467,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes_b601_gripper/gripper_left.STL" />
+          filename="package://rebot_description/urdf/meshes_b601_gripper/gripper_left.STL" />
       </geometry>
       <material
         name="">
@@ -481,7 +481,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes_b601_gripper/gripper_left.STL" />
+          filename="package://rebot_description/urdf/meshes_b601_gripper/gripper_left.STL" />
       </geometry>
     </collision>
   </link>
@@ -525,7 +525,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes_b601_gripper/gripper_right.STL" />
+          filename="package://rebot_description/urdf/meshes_b601_gripper/gripper_right.STL" />
       </geometry>
       <material
         name="">
@@ -539,7 +539,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="./meshes_b601_gripper/gripper_right.STL" />
+          filename="package://rebot_description/urdf/meshes_b601_gripper/gripper_right.STL" />
       </geometry>
     </collision>
   </link>
