@@ -62,6 +62,7 @@ install(
     urdf
     launch
     script
+    rviz
   DESTINATION share/${PROJECT_NAME}
 )
 

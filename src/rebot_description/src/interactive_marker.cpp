@@ -30,26 +30,23 @@ public:
 
         // 初始姿态
         marker.pose.orientation.w = 1.0;
+        
         marker.scale = 0.15; // 整体缩放比例
 
-        // =========================================================
-        // 1. 创建用于可爱的“球体”可视化形状 (Visual Marker)
-        // =========================================================
+        
         visualization_msgs::msg::Marker sphere_marker;
         sphere_marker.type = visualization_msgs::msg::Marker::SPHERE;
-        sphere_marker.scale.x = 0.1; // 球体 X 直径 (单位: 米)
-        sphere_marker.scale.y = 0.1; // 球体 Y 直径
-        sphere_marker.scale.z = 0.1; // 球体 Z 直径
+        sphere_marker.scale.x = 0.02; // 球体 X 直径 (单位: 米)
+        sphere_marker.scale.y = 0.02; // 球体 Y 直径
+        sphere_marker.scale.z = 0.02; // 球体 Z 直径
 
         // 设置球体颜色 (RGBA: 0.0 ~ 1.0)
         sphere_marker.color.r = 0.0f;
         sphere_marker.color.g = 0.8f;
         sphere_marker.color.b = 1.0f;
-        sphere_marker.color.a = 0.8f; // 半透明
+        sphere_marker.color.a = 0.5f; // 半透明
 
-        // =========================================================
-        // 2. 创建平移/旋转控制项，并将球体放入控制项中
-        // =========================================================
+       
         visualization_msgs::msg::InteractiveMarkerControl control;
         control.always_visible = true;
         // 设置为 MOVE_3D 模式（鼠标按住球体可在 3D 空间自由平移拖拽）
@@ -59,9 +56,6 @@ public:
         control.markers.push_back(sphere_marker);
         marker.controls.push_back(control);
 
-        // =========================================================
-        // 3. (可选) 添加经典的 3 轴环形旋转/平移手柄
-        // =========================================================
         // 如果你需要像 MoveIt 那样的 XYZ 旋转环，可以在这里追加控制轴：
         visualization_msgs::msg::InteractiveMarkerControl rotate_control;
         rotate_control.name = "rotate_x";
@@ -77,12 +71,16 @@ public:
 
     void feedback(const visualization_msgs::msg::InteractiveMarkerFeedback::ConstSharedPtr feedback)
     {
+        // 只在释放鼠标时发送
+        if (feedback->event_type != visualization_msgs::msg::InteractiveMarkerFeedback::MOUSE_UP)
+        {
+            return;
+        }
+
         const auto& pose = feedback->pose;
+        Eigen::Vector3d p(pose.position.x,pose.position.y,pose.position.z);
 
-        Eigen::Vector3d p(pose.position.x, pose.position.y, pose.position.z);
-        Eigen::Quaterniond q(pose.orientation.w, pose.orientation.x, pose.orientation.y, pose.orientation.z);
-
-        RCLCPP_INFO(this->get_logger(), "Target: p = [%.4f, %.4f, %.4f]", p.x(), p.y(), p.z());
+        RCLCPP_INFO(this->get_logger(),"Target final: [%.4f %.4f %.4f]",p.x(), p.y(), p.z());
         target_pub_->publish(pose);
     }
 

@@ -19,7 +19,7 @@ def generate_launch_description():
     rviz_file = os.path.join(
         pkg_share,
         'rviz',
-        'robot.rviz'
+        'rebotWithMaker.rviz'
     )
 
     # 读取 URDF
@@ -46,9 +46,9 @@ def generate_launch_description():
         # 2. joint_state_publisher
         # =========================
         Node(
-            package='joint_state_publisher_gui',
-            executable='joint_state_publisher_gui',
-            name='joint_state_publisher_gui',
+            package='joint_state_publisher',
+            executable='joint_state_publisher',
+            name='joint_state_publisher',
             output='screen'
         ),
 

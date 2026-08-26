@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.28)
-
 project(test_control)
+
+set(Boost_USE_DEBUG_RUNTIME OFF CACHE BOOL "Disable Boost Debug Runtime" FORCE)
+set(Boost_USE_STATIC_LIBS OFF CACHE BOOL "Disable Boost Static" FORCE)
 
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
@@ -10,6 +12,7 @@ find_package(sensor_msgs REQUIRED)
 find_package(robot_msgs REQUIRED)
 find_package(robot_motion REQUIRED)
 find_package(control_msgs REQUIRED)
+find_package(moveit_ros_planning_interface REQUIRED)
 
 add_executable(robot_monitor
   src/test_control.cpp
@@ -45,6 +48,7 @@ ament_target_dependencies(test_moveit_controller
   robot_motion
   control_msgs
   rclcpp_action
+  moveit_ros_planning_interface
 )
 
 install(

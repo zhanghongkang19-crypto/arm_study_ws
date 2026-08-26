@@ -23,7 +23,7 @@ public:
 
 
         // 发布机械臂控制指令
-        cmd_pub_ = this->create_publisher<robot_msgs::msg::ArmPositionCmd>( "/rebot/joint_group_cmd", 10);
+        cmd_pub_ = this->create_publisher<robot_msgs::msg::ArmPositionCmd>( "/rebot/joint_group_cmd", 1);
         // 订阅机械臂状态
         joint_state_sub_ = this->create_subscription<sensor_msgs::msg::JointState>( "/joint_states", 10,std::bind( &RobotMonitor::jointStateCallback, this,std::placeholders::_1));
         // 定时发送控制命令
