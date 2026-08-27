@@ -43,16 +43,6 @@ def generate_launch_description():
         ),
 
         # =========================
-        # 2. joint_state_publisher
-        # =========================
-        Node(
-            package='joint_state_publisher',
-            executable='joint_state_publisher',
-            name='joint_state_publisher',
-            output='screen'
-        ),
-
-        # =========================
         # 3. Interactive Marker
         # =========================
         Node(

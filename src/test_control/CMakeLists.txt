@@ -13,6 +13,12 @@ find_package(robot_msgs REQUIRED)
 find_package(robot_motion REQUIRED)
 find_package(control_msgs REQUIRED)
 find_package(moveit_ros_planning_interface REQUIRED)
+find_package(tl_expected REQUIRED)
+if(NOT TARGET tl::expected)
+    add_library(tl::expected ALIAS tl_expected::tl_expected)
+endif()
+find_package(Boost REQUIRED COMPONENTS random)
+
 
 add_executable(robot_monitor
   src/test_control.cpp
