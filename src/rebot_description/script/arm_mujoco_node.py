@@ -53,6 +53,21 @@ class RebotMujocoNode(Node):
     self.cmd_lock = threading.Lock()
     self.ctrl_cmd = np.zeros(self.num_actuators)
 
+    self.joint_map = []
+    for name in self.joint_names:
+      joint_id = self.model.joint(name).id
+      self.joint_map.append({
+          "name": name,
+          "joint_id": joint_id,
+          "qpos_addr": int(self.model.jnt_qposadr[joint_id]),
+          "dof_addr": int(self.model.jnt_dofadr[joint_id]),
+          "limited": bool(self.model.jnt_limited[joint_id]),
+          "lower": float(self.model.jnt_range[joint_id, 0])
+                    if self.model.jnt_limited[joint_id] else None,
+          "upper": float(self.model.jnt_range[joint_id, 1])
+                    if self.model.jnt_limited[joint_id] else None,
+      })
+
     # 3. ROS 2 订阅者与发布者
     # 接收来自外部控制包的指令
     self.sub_cmd = self.create_subscription(
@@ -82,12 +97,27 @@ class RebotMujocoNode(Node):
         self.ctrl_cmd = np.array(msg.position)
 
   def publish_joint_states(self):
-    """定期发布当前关节状态到 ROS 2"""
     msg = JointState()
     msg.header.stamp = self.get_clock().now().to_msg()
     msg.name = self.joint_names
-    msg.position = self.data.qpos[: self.num_joints].tolist()
-    msg.velocity = self.data.qvel[: self.num_joints].tolist()
+    positions = []
+    velocities = []
+    tol = 1e-3
+    for info in self.joint_map:
+        q = float(self.data.qpos[info["qpos_addr"]])
+        dq = float(self.data.qvel[info["dof_addr"]])
+        if info["limited"]:
+            lower = info["lower"]
+            upper = info["upper"]
+            if upper < q <= upper + tol:
+                q = upper
+            elif lower - tol <= q < lower:
+                q = lower
+        positions.append(q)
+        velocities.append(dq)
+
+    msg.position = positions
+    msg.velocity = velocities
 
     self.pub_joint_states.publish(msg)
 

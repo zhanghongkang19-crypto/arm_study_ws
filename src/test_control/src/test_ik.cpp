@@ -20,7 +20,7 @@ public:
     RobotMonitor(): Node("robot_monitor"), pseudoInverseIK_("reBot_B601_DM_with_gripper.urdf", "base_link", "link6"),   
             nlpIK_("reBot_B601_DM_with_gripper.urdf", "base_link", "link6")
     {
-        for(int i=0;i<8;i++)
+        for(int i=0;i<6;i++)
         {
             cmd[i]=0.0;
         }
@@ -68,7 +68,7 @@ private:
         
         Eigen::VectorXd result_joint_angles;
         robot_msgs::msg::ArmPositionCmd msg;
-        msg.position.resize(8);
+        msg.position.resize(6);
         bool success = pseudoInverseIK_.get_null_space_ik(joint_positions, target_pose_, "link6", result_joint_angles);
          
         if(success)
@@ -113,7 +113,7 @@ private:
         
         Eigen::VectorXd result_joint_angles;
         robot_msgs::msg::ArmPositionCmd msg;
-        msg.position.resize(8);
+        msg.position.resize(6);
         //bool success = nlpIK_.get_ipopt_ik(joint_positions, target_pose_, "link6", result_joint_angles);
         bool success = nlpIK_.get_sqp_ik(joint_positions, target_pose_, "link6", result_joint_angles);     
     
@@ -162,7 +162,7 @@ private:
 
 private:
     Eigen::Matrix<double,7,1> target_pose_;
-    double cmd[8];
+    double cmd[6];
     std::vector<double> joint_positions_;
     PseudoInverseIK pseudoInverseIK_;
     NlpIK   nlpIK_;

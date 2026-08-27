@@ -92,5 +92,59 @@ contype conaffinity 含义：这两个参数是 MuJoCo 中用来控制碰撞分�
     <exclude body1="gripper_left" body2="gripper_right"/>
     </contact>
 ```
-
   避免。2、看joint的kp,kd设置是否正常，经验为小质量，小kp,kd，大质量，大kp,kd。 3、看一些关节是否加入 damping, frictionloss。
+
+
+
+## MuJoCo 执行器参数详解：`actuatorfrcrange` 与 `position` 控制器的关系
+这两个参数控制的是两个不同层面的东西：
+```xml
+<joint name="joint2" ... actuatorfrcrange="-27 27" />
+<actuator>
+    <position joint="joint2" kp="100" kv="20"/>
+</actuator>
+```
+它们共同决定最终关节运动效果。
+### 1. $k_p$、$k_v$ 是控制器参数
+```xml
+<position joint="joint2" kp="100" kv="20"/>
+```
+表示 MuJoCo 给 `joint2` 配置了一个位置 PD 控制器。
+**数学形式近似：**
+$$\tau_{\text{cmd}} = K_p (q_d - q) + K_v (\dot{q}_d - \dot{q})$$
+**其中：**  
+* $q_d$：你通过 `data.ctrl` 给的目标角度  
+* $q$：当前关节角  
+* $K_p$：位置刚度  
+* $K_v$：阻尼   
+### 2. `joint4` 实际计算示例
+对于以下配置：
+```xml
+<joint name="joint4" actuatorfrcrange="-7 7"/>
+<position joint="joint4" kp="25" kv="8"/>
+```
+假设：  
+* 当前角：$q = 0.3 \text{ rad}$  
+* 目标角：$q_d = 0 \text{ rad}$  
+* 误差：$e = -0.3 \text{ rad}$  
+**PD 输出：**  
+$$\tau = 25 \times (-0.3) = -7.5 \text{ N}\cdot\text{m}$$ 
+**最终限制：**  
+由于 `joint4` 的力矩限制为 $[-7, 7]$，所以实际输出：  
+$$\tau = -7 \text{ N}\cdot\text{m}$$  
+虽然你设置了 $k_p = 25$，但是此时输出**已经打满**。  
+### 3. 一个简单经验公式
+对于 `position` 执行器，建议在**最大允许误差**时，控制器计算出的力矩刚好接近**最大力矩**：
+$$K_p e_{\text{max}} \approx \tau_{\text{max}}$$
+以 `joint4` 为例：
+* 假设最大允许误差 $e_{\text{max}} = 0.3 \text{ rad}$
+* 最大力矩 $\tau_{\text{max}} = 7 \text{ N}\cdot\text{m}$
+计算得到：
+$$K_p = \frac{7}{0.3} \approx 23$$
+所以设置 `kp=25` 是非常有道理且合理的。
+### 7. 两者关系总结
+| 参数 | 作用 | 类比 |
+| --- | --- | --- |
+| **$k_p$** | 想拉回目标的力度 | 弹簧刚度 |
+| **$k_v$** | 抑制速度震荡 | 阻尼 |
+| **`actuatorfrcrange`** | 最大输出能力 | 电机最大扭矩 |

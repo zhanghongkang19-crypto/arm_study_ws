@@ -36,9 +36,9 @@ public:
         
         visualization_msgs::msg::Marker sphere_marker;
         sphere_marker.type = visualization_msgs::msg::Marker::SPHERE;
-        sphere_marker.scale.x = 0.02; // 球体 X 直径 (单位: 米)
-        sphere_marker.scale.y = 0.02; // 球体 Y 直径
-        sphere_marker.scale.z = 0.02; // 球体 Z 直径
+        sphere_marker.scale.x = 0.08; // 球体 X 直径 (单位: 米)
+        sphere_marker.scale.y = 0.08; // 球体 Y 直径
+        sphere_marker.scale.z = 0.08; // 球体 Z 直径
 
         // 设置球体颜色 (RGBA: 0.0 ~ 1.0)
         sphere_marker.color.r = 0.0f;

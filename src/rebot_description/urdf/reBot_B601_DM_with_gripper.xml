@@ -62,7 +62,7 @@
           <geom type="mesh" rgba="0.627451 0.627451 0.627451 1" mesh="link3"/>
           <body name="link4" pos="0.2426 -0.054 -0.001625">
             <inertial pos="0.0612382 -0.051523 -0.030334" quat="0.429326 0.43808 0.555119 0.56179" mass="0.191139" diaginertia="0.000115773 0.000101138 6.89489e-05"/>
-            <joint name="joint4" pos="0 0 0" axis="0 0 1" range="-1.87 1.57" actuatorfrcrange="-7 7" damping="1" />
+            <joint name="joint4" pos="0 0 0" axis="0 0 1" range="-1.87 1.57" actuatorfrcrange="-17 17" damping="1" />
             <geom type="mesh" rgba="0.627451 0.627451 0.627451 1" mesh="link4"/>
             <body name="link5" pos="0.078308 -0.0375 -0.03" quat="0.707105 -0.707108 0 0">
               <inertial pos="-0.00504933 1.74603e-06 0.0387866" quat="0.705279 0.702041 0.0698205 -0.0696118" mass="0.150004" diaginertia="6.84851e-05 5.38003e-05 5.17187e-05"/>
@@ -75,12 +75,12 @@
                 <geom pos="0 0 0.15971" quat="0.707105 0 -0.707108 0" type="mesh" rgba="0.627451 0.627451 0.627451 1" mesh="gripper_link" contype="0"  conaffinity="0"/>
                 <body name="gripper_left" pos="1.31856e-05 2.7531e-05 0.117619" quat="0.499998 0.500002 -0.5 -0.5">
                   <inertial pos="0.00937155 -0.0183514 -0.00213051" quat="-0.219218 0.644983 0.318442 0.659193" mass="0.0423279" diaginertia="1.13774e-05 1.08393e-05 8.55489e-06"/>
-                  <joint name="gripper_joint1" pos="0 0 0" axis="1 0 0" type="slide" range="0 0.0715" actuatorfrcrange="-100 100" damping="0.5" frictionloss="0.05" solreflimit="0.02 1"/>
+                  <joint name="gripper_joint1" pos="0 0 0" axis="1 0 0" type="slide" range="0 0.0715" actuatorfrcrange="-7 7" damping="0.5" frictionloss="0.05" solreflimit="0.02 1"/>
                   <geom type="mesh" rgba="0.627451 0.627451 0.627451 1" mesh="gripper_left"/>
                 </body>
                 <body name="gripper_right" pos="-1.28764e-05 -2.7531e-05 0.117619" quat="0.499998 -0.500002 -0.5 0.5">
                   <inertial pos="0.00937155 0.0183514 0.00213051" quat="0.318442 0.659193 -0.219218 0.644983" mass="0.0423279" diaginertia="1.13774e-05 1.08393e-05 8.55489e-06"/>
-                  <joint name="gripper_joint2" pos="0 0 0" axis="1 0 0" type="slide" range="0 0.0715" actuatorfrcrange="-100 100" damping="0.5" frictionloss="0.05" solreflimit="0.02 1"/>
+                  <joint name="gripper_joint2" pos="0 0 0" axis="1 0 0" type="slide" range="0 0.0715" actuatorfrcrange="-7 7" damping="0.5" frictionloss="0.05" solreflimit="0.02 1"/>
                   <geom type="mesh" rgba="0.627451 0.627451 0.627451 1" mesh="gripper_right"/>
                 </body>
               </body>
@@ -103,13 +103,14 @@
   </contact>
 
   <actuator>
-    <position joint="joint1" kp="100" kv="10"/>
-    <position joint="joint2" kp="100" kv="10"/>
-    <position joint="joint3" kp="100" kv="10"/>
-    <position joint="joint4" kp="100"  kv="5"/>
-    <position joint="joint5" kp="20"  kv="5"/>
-    <position joint="joint6" kp="15"  kv="5"/>
-    <position joint="gripper_joint1" kp="5"  kv="1"/>
-    <position joint="gripper_joint2" kp="5"  kv="1"/>
+    <position joint="joint1" kp="100" kv="20"/>
+    <position joint="joint2" kp="100" kv="20"/>
+    <position joint="joint3" kp="100" kv="20"/>
+    <position joint="joint4" kp="25"  kv="8"/>
+    <position joint="joint5" kp="25"  kv="8"/>
+    <position joint="joint6" kp="25"  kv="8"/>
+
+    <position joint="gripper_joint1" kp="10"  kv="1"/>
+    <position joint="gripper_joint2" kp="10"  kv="1"/>
   </actuator>
 </mujoco>
