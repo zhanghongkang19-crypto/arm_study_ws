@@ -222,3 +222,79 @@ $$\text{subject to:} \begin{cases} x_0 - x(k) = 0 & \text{(初始状态约束)} 
 * **LTV-NMPC**：每一帧将非线性动力学展开成 $A_k, B_k$，化成 QP 求解，速度极快（微秒/毫秒级），非常适合自动驾驶、四足机器人等高频实时控制。  
 * **Full-NLP (SQP)**：直接迭代求解原非线性模型，跟踪精度和大偏差下的鲁棒性更高，但算力开销相对较大。  
 你目前的项目场景更倾向于使用 **LTV-MPC（QP 求解）** 还是 **纯 NLP（如 CasADi / Ipopt / acados 求解）** 呢？我可以为你针对性提供对应的 C++ 或 Python 示例代码！
+
+# DDP
+## 1. **最优控制**问题
+给定一个具有状态 $x \in \mathbb{R}^N$ $u \in \mathbb{R}^M$ 和控制的连续时间系统，其**动态特性**由以下描述：
+$$\frac{dx}{dt} = f(\mathbf{x}(t), \mathbf{u}(t), t)$$
+我们想要最小化**成本函数**：
+$$J(\mathbf{x}(t_0), \pi) = \underbrace{h(\mathbf{x}(t_f), t_f)}_{\text{terminal cost}} + \int_{t_0}^{t_f} \underbrace{g(\mathbf{x}(t), \mathbf{u}(t), t)dt}_{\text{cost-to-go}}$$
+这可以理解为从状态 $\mathbf{x}(t_0)$ 开始遵循策略 $\pi$ 的累积成本。我们现在的目标是找到**最优策略** $\pi^*$，以找到最小成本：
+$$\pi^* = \arg\min_{\pi} J(\mathbf{x}(t_0), \pi)$$
+假设时间不变动态，此问题也可**离散化**如下。给定固定时间范围 **N**，定义我们的**时间步长** $\Delta t = \frac{t_f - t_0}{N}$
+$$\begin{aligned} \frac{\mathbf{x}(t_k + \Delta t) - \mathbf{x}(t_k)}{\Delta t} &\approx f(\mathbf{x}(t_k), \mathbf{u}(t_k)) \\ \mathbf{x}(t_k + \Delta t_k) &= \mathbf{x}(t_k) + \Delta t f(\mathbf{x}(t_k), \mathbf{u}(t_k)) \\ \mathbf{x}(t_{k+1}) &= \mathbf{x}(t_k) + \Delta t f(\mathbf{x}(t_k), \mathbf{u}(t_k)) \\ \mathbf{x}_{k+1} &= \mathbf{x}_k + \Delta t f(\mathbf{x}_k, \mathbf{u}_k) \end{aligned}$$
+在最后一行中，为了便于阅读，我们做了符号简化 $\mathbf{x}_k := \mathbf{x}(t_k)$。这将在后续操作中变得紧凑。
+以类似的方式，我们也可以将成本函数离散化为：
+$$J(\mathbf{x}_0, \pi) = h(\mathbf{x}_N, t_N) + \sum_{k=0}^{N-1} g(\mathbf{x}_k, \mathbf{u}_k, t_k)$$
+在接下来的内容中，我们将假设我们的成本函数都是时不变的：
+$$J(\mathbf{x}_0, \pi) = h(\mathbf{x}_N) + \sum_{k=0}^{N-1} g(\mathbf{x}_k, \mathbf{u}_k)$$
+
+## 2. **动态规划（DP）**
+让我们考虑一个**离散图**，我们希望以最小的成本从起始节点遍历到目标节点，如下图所示。将每个节点视为一个状态 $\mathbf{x}$，其值 $\mathbf{V}(\mathbf{x})$ 表示从该状态到达目标的剩余成本。从节点出发的每条边可以被视为一个**离散动作**，具有相关的到达成本 $g(\mathbf{x}, \mathbf{u})$，自然地，目标状态将具有终端成本 $h(\mathbf{x}_{goal}) = 0$
+```text
+       ●--------(2)------->●--------(4)------->●
+      / \                 / \                 / \
+     /   \--(3)-------\  /   \-(3)---\       /   \
+    (1)                \/             \     (1)   (2)
+   /                    ●---------(1)--\-->●-----\-->●
+  /                    /                \         \ /
+● start             (2)                  (3)       ● goal
+  \                  /                    \       /
+   \                /                      \     /
+    (1)------------●-------------(2)---------->●/
+
+```
+通过图找到最优路径的一种方法是利用**贝尔曼最优性原理**，该原理指出，一个状态的最优值是最小化的“到达成本”与后续状态值 $\mathbf{x}'$ 的组合
+$$V^*(\mathbf{x}) = \min_{\mathbf{u}} [g(\mathbf{x}, \mathbf{u}) + V^*(\mathbf{x}')]$$
+如果我们有一个神奇的预言机来给我们提供 $\mathbf{x}'$ 的**最优值**，那么这个公式允许我们回溯时间并计算每个 $\mathbf{x}$ 的最优值。幸运的是，对于我们的玩具问题（以及更广泛的问题），我们已经有了最终状态的最优值，因为无需做出任何决策：
+$$V^*(\mathbf{x}_{goal}) = \min_{\mathbf{u}} [h(\mathbf{x}_{goal})] = \min_{\mathbf{u}} [0] = 0$$
+现在，我们继续回溯时间，利用**贝尔曼方程**，可以估计每个状态的价值
+一旦有了每个节点/状态的值，我们就可以通过简单地查看下一个可到达的状态并**选择成本**最低的状态来轻松找到最低成本的路径。事实上，我们可以从任何想要的节点开始，而不仅仅是起始节点。现在让我们更加严谨，值 $\mathbf{V}(\mathbf{x})$ 的定义是什么？它是如果我们从 $\mathbf{x}$ 开始并尝试达到目标时将产生的成本。之前我们看到了最优值 $\mathbf{V}^*(\mathbf{x})$，它为我们提供了最佳情况下的成本。然而，更一般的表述是在某个策略 $\pi$ 下的值，这个策略可能是最优的，也可能不是，这并不重要：
+$$\begin{aligned} V^\pi(\mathbf{x}_n, t_n) &= \min_{\mathbf{u}} [J(\mathbf{x}_n, \pi)] = \min_{\mathbf{u}} \left[ \sum_{k=n}^{N-1} g(\mathbf{x}_k, \mathbf{u}_k) + h(\mathbf{x}_N) \right] \\ &= \min_{\mathbf{u}} \left[ g(\mathbf{x}_n, \mathbf{u}_n) + \underbrace{\sum_{k=n+1}^{N-1} g(\mathbf{x}_k, \mathbf{u}_k) + h(\mathbf{x}_N)}_{V^\pi(\mathbf{x}_{n+1}, n+1)} \right] \\ &= \min_{\mathbf{u}} \left[ g(\mathbf{x}_n, \mathbf{u}_n) + V^\pi(\mathbf{x}_{n+1}, n+1) \right] \end{aligned}$$
+其中 $\mathbf{x}_{n+1} = f(\mathbf{x}_n, \mathbf{u}_n)$。这种**递归关系**被称为离散贝尔曼方程。
+
+**DDP（动态微分编程，Dynamic Differential Programming）** 的核心推导逻辑，本质上就是把前面你提过的两个理论结合在一起：**“离散贝尔曼方程（动态规划）”** $+$ **“二阶泰勒展开（局部近似）”**。
+
+在连续非线性系统中，传统的动态规划（DP）面临“维度灾难”无法直接求解。DDP 的思想是：**不再求解全状态空间的最优值，而是沿着一条给定的“名义轨迹”，对贝尔曼方程进行局部二阶逼近，从而得到局部最优解，并通过迭代逐步逼近全局最优。**
+
+## DDP 的完整推导四步曲
+#### 1. 起点：离散贝尔曼方程（Bellman Equation）
+根据上一张图的推导，第 $n$ 步的价值函数 $V(\mathbf{x}_n)$ 满足递归关系：
+$$V(\mathbf{x}_n) = \min_{\mathbf{u}_n} \Big[ \underbrace{g(\mathbf{x}_n, \mathbf{u}_n)}_{\text{当步代价}} + \underbrace{V(\mathbf{x}_{n+1})}_{\text{未来累积代价}} \Big]$$
+其中状态转移方程为 $\mathbf{x}_{n+1} = \tilde{f}(\mathbf{x}_n, \mathbf{u}_n)$。
+
+#### 2. 定义 Q 函数（动作-价值函数）
+为了求极值方便，把括号里的表达式定义为 $Q$ 函数：
+$$Q(\mathbf{x}_n, \mathbf{u}_n) = g(\mathbf{x}_n, \mathbf{u}_n) + V(\tilde{f}(\mathbf{x}_n, \mathbf{u}_n))$$
+此时贝尔曼方程简化为：$V(\mathbf{x}_n) = \min_{\mathbf{u}_n} Q(\mathbf{x}_n, \mathbf{u}_n)$。
+
+#### 3. 二阶泰勒展开（局部近似）
+非线性的 $Q$ 极其复杂，直接求 $\min$ 无法得到解析解。因此，DDP 在名义轨迹点 $(\bar{\mathbf{x}}_n, \bar{\mathbf{u}}_n)$ 处，对 $Q$ 函数做**二阶泰勒展开**（也就是你前面提问的那两张公式图）：
+把偏差量设为 $\delta \mathbf{x}_n = \mathbf{x}_n - \bar{\mathbf{x}}_n$，$\delta \mathbf{u}_n = \mathbf{u}_n - \bar{\mathbf{u}}_n$，展开得到：
+$$Q(\delta \mathbf{x}_n, \delta \mathbf{u}_n) \approx Q + Q_{\mathbf{x}} \delta \mathbf{x}_n + Q_{\mathbf{u}} \delta \mathbf{u}_n + \frac{1}{2}\delta \mathbf{x}_n^T Q_{\mathbf{xx}} \delta \mathbf{x}_n + \delta \mathbf{x}_n^T Q_{\mathbf{xu}} \delta \mathbf{u}_n + \frac{1}{2}\delta \mathbf{u}_n^T Q_{\mathbf{uu}} \delta \mathbf{u}_n$$
+*(通过链式法则，利用 $\nabla_{\mathbf{x}}g, \nabla_{\mathbf{x}}\tilde{f}, \nabla^2 V$ 等导数拼接，即可得到 $Q_{\mathbf{x}}, Q_{\mathbf{u}}, Q_{\mathbf{xx}}, Q_{\mathbf{xu}}, Q_{\mathbf{uu}}$)*。
+
+#### 4. 对决策变量 $\delta \mathbf{u}_n$ 极值化（导出控制律）
+因为状态偏置 $\delta \mathbf{x}_n$ 是被动的，只有控制偏置 $\delta \mathbf{u}_n$ 是算法可以主动决策的自变量。
+对 $\delta \mathbf{u}_n$ 求偏导并令导数为 0：
+$$\frac{\partial Q}{\partial \delta \mathbf{u}_n} = Q_{\mathbf{u}} + Q_{\mathbf{ux}}\delta \mathbf{x}_n + Q_{\mathbf{uu}}\delta \mathbf{u}_n = \mathbf{0}$$
+直接解出**最优控制增量** $\delta \mathbf{u}_n^*$：
+$$\delta \mathbf{u}_n^* = \underbrace{- Q_{\mathbf{uu}}^{-1} Q_{\mathbf{u}}}_{\mathbf{k}_n \text{ (前馈项)}} \; \underbrace{- Q_{\mathbf{uu}}^{-1} Q_{\mathbf{ux}}}_{\mathbf{K}_n \text{ (反馈增益)}} \cdot \delta \mathbf{x}_n$$
+将解出的 $\delta \mathbf{u}_n^*$ 代回原 $Q$ 函数二阶展开式中，就能得到当前时刻价值函数 $V(\mathbf{x}_n)$ 的导数（$V_{\mathbf{x}}$ 和 $V_{\mathbf{xx}}$），从而继续向前一步（第 $n-1$ 步）反向递推。  
+
+### DDP 与 iLQR 的关键区别
+推导到这一步时，有两个分支：
+* **标准 DDP**：在计算 $Q$ 函数的二阶导数（$Q_{\mathbf{xx}}, Q_{\mathbf{xu}}, Q_{\mathbf{uu}}$）时，**保留了系统运动学/动力学方程 $\tilde{f}$ 的二阶导数**（$\nabla^2 \tilde{f}$）。  
+* **iLQR（迭代 LQR）**：忽略了系统动力学 $\tilde{f}$ 的二阶导数（假定系统局部线性化），只保留代价函数 $g$ 的二阶导数。  
+**一句话总结 DDP 的推导脉络**：  
+用**贝尔曼方程**将复杂的多步最优控制化简为单步问题 $\to$ 引入 **$Q$ 函数** $\to$ 进行**二阶泰勒展开**转化为二次型求极值问题 $\to$ 对控制量求导，推导出由 **前馈 $\mathbf{k}_n$** 和 **反馈 $\mathbf{K}_n$** 构成的控制律。  
