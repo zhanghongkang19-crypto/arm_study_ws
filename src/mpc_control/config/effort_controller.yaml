@@ -1,0 +1,16 @@
+# Alternative ros2_control setup for torque output. Do not load arm_controller
+# (the position trajectory controller) at the same time.
+controller_manager:
+  ros__parameters:
+    update_rate: 200
+
+    arm_effort_controller:
+      type: forward_command_controller/ForwardCommandController
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+arm_effort_controller:
+  ros__parameters:
+    joints: [joint1, joint2, joint3, joint4, joint5, joint6]
+    interface_name: effort

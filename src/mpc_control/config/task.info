@@ -1,0 +1,58 @@
+; OCS2 iLQR settings for the 6-DoF torque-controlled reBot arm.
+ddp
+{
+  algorithm                       ILQR
+
+  nThreads                        2
+  threadPriority                  50
+
+  maxNumIterations                3
+  minRelCost                      1e-3
+  constraintTolerance             1e-3
+
+  displayInfo                     false
+  displayShortSummary             true
+  checkNumericalStability         true
+  debugPrintRollout               false
+  debugCaching                    false
+
+  AbsTolODE                       1e-6
+  RelTolODE                       1e-4
+  maxNumStepsPerSecond            10000
+  timeStep                        0.01
+  backwardPassIntegratorType      RK4
+
+  constraintPenaltyInitialValue   20.0
+  constraintPenaltyIncreaseRate   2.0
+  preComputeRiccatiTerms          true
+  useFeedbackPolicy               true
+
+  strategy                        LINE_SEARCH
+  lineSearch
+  {
+    minStepLength                 1e-3
+    maxStepLength                 1.0
+    hessianCorrectionStrategy     DIAGONAL_SHIFT
+    hessianCorrectionMultiple     1e-6
+  }
+}
+
+rollout
+{
+  AbsTolODE                       1e-6
+  RelTolODE                       1e-4
+  timeStep                        0.005
+  integratorType                  ODE45
+  maxNumStepsPerSecond            10000
+  checkNumericalStability         true
+}
+
+mpc
+{
+  timeHorizon                     0.8
+  solutionTimeWindow              -1
+  coldStart                       false
+  debugPrint                      false
+  mpcDesiredFrequency             50
+  mrtDesiredFrequency             200
+}

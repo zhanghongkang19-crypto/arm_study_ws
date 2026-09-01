@@ -1,0 +1,19 @@
+mpc_controller:
+  ros__parameters:
+    end_effector_frame: link6
+    base_frame: base_link
+    joint_names: [joint1, joint2, joint3, joint4, joint5, joint6]
+
+    control_frequency: 50.0
+    state_timeout: 0.2
+    torque_command_topic: /arm_effort_controller/commands
+    torque_limits: [27.0, 27.0, 27.0, 7.0, 7.0, 7.0]
+
+    weights:
+      position: 120.0
+      orientation: 0.0
+      joint_velocity: 0.5
+      torque: 0.002
+      torque_limit: 20.0
+      joint_limit: 30.0
+      terminal_scale: 8.0

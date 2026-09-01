@@ -3,14 +3,26 @@
 <package format="3">
   <name>mpc_control</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
+  <description>OCS2 full-dynamics torque MPC demo for the reBot 6-DoF arm.</description>
   <maintainer email="hongkang.zhang@zhangmen.com">zme</maintainer>
-  <license>TODO: License declaration</license>
+  <license>Apache-2.0</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
 
   <depend>rclcpp</depend>
   <depend>std_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>rebot_description</depend>
+  <depend>pinocchio</depend>
+  <depend>ocs2_core</depend>
+  <depend>ocs2_oc</depend>
+  <depend>ocs2_mpc</depend>
+  <depend>ocs2_ddp</depend>
+
+  <exec_depend>ament_index_python</exec_depend>
+  <exec_depend>forward_command_controller</exec_depend>
+  <exec_depend>joint_state_broadcaster</exec_depend>
 
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
