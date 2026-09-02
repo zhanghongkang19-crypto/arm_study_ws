@@ -44,13 +44,13 @@ rollout
   timeStep                        0.005
   integratorType                  ODE45
   maxNumStepsPerSecond            10000
-  checkNumericalStability         true
+  checkNumericalStability         flase
 }
 
 mpc
 {
-  timeHorizon                     0.8
-  solutionTimeWindow              -1
+  timeHorizon                     1
+  solutionTimeWindow              0.2
   coldStart                       false
   debugPrint                      false
   mpcDesiredFrequency             50

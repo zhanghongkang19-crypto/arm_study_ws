@@ -102,7 +102,7 @@
     <exclude body1="gripper_left" body2="gripper_right"/>
   </contact>
 
-  <actuator>
+  <!-- <actuator>
     <position joint="joint1" kp="100" kv="20"/>
     <position joint="joint2" kp="100" kv="20"/>
     <position joint="joint3" kp="100" kv="20"/>
@@ -112,5 +112,21 @@
 
     <position joint="gripper_joint1" kp="10"  kv="1"/>
     <position joint="gripper_joint2" kp="10"  kv="1"/>
+  </actuator> -->
+
+  <actuator>
+    <!-- 机械臂主关节（前3轴：基座/大臂/小臂，力矩范围可根据电机规格自定义） -->
+    <motor joint="joint1" />
+    <motor joint="joint2" />
+    <motor joint="joint3" />
+    
+    <!-- 机械臂末端关节（后3轴：手腕） -->
+    <motor joint="joint4" />
+    <motor joint="joint5" />
+    <motor joint="joint6" />
+
+    <!-- 夹爪关节 -->
+    <motor joint="gripper_joint1" />
+    <motor joint="gripper_joint2" />
   </actuator>
 </mujoco>
