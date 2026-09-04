@@ -18,11 +18,12 @@ namespace mpc_control
 namespace
 {
 
-constexpr int kArmDof = 6;
-constexpr int kStateDim = 12;
-constexpr double kFiniteDifferenceStep = 1.0e-6;
-constexpr double kHessianRegularization = 1.0e-8;
+constexpr int kArmDof = 6;                       // 机械臂关节数量。
+constexpr int kStateDim = 12;                    // 状态为 [q, dq]。
+constexpr double kFiniteDifferenceStep = 1.0e-6; // 数值 Jacobian 的微小扰动。
+constexpr double kHessianRegularization = 1.0e-8; // 保证 Hessian 数值稳定。
 
+// 查找末端坐标系，名称错误时尽早报错。
 pinocchio::FrameIndex requireFrame(
   const pinocchio::Model & model,
   const std::string & frame_name)
@@ -38,6 +39,7 @@ ocs2::vector_t readDesiredPose(
   ocs2::scalar_t time,
   const ocs2::TargetTrajectories & target_trajectories)
 {
+  // 本 demo 约定目标向量为位置加四元数。
   const auto desired = target_trajectories.getDesiredState(time);
   if (desired.size() != 7) {
     throw std::runtime_error(
@@ -51,10 +53,12 @@ Eigen::Matrix<double, 6, 1> calculatePoseResidual(
   pinocchio::FrameIndex frame_id, const ocs2::vector_t & q,
   const ocs2::vector_t & desired_pose)
 {
+  // 根据关节角计算 link6 当前位姿。
   pinocchio::forwardKinematics(model, data, q);
   const pinocchio::SE3 & world_to_ee =
     pinocchio::updateFramePlacement(model, data, frame_id);
 
+  // 四元数使用 [qw, qx, qy, qz]，计算前先归一化。
   Eigen::Quaterniond desired_quaternion(
     desired_pose(3), desired_pose(4), desired_pose(5), desired_pose(6));
   if (desired_quaternion.norm() < 1.0e-8) {
@@ -62,6 +66,7 @@ Eigen::Matrix<double, 6, 1> calculatePoseResidual(
   }
   desired_quaternion.normalize();
 
+  // 前 3 维是位置误差，后 3 维是旋转误差。
   Eigen::Matrix<double, 6, 1> residual;
   residual.head<3>() = world_to_ee.translation() - desired_pose.head<3>();
   residual.tail<3>() = pinocchio::log3(
@@ -74,6 +79,7 @@ template<typename ResidualFunction>
 Eigen::Matrix<double, 6, 6> finiteDifferenceJacobian(
   const ocs2::vector_t & q, ResidualFunction && residual_function)
 {
+  // 分别正向和反向扰动每个关节，用中心差分提高精度。
   Eigen::Matrix<double, 6, 6> jacobian;
   for (int index = 0; index < kArmDof; ++index) {
     ocs2::vector_t q_plus = q;
@@ -90,6 +96,7 @@ Eigen::Matrix<double, 6, 6> finiteDifferenceJacobian(
 Eigen::Matrix<double, 6, 6> poseWeightMatrix(
   const ArmCostWeights & weights, double scale = 1.0)
 {
+  // 位置和姿态使用不同权重，便于只跟踪位置。
   Eigen::Matrix<double, 6, 6> matrix =
     Eigen::Matrix<double, 6, 6>::Zero();
   matrix.diagonal().head<3>().setConstant(scale * weights.position);
@@ -111,6 +118,7 @@ void checkStateInput(
 
 void validateWeights(const ArmCostWeights & weights)
 {
+  // 负权重或非有限数会破坏代价函数的含义和数值稳定性。
   const std::initializer_list<double> values{
     weights.position, weights.orientation, weights.joint_velocity,
     weights.torque, weights.torque_limit, weights.joint_limit,
@@ -139,6 +147,8 @@ EndEffectorPoseCost::EndEffectorPoseCost(
   torque_limits_(std::move(torque_limits))
 {
   validateWeights(weights_);
+
+  // 每个关节都必须有一个有限且大于零的力矩限制。
   if (torque_limits_.size() != kArmDof ||
     !torque_limits_.allFinite() || (torque_limits_.array() <= 0.0).any())
   {
@@ -185,6 +195,7 @@ void EndEffectorPoseCost::addJointLimitCost(
   const ocs2::vector_t & q, ocs2::scalar_t * value,
   ocs2::vector_t * gradient, ocs2::matrix_t * hessian) const
 {
+  // 只有越过 URDF 中的上下界时才产生二次惩罚。
   for (int index = 0; index < kArmDof; ++index) {
     double violation = 0.0;
     double sign = 0.0;
@@ -209,6 +220,7 @@ void EndEffectorPoseCost::addTorqueLimitCost(
   const ocs2::vector_t & input, ocs2::scalar_t * value,
   ocs2::vector_t * gradient, ocs2::matrix_t * hessian) const
 {
+  // 优化过程中允许短暂越界，但越界越多，代价增长越快。
   for (int index = 0; index < kArmDof; ++index) {
     const double violation = std::abs(input(index)) - torque_limits_(index);
     if (violation > 0.0) {
@@ -231,6 +243,8 @@ ocs2::scalar_t EndEffectorPoseCost::getValue(
   checkStateInput(state, &input);
   const auto residual = poseResidual(state.head<6>(),
                                      desiredPose(time, target_trajectories));
+
+  // 总代价 = 位姿误差 + 关节速度 + 控制力矩 + 两项软限位。
   ocs2::scalar_t value =
     0.5 * residual.dot(poseWeightMatrix(weights_) * residual) +
     0.5 * weights_.joint_velocity * state.tail<6>().squaredNorm() +
@@ -253,6 +267,7 @@ EndEffectorPoseCost::getQuadraticApproximation(
   const auto jacobian = poseResidualJacobian(state.head<6>(), desired_pose);
   const auto pose_weight = poseWeightMatrix(weights_);
 
+  // 使用 Gauss-Newton 形式 J^T W J 构造半正定 Hessian。
   ocs2::ScalarFunctionQuadraticApproximation approximation;
   approximation.f =
     0.5 * residual.dot(pose_weight * residual) +
@@ -273,10 +288,12 @@ EndEffectorPoseCost::getQuadraticApproximation(
   approximation.dfdxx.bottomRightCorner<6, 6>().diagonal().setConstant(
       weights_.joint_velocity);
 
+  // 把关节和力矩软限位加入同一个二次近似。
   addJointLimitCost(state.head<6>(), &approximation.f,
                     &approximation.dfdx, &approximation.dfdxx);
   addTorqueLimitCost(input, &approximation.f, &approximation.dfdu,
                      &approximation.dfduu);
+  // 消除浮点误差造成的轻微不对称，并加入很小的正则项。
   approximation.dfdxx =
     0.5 * (approximation.dfdxx + approximation.dfdxx.transpose());
   approximation.dfdxx.diagonal().array() += kHessianRegularization;
@@ -340,6 +357,7 @@ ocs2::scalar_t EndEffectorTerminalCost::getValue(
   checkStateInput(state);
   const auto residual = poseResidual(state.head<6>(),
                                      desiredPose(time, target_trajectories));
+  // 终点处放大位姿和速度代价，鼓励机械臂稳定到达目标。
   return 0.5 * residual.dot(
                    poseWeightMatrix(weights_, weights_.terminal_scale) *
                    residual) +
@@ -357,6 +375,7 @@ EndEffectorTerminalCost::getQuadraticApproximation(
   const auto desired_pose = desiredPose(time, target_trajectories);
   const auto residual = poseResidual(state.head<6>(), desired_pose);
   const auto jacobian = poseResidualJacobian(state.head<6>(), desired_pose);
+  // 终端权重在普通运行权重基础上乘 terminal_scale。
   const auto pose_weight =
     poseWeightMatrix(weights_, weights_.terminal_scale);
   const double velocity_weight =
@@ -378,6 +397,7 @@ EndEffectorTerminalCost::getQuadraticApproximation(
     jacobian.transpose() * pose_weight * jacobian;
   approximation.dfdxx.bottomRightCorner<6, 6>().diagonal().setConstant(
       velocity_weight);
+  // 与运行代价一样，对 Hessian 做数值稳定处理。
   approximation.dfdxx =
     0.5 * (approximation.dfdxx + approximation.dfdxx.transpose());
   approximation.dfdxx.diagonal().array() += kHessianRegularization;
